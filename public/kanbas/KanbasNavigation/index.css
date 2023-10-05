@@ -7,7 +7,7 @@
   background-color:  #000000;
   z-index: 10;
   box-sizing: border-box;
-  font-weight: 200;
+  /*font-weight: 200;*/
 }
 
 .kanbas-navigation .logo-container {
@@ -39,6 +39,7 @@ ul.kanbas-navigation .list-group-item {
   text-align: center;
   background-color: #000000;
   font-size: 14px;
+  border-style: none;
 }
 
 ul.kanbas-navigation .list-group-item.active {
@@ -53,7 +54,6 @@ ul.kanbas-navigation .list-group-item a {
   align-items: center;
   box-sizing: border-box;
   text-decoration: none;
-  border-style: none;
   position: relative;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -65,7 +65,8 @@ ul.kanbas-navigation .list-group-item.active a {
 
 ul.kanbas-navigation .list-group-item i {
   color:  #d41b2c;
-  font-size: 25px
+  font-size: 25px;
+  margin-bottom: 5px;
 }
 
 i#Account {

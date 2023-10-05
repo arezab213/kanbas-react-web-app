@@ -1,8 +1,81 @@
 body * {
   font-family: 'Lato Extended', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 200;
+
 }
 
 .flex-row-container {
   display: flex;
   flex-direction: row;
+}
+
+.main-content-wrapper {
+  margin-left: 84px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #c7cdd1;
+  margin-top: 0px;
+  margin-right: 24px;
+  margin-bottom: 0px;
+  margin-left: 24px;
+  height: 72px;
+  /*box-sizing: border-box;*/
+}
+
+.header-bar i#menu-button {
+  margin-right: 22px;
+  padding-top: 5px;
+  width: 36px;
+  height: 30px;
+  color: #A32424;
+  text-align: center;
+  font-size: 25px;
+}
+
+.breadcrumb-wrapper {
+  /*flex-grow: 1;*/
+  /*flex-shrink: 1;*/
+  /*flex-basis: 0%;*/
+  /*display: flex;
+  align-items: center;
+  box-sizing: border-box;*/
+}
+
+ul.breadcrumbs.list-group {
+  /*padding: 0px;
+  margin: 0px;*/
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+
+}
+
+ul.breadcrumbs .list-group-item {
+  /*display: inline-block;*/
+  vertical-align: top;
+  border-style: none;
+  font-size: 18px;
+  padding: 0;
+}
+
+ul.breadcrumbs .list-group-item a {
+  color:  #A32424;
+  text-decoration: none;
+}
+
+.header-bar i#subsection-arrow {
+  margin-right: 9px;
+  margin-left: 9px;
+  width: 5px;
+  height: 14px;
+  color: #000000;
+  font-size: 10px;
 }
