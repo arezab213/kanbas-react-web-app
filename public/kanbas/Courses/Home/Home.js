@@ -3,7 +3,23 @@ import KanbasNavigation from "../../KanbasNavigation/KanbasNavigation.js"
 
 function Home() {
   return `
-  <table width="100%">
+    <div class="flex-row-container">
+      <div class="kanbas-navigation">
+        <div class="logo-container">
+          <img class="logo-mark" src="../../../images/nu_logo.png" alt="..."/>
+        </div>
+        <div>
+          ${KanbasNavigation("Courses")}
+        </div>
+      </div>
+    </div>
+`;
+}
+
+export default Home;
+
+/*
+<table width="100%">
     <tbody>
     <tr>
       <td valign="top">
@@ -121,8 +137,4 @@ function Home() {
       </td>
     </tr>
     </tbody>
-  </table>
-`;
-}
-
-export default Home;
+  </table>*/

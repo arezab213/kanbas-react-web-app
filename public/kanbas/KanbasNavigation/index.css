@@ -1,23 +1,73 @@
-ul.kanbas-navigation.list-group {
-  border-radius: 0px;
-  margin-left: 20px;
+.kanbas-navigation {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100%;
+  width: 84px;
+  background-color:  #000000;
+  z-index: 10;
+  box-sizing: border-box;
+  font-weight: 200;
 }
+
+.kanbas-navigation .logo-container {
+  width: 100%;
+  background-color:  #000000;
+  box-sizing: border-box;
+  /*z-index: 11;*/
+}
+
+.logo-container > .logo-mark {
+  height: 85px;
+  background-size: contain;
+  background-position: 50%;
+  display: block;
+}
+
+ul.kanbas-navigation.list-group {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
 ul.kanbas-navigation .list-group-item {
-  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #000000;
+  font-size: 14px;
 }
 
 ul.kanbas-navigation .list-group-item.active {
-  color: black;
-  background-color: white;
-  border: none;
-  border-left: 2px solid black;
+  background-color: #ffffff;
 }
 
-ul.kanbas-navigation a {
-  color: red;
+ul.kanbas-navigation .list-group-item a {
+  color:  #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
   text-decoration: none;
+  border-style: none;
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 ul.kanbas-navigation .list-group-item.active a {
-  color: black;
+  color: #A32424;
+}
+
+ul.kanbas-navigation .list-group-item i {
+  color:  #d41b2c;
+  font-size: 25px
+}
+
+i#Account {
+  color:  #c4c4c4;
+  font-size: 35px;
 }
