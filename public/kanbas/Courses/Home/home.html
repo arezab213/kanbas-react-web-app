@@ -1,3 +1,4 @@
+<!--
 <table width="100%">
   <tbody>
   <tr>
@@ -200,3 +201,19 @@
   </tr>
   </tbody>
 </table>
+-->
+<html>
+<head>
+  <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/kanbas/Courses/CourseNavigation/index.css"/>
+  <link rel="stylesheet" href="/kanbas/KanbasNavigation/index.css"/>
+</head>
+<body>
+<div id="root"></div>
+<script type="module">
+  import Home from "./Home.js";
+  const root = document.getElementById("root");
+  root.innerHTML = Home();
+</script>
+</body>
+</html>
