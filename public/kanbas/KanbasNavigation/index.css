@@ -43,6 +43,7 @@ ul.kanbas-navigation .list-group-item {
 
 ul.kanbas-navigation .list-group-item.active {
   background-color: #ffffff;
+  border-color: #ffffff;
 }
 
 ul.kanbas-navigation .list-group-item a {
