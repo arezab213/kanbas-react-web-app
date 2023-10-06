@@ -1,0 +1,55 @@
+.acc-main-container {
+  display: flex;
+  flex: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+
+.acc-main-content {
+  padding: 36px;
+}
+
+.acc-profile-layout-primary {
+  /*flex-grow: 3;
+  flex-shrink: 1;
+  flex-basis: 0%;*/
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  /*position: relative;*/
+}
+
+.acc-profile-logo-wrapper {
+  height: 128px;
+  width: 128px;
+  text-align: center;
+}
+
+.acc-profile-logo-wrapper i#profile-logo {
+  /*margin-right: 22px;*/
+  padding-top: 5px;
+  /*width: 36px;
+  height: 30px; */
+  color: #c4c4c4;
+  /*text-align: center;*/
+  font-size: 120px;
+}
+
+h2#profile-name {
+  margin-top: 6px;
+  margin-bottom: 18px;
+  font-weight: 300;
+}
+
+h3#profile-header {
+  margin-top: 6px;
+  padding-top: 12px;
+  margin-bottom: 6px;
+  font-weight: 200;
+}
+
+
+
+.acc-profile-layout-secondary {
+
+}

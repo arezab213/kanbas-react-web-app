@@ -16,6 +16,12 @@ body * {
   width: 100%;
 }
 
+.below-header-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
 /*header bar styling start */
 .header-bar {
   display: flex;
