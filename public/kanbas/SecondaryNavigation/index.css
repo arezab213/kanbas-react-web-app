@@ -1,0 +1,82 @@
+/*secondary bar styling start */
+.secondary-navigation {
+  /*margin-left: 84px;*/
+  /*flex-direction: column;*/
+  /*height: 100%;*/
+  width: 192px;
+  /*position: absolute;*/
+  /*box-sizing: border-box;*/
+  /*top: 0;*/
+  /*right: 100%;*/
+  /*padding: 0;*/
+  /*bottom: 0;*/
+  /*display: block;*/
+}
+
+.secondary-navigation .sn-list-container {
+  /*position: sticky;*/
+  padding-top: 24px;
+  padding-right: 12px;
+  padding-left: 24px;
+}
+
+ul.secondary-navigation.list-group {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  border-radius: 0px;
+}
+
+ul.secondary-navigation .list-group-item {
+  /*display: flex;
+  flex-direction: column;*/
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  font-size: 16px;
+  height: auto;
+  min-height: 36px;
+  display: inline-block;
+  /*box-sizing: border-box;*/
+  /*text-align: center;
+  background-color: #000000;
+  font-size: 14px;
+  border-style: none;*/
+}
+
+ul.secondary-navigation .list-group-item.active {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+ul.secondary-navigation .list-group-item a {
+  color:  #a32424;
+  display: flex;
+  /*display: block;*/
+  flex-direction: column;
+  /*align-items: center;*/
+  /*box-sizing: border-box;
+  text-decoration: none;
+  position: relative;*/
+  padding-top: 6px;
+  padding-right: 0px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+  text-decoration: none;
+  max-width: 140px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  /*background-color: #ffffff;
+  border-color: #ffffff;*/
+}
+
+ul.secondary-navigation .list-group-item.active a {
+  color: #000000;
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #000000;
+  font-weight: 400;
+  padding-left: 4px;
+}
+
+/*secondary bar styling end */

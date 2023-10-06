@@ -1,7 +1,7 @@
-import SecondaryNavigation from "../../SecondaryNavigation/SecondaryNavigation.js";
-import KanbasNavigation from "../../KanbasNavigation/KanbasNavigation.js"
+import SecondaryNavigation from "../../kanbas/SecondaryNavigation/SecondaryNavigation.js"
+import KanbasNavigation from "../../kanbas/KanbasNavigation/KanbasNavigation.js"
 
-function Grades() {
+function Account() {
   return `
     <div class="flex-row-container">
       <div class="kanbas-navigation">
@@ -9,7 +9,7 @@ function Grades() {
           <img class="logo-mark" src="../../../images/nu_logo.png" alt="..."/>
         </div>
         <div>
-          ${KanbasNavigation("Courses")}
+          ${KanbasNavigation("Account")}
         </div>
       </div>
       <div class="main-content-wrapper">
@@ -31,7 +31,7 @@ function Grades() {
         </div>
         <div class="secondary-navigation">
           <div class="sn-list-container">
-            ${SecondaryNavigation("Grades", "courses")}
+            ${SecondaryNavigation("Profile", "account")}
           <div>
         </div>
       </div>
@@ -39,4 +39,4 @@ function Grades() {
 `;
 }
 
-export default Grades;
+export default Account;

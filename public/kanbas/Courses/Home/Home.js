@@ -1,4 +1,4 @@
-import CourseNavigation from "../CourseNavigation/CourseNavigation.js";
+import SecondaryNavigation from "../../SecondaryNavigation/SecondaryNavigation.js"
 import KanbasNavigation from "../../KanbasNavigation/KanbasNavigation.js"
 
 function Home() {
@@ -28,6 +28,11 @@ function Home() {
               </ul>
             </nav>
           </div>
+        </div>
+        <div class="secondary-navigation">
+          <div class="sn-list-container">
+            ${SecondaryNavigation("Home", "courses")}
+          <div>
         </div>
       </div>
     </div>

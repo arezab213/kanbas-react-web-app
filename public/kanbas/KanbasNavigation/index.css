@@ -28,6 +28,7 @@ ul.kanbas-navigation.list-group {
   padding: 0px;
   margin: 0px;
   list-style: none;
+  border-radius: 0px;
 }
 
 ul.kanbas-navigation .list-group-item {

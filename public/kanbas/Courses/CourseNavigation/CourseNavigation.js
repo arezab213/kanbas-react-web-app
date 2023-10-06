@@ -1,3 +1,4 @@
+/*
 function CourseNavigation(active) {
   const links = [
     { text: "Home", url: "/Kanbas/Courses/Home/home.html" },
@@ -20,12 +21,12 @@ function CourseNavigation(active) {
     { text: "Settings", url: "#"},
   ];
   return `
-<ul class="course-navigation list-group">
+<ul class="secondary-navigation list-group">
   ${links
     .map(
       (link) => `
     <li class="list-group-item ${active === link.text ? "active" : ""}">
-      <a href="${link.url}" class="course-navigation-link ">${link.text}</a>
+      <a href="${link.url}" class="secondary-navigation-link ">${link.text}</a>
     </li>
   `
     )
@@ -35,3 +36,4 @@ function CourseNavigation(active) {
 }
 
 export default CourseNavigation;
+*/
