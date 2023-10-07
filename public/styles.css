@@ -1,8 +1,11 @@
 body * {
   font-family: 'Lato Extended', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 200;
-
 }
+
+/*body * a:hover {
+  text-decoration: underline;
+}*/
 
 .flex-row-container {
   display: flex;

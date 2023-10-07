@@ -40,17 +40,24 @@ function Account() {
                   <i class="fa-solid fa-user" id="profile-logo"></i>
                 </div>
                 <h2 id="profile-name">Rick Rubin</h2>
-                <div>
+                <div class="profile-section">
                 <h3 id="profile-header">Contact</h2>
                 <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
                 </div>
-                <div>
+                <div class="profile-section">
                 <h3 id="profile-header">Biography</h2>
                 <p>Rick Rubin, American record producer whose light touch and keen ear made him one of the most sought-after producers in popular music.</p>
-                </div class="profile-section">
-                <h3 id="profile-header">Links</h2>
-                <p><a href="https://www.youtube.com/@WebDevTV">YouTube</a></p>
                 </div>
+                <div class="profile-section">
+                <h3 id="profile-header">Links</h2>
+
+                <p><i class="fa-solid fa-link" id="link-logo"></i><a href="https://www.youtube.com/@WebDevTV">YouTube<i class="fa-solid fa-up-right-from-square" id="external-link-icon"></i></a></p>
+                </div>
+              </div>
+              <div class="acc-profile-layout-secondary">
+              <a href="/Kanbas/Account/Profile/edit.html">
+              <button type="button" class="btn btn-primary"><i class="fa-solid fa-pencil fa-flip-horizontal" id="edit-button-icon"></i>Edit Profile</button>
+              </a>
               </div>
 
           </div>

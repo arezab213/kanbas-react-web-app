@@ -7,6 +7,9 @@
 
 .acc-main-content {
   padding: 36px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
 }
 
 .acc-profile-layout-primary {
@@ -48,8 +51,75 @@ h3#profile-header {
   font-weight: 200;
 }
 
+.profile-section a {
+  text-decoration: none;
+  color: #A32424;
+}
 
+.profile-section a:hover {
+  text-decoration: underline;
+  color: #A32424;
+}
+
+.profile-section p {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.profile-section i#link-logo {
+  height: 16px;
+  width: 16px;
+  margin-right: 6px;
+  font-size: 12px;
+  color: #66696e;
+}
+
+.profile-section i#external-link-icon {
+  margin-left: 5px;
+  font-size: 12px;
+}
 
 .acc-profile-layout-secondary {
+  flex-grow: 1;
+  /*flex-shrink: 1;
+  flex-basis: 0%;*/
+  text-align: right;
+}
 
+.acc-profile-layout-secondary button {
+  background-color: #f5f5f5;
+  color: #000000;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c7cdd1;
+  border-radius: 3px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 14px;
+  padding-left: 14px;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.acc-profile-layout-secondary button:hover {
+  background-color: #e5e5e5;
+  transition: 0.2s;
+  color: #000000;
+  border-color: #c7cdd1;
+}
+
+.acc-profile-layout-secondary button:focus, btn:active {
+  background-color: #e5e5e5;
+  transition: 0.1s;
+  color: #000000;
+  border-color: #a32424;
+  border-width: 2px;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+i#edit-button-icon {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #2d3b45;
 }

@@ -13,6 +13,10 @@
   /*display: block;*/
 }
 
+/*.secondary-navigation * a:hover {
+  text-decoration: underline;
+}*/
+
 .secondary-navigation .sn-list-container {
   /*position: sticky;*/
   padding-top: 24px;
@@ -68,6 +72,10 @@ ul.secondary-navigation .list-group-item a {
   overflow-wrap: break-word;
   /*background-color: #ffffff;
   border-color: #ffffff;*/
+}
+
+ul.secondary-navigation .list-group-item a:hover {
+  text-decoration: underline;
 }
 
 ul.secondary-navigation .list-group-item.active a {
