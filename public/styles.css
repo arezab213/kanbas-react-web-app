@@ -6,6 +6,9 @@ body * {
 /*body * a:hover {
   text-decoration: underline;
 }*/
+*:focus {
+    box-shadow: none !important;
+}
 
 .flex-row-container {
   display: flex;
