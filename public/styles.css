@@ -91,6 +91,10 @@ ul.breadcrumbs .list-group-item a {
   font-weight: 300;
 }
 
+ul.breadcrumbs .list-group-item a:hover {
+  text-decoration: underline;
+}
+
 .header-bar i#subsection-arrow {
   margin-right: 9px;
   margin-left: 9px;

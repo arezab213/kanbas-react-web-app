@@ -19,20 +19,22 @@ function Home() {
             <nav id="breadcrumbs">
               <ul class="breadcrumbs list-group">
                 <li class="list-group-item">
-                  <a href="#">Main Section</a>
+                  <a href="#">CS4550.19753.202410</a>
                 </li>
                 <li class="list-group-item">
                   <i class="fa-solid fa-chevron-right" id="subsection-arrow"></i>
-                  Subsection
+                  Home
                 </li>
               </ul>
             </nav>
           </div>
         </div>
+        <div class="below-header-content">
         <div class="secondary-navigation">
           <div class="sn-list-container">
             ${SecondaryNavigation("Home", "courses")}
           <div>
+        </div>
         </div>
       </div>
     </div>
