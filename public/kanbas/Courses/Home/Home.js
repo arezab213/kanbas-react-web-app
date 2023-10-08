@@ -85,13 +85,26 @@ function Home() {
             </div>
           </div>
           <div class="home-side-content">
-            <button type="button" class="btn btn-primary"><i class="fa-solid fa-file-import button-icon"></i>Import Existing Content</button>
-            <button type="button" class="btn btn-primary"><i class="fa-solid fa-file-import button-icon"></i>Import from Commons</button>
-            <button type="button" class="btn btn-primary"><i class="fa-solid fa-file-import button-icon"></i>Choose Home Page</button>
-            <button type="button" class="btn btn-primary"><i class="fa-solid fa-file-import button-icon"></i>View Course Stream</button>
-            <button type="button" class="btn btn-primary"><i class="fa-solid fa-file-import button-icon"></i>New Announcement</button>
-            <button type="button" class="btn btn-primary"><i class="fa-solid fa-file-import button-icon"></i>New Analytics</button>
-            <button type="button" class="btn btn-primary"><i class="fa-solid fa-file-import button-icon"></i>View Course Notifications</button>
+            <div id="course-status-btns">
+              <h5 id="home-side-panel-header">Course Status</h5>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary" id="unpublish-btn"><i class="fa-solid fa-ban button-icon"></i>Unpublish</button>
+                <button type="button" class="btn btn-primary" id="publish-btn"><i class="fa-regular fa-circle-check button-icon"></i>Published</button>
+              </div>
+              <button type="button" class="btn btn-primary"><i class="fa-solid fa-file-import button-icon"></i>Import Existing Content</button>
+              <button type="button" class="btn btn-primary"><i class="fa-solid fa-right-from-bracket button-icon"></i>Import from Commons</button>
+              <button type="button" class="btn btn-primary"><i class="fa-solid fa-location-crosshairs button-icon"></i>Choose Home Page</button>
+              <button type="button" class="btn btn-primary"><i class="fa-solid fa-chart-column button-icon"></i>View Course Stream</button>
+              <button type="button" class="btn btn-primary"><i class="fa-solid fa-bullhorn button-icon"></i>New Announcement</button>
+              <button type="button" class="btn btn-primary"><i class="fa-solid fa-chart-column button-icon"></i>New Analytics</button>
+              <button type="button" class="btn btn-primary"><i class="fa-regular fa-bell button-icon"></i>View Course Notifications</button>
+            </div>
+            <div class="btn-subsections" id="to-do-section">
+              <h6 id="home-side-panel-subheader">To Do</h6>
+            </div>
+            <div class="btn-subsections" id="coming-up-section">
+              <h6 id="home-side-panel-subheader">Coming Up</h6>
+            </div>
           </div>
         </div>
       </div>

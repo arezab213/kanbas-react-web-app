@@ -57,7 +57,7 @@ i#external-link-icon {
   transition: 0.1s;
   color: #000000;
   border-color: #a32424;
-  border-width: 2px;
+  border-width: 1px;
   outline: none !important;
   box-shadow: none !important;
 }
