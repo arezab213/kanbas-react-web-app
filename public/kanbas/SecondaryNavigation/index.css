@@ -75,6 +75,7 @@ ul.secondary-navigation .list-group-item a {
   max-width: 140px;
   word-break: break-word;
   overflow-wrap: break-word;
+  font-weight: 300;
   /*background-color: #ffffff;
   border-color: #ffffff;*/
 }

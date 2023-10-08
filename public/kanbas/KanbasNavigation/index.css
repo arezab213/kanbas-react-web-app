@@ -2,11 +2,15 @@
   display: flex;
   flex-direction: column;
   position: fixed;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 84px;
   background-color:  #000000;
   z-index: 10;
   box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
   /*font-weight: 200;*/
 }
 
@@ -24,14 +28,14 @@
   display: block;
 }
 
-ul.kanbas-navigation.list-group {
+ul.kn.list-group {
   padding: 0px;
   margin: 0px;
   list-style: none;
   border-radius: 0px;
 }
 
-ul.kanbas-navigation .list-group-item {
+ul.kn .list-group-item {
   display: flex;
   flex-direction: column;
   padding: 0px;
@@ -43,12 +47,12 @@ ul.kanbas-navigation .list-group-item {
   border-style: none;
 }
 
-ul.kanbas-navigation .list-group-item.active {
+ul.kn .list-group-item.active {
   background-color: #ffffff;
   border-color: #ffffff;
 }
 
-ul.kanbas-navigation .list-group-item a {
+ul.kn .list-group-item a {
   color:  #ffffff;
   display: flex;
   flex-direction: column;
@@ -60,11 +64,11 @@ ul.kanbas-navigation .list-group-item a {
   padding-bottom: 8px;
 }
 
-ul.kanbas-navigation .list-group-item.active a {
+ul.kn .list-group-item.active a {
   color: #A32424;
 }
 
-ul.kanbas-navigation .list-group-item i {
+ul.kn .list-group-item i {
   color:  #d41b2c;
   font-size: 25px;
   margin-bottom: 5px;

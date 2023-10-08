@@ -11,7 +11,7 @@ function KanbasNavigation(active) {
     { text: "Help", url: "#", icon: "fa-regular fa-circle-question"  }
   ];
   return `
-<ul class="kanbas-navigation list-group">
+<ul class="kn list-group">
   ${links
     .map(
       (link) => `
