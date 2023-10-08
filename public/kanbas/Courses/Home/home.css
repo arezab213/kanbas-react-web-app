@@ -33,6 +33,10 @@ i#publish-all-check-icon {
   color: #05a82b;
 }
 
+i#solid-check-circle {
+  color: #05a82b;
+}
+
 i#add-module-icon {
   font-size: 16px;
   margin-right: 5px;
@@ -63,7 +67,7 @@ ul.module-content .list-group-item {
   margin-top: 15px;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-right: 6px;
+  padding-right: 12px;
   padding-left: 6px;
   color: #4c5860;
   background-color: #f5f5f5;
@@ -78,7 +82,7 @@ ul.module-content .list-group-item-secondary {
   display: flex;
   flex-direction: row;
   padding-top: 12px;
-  padding-right: 6px;
+  padding-right: 12px;
   padding-bottom: 12px;
   padding-left: 10px;
   border: 1px solid #c7cdd1;
@@ -89,6 +93,10 @@ ul.module-content .list-group-item-secondary {
   color: #4c5860;
   background-color: #ffffff;
 
+}
+
+ul.module-content .list-group-item-secondary:hover {
+  background-color: #eef7ff;
 }
 
 span.module-list-item-indent {
@@ -120,6 +128,14 @@ span.module-list-item-indent {
 .list-group-item-secondary > i#module-row-grip-icon {
   margin-left: 0px;
 }*/
+.module-row-right-side-icons-container {
+
+  display: flex;
+  flex-direction: row-reverse;
+  flex-grow: 1;
+  flex-shrink: 1;
+  /*align-items: flex-end;*/
+}
 
 .module-row-icon-container {
   width: 20px;
@@ -131,24 +147,23 @@ span.module-list-item-indent {
   padding-top: 7px;
 }
 
-.module-row-right-side-icons-container {
-
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  flex-shrink: 1;
-  align-items: flex-end;
+.list-group-item-secondary > .module-row-icon-container {
+  width: 20px;
+  height: 27px;
+  margin-left: 0px;
+  padding-top: 5px;
 }
 
-.module-row-icon-container-end {
+.module-row-right-side-icons-container .module-row-icon-container-end {
   width: 20px;
   height: 30px;
   text-align: center;
   /*margin-left: auto;*/
-  font-size: 16px;
-  padding-top: 7px;
+  font-size: 20px;
+  padding-top: 5px;
   float: right;
-  /*margin-left: 10px;*/
+
+  margin-left: 15px;
   /*position: relative;
   right: 0%;*/
   /*margin-right: 8px;
@@ -158,17 +173,14 @@ span.module-list-item-indent {
   padding-top: 7px;*/
 }
 
-.list-group-item-secondary > .module-row-icon-container {
+.list-group-item-secondary > .module-row-right-side-icons-container > .module-row-icon-container-end {
   width: 20px;
   height: 27px;
-  margin-left: 0px;
-  padding-top: 5px;
-}
-
-.list-group-item-secondary > .module-row-icon-container-end {
-  width: 20px;
-  height: 27px;
-
+  text-align: center;
+  /*margin-left: auto;*/
+  font-size: 20px;
+  padding-top: 3px;
+  float: right;
   /*margin-left: 0px;
   padding-top: 5px;*/
 }
