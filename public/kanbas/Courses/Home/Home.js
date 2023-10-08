@@ -45,42 +45,42 @@ function Home() {
             </div>
             <div class="home-module-content">
               <ul class="module-content list-group">
-                <li class="list-group-item">Week 0 - INTRO</li>
-                <li class="list-group-item-secondary">LEARNING OBJECTIVES</li>
-                <li class="list-group-item-secondary"><span class="module-list-item-indent"></span>Introduction to the course</li>
-                <li class="list-group-item-secondary"><span class="module-list-item-indent"></span>Learn what is Web Development</li>
-                <li class="list-group-item-secondary"><span class="module-list-item-indent"></span>Creating a development Environment</li>
-                <li class="list-group-item-secondary"><span class="module-list-item-indent"></span>Creating a Web Application</li>
-                <li class="list-group-item-secondary"><span class="module-list-item-indent"></span>Getting started with the first assignment</li>
-                <li class="list-group-item-secondary">READING</li>
-                <li class="list-group-item-secondary"><span class="module-list-item-indent"></span>Full Stack Developer - Chapter 1 - Introduction</li>
-                <li class="list-group-item-secondary"><span class="module-list-item-indent"></span>Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
-                <li class="list-group-item-secondary">Slides</li>
-                <li class="list-group-item-secondary"><i class="fa-solid fa-link" id="link-logo"></i><a href="#">Introduction to Web Development<i class="fa-solid fa-up-right-from-square" id="external-link-icon"></i></a></li>
-                <li class="list-group-item-secondary"><i class="fa-solid fa-link" id="link-logo"></i><a href="#">Creating an HTTP server with Node.js<i class="fa-solid fa-up-right-from-square" id="external-link-icon"></i></a></li>
+                <li class="list-group-item"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div>Week 0 - INTRO</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div>LEARNING OBJECTIVES</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><span class="module-list-item-indent"></span>Introduction to the course</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><span class="module-list-item-indent"></span>Learn what is Web Development</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><span class="module-list-item-indent"></span>Creating a development Environment</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><span class="module-list-item-indent"></span>Creating a Web Application</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><span class="module-list-item-indent"></span>Getting started with the first assignment</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div>READING</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><span class="module-list-item-indent"></span>Full Stack Developer - Chapter 1 - Introduction</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><span class="module-list-item-indent"></span>Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div>SLIDES</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><div class="module-row-icon-container link-icon-container"><i class="fa-solid fa-link" id="link-logo"></i></div><a href="#">Introduction to Web Development<i class="fa-solid fa-up-right-from-square" id="external-link-icon"></i></a></li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><div class="module-row-icon-container link-icon-container"><i class="fa-solid fa-link" id="link-logo"></i></div><a href="#">Creating an HTTP server with Node.js<i class="fa-solid fa-up-right-from-square" id="external-link-icon"></i></a></li>
               </ul>
             </div>
             <div class="home-module-content">
               <ul class="module-content list-group">
-                <li class="list-group-item">Week 1 - HTML</li>
-                <li class="list-group-item-secondary">LEARNING OBJECTIVES</li>
-                <li class="list-group-item-secondary"><span class="module-list-item-indent"></span>Learn how to create user interfaces with HTML</li>
-                <li class="list-group-item-secondary"><span class="module-list-item-indent"></span>Keep working on assignment 1</li>
-                <li class="list-group-item-secondary"><span class="module-list-item-indent"></span>Deploy the assignment to Netlify</li>
-                <li class="list-group-item-secondary">READING</li>
-                <li class="list-group-item-secondary"><span class="module-list-item-indent"></span>Full Stack Developer - Chapter 1 - Introduction</li>
-                <li class="list-group-item-secondary"><span class="module-list-item-indent"></span>Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
-                <li class="list-group-item-secondary">Slides</li>
-                <li class="list-group-item-secondary"><i class="fa-solid fa-link" id="link-logo"></i><a href="#">Introduction to HTML and the DOM<i class="fa-solid fa-up-right-from-square" id="external-link-icon"></i></a></li>
-                <li class="list-group-item-secondary"><i class="fa-solid fa-link" id="link-logo"></i><a href="#">Formatting Web content with Headings and Paragraphs<i class="fa-solid fa-up-right-from-square" id="external-link-icon"></i></a></li>
+                <li class="list-group-item"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div>Week 1 - HTML<div class="module-row-right-side-icons-container"><div class="module-row-icon-container-end"><i class="fa-solid fa-ellipsis-vertical"></i></div></div></li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div>LEARNING OBJECTIVES</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><span class="module-list-item-indent"></span>Learn how to create user interfaces with HTML</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><span class="module-list-item-indent"></span>Keep working on assignment 1</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><span class="module-list-item-indent"></span>Deploy the assignment to Netlify</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div>READING</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><span class="module-list-item-indent"></span>Full Stack Developer - Chapter 1 - Introduction</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><span class="module-list-item-indent"></span>Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div>SLIDES</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><div class="module-row-icon-container link-icon-container"><i class="fa-solid fa-link" id="link-logo"></i></div><a href="#">Introduction to HTML and the DOM<i class="fa-solid fa-up-right-from-square" id="external-link-icon"></i></a></li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><div class="module-row-icon-container link-icon-container"><i class="fa-solid fa-link" id="link-logo"></i></div><a href="#">Formatting Web content with Headings and Paragraphs<i class="fa-solid fa-up-right-from-square" id="external-link-icon"></i></a></li>
               </ul>
             </div>
             <div class="home-module-content">
               <ul class="module-content list-group">
-                <li class="list-group-item">Required Textbook</li>
-                <li class="list-group-item-secondary"><i class="fa-solid fa-link" id="link-logo"></i><a href="#">Required Text - Full Stack Developer<i class="fa-solid fa-up-right-from-square" id="external-link-icon"></i></a></li>
-                <li class="list-group-item-secondary"><i class="fa-solid fa-link" id="link-logo"></i><a href="#">Link to Web Support Form<i class="fa-solid fa-up-right-from-square" id="external-link-icon"></i></a></li>
-                <li class="list-group-item-secondary"><i class="fa-solid fa-link" id="link-logo"></i><a href="#">Link to Student Customer Service Portal<i class="fa-solid fa-up-right-from-square" id="external-link-icon"></i></a></li>
+                <li class="list-group-item"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div>Required Textbook</li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><div class="module-row-icon-container link-icon-container"><i class="fa-solid fa-link" id="link-logo"></i></div><a href="#">Required Text - Full Stack Developer<i class="fa-solid fa-up-right-from-square" id="external-link-icon"></i></a></li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><div class="module-row-icon-container link-icon-container"><i class="fa-solid fa-link" id="link-logo"></i></div><a href="#">Link to Web Support Form<i class="fa-solid fa-up-right-from-square" id="external-link-icon"></i></a></li>
+                <li class="list-group-item-secondary"><div class="module-row-icon-container"><i class="fa-solid fa-grip-vertical" id="module-row-grip-icon"></i></div><div class="module-row-icon-container link-icon-container"><i class="fa-solid fa-link" id="link-logo"></i></div><a href="#">Link to Student Customer Service Portal<i class="fa-solid fa-up-right-from-square" id="external-link-icon"></i></a></li>
               </ul>
             </div>
           </div>

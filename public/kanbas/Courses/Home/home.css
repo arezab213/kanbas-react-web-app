@@ -58,6 +58,8 @@ ul.module-content.list-group {
 }
 
 ul.module-content .list-group-item {
+  display: flex;
+  flex-direction: row;
   margin-top: 15px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -73,11 +75,14 @@ ul.module-content .list-group-item {
 
 ul.module-content .list-group-item-secondary {
   /*width: 100%*/
+  display: flex;
+  flex-direction: row;
   padding-top: 12px;
   padding-right: 6px;
   padding-bottom: 12px;
   padding-left: 10px;
   border: 1px solid #c7cdd1;
+  border-left: 3px solid #05a82b;
   border-top: 0;
   font-size: 18px;
   font-weight: 300;
@@ -92,17 +97,90 @@ span.module-list-item-indent {
 }
 
 .home-module-content i#link-logo {
-  height: 16px;
+  /*height: 16px;
   width: 16px;
   margin-right: 12px;
   margin-left: 12px;
-  font-size: 12px;
-  color: #66696e;
+  font-size: 12px;*/
+  color: #05a82b;
 }
 
 .home-module-content i#external-link-icon {
   margin-left: 10px;
   font-size: 12px;
+}
+
+/*i#module-row-grip-icon {
+  margin-right: 10px;
+  margin-left: 4px;
+  margin-bottom: 2px;
+  font-size: 16px;
+}
+
+.list-group-item-secondary > i#module-row-grip-icon {
+  margin-left: 0px;
+}*/
+
+.module-row-icon-container {
+  width: 20px;
+  height: 30px;
+  margin-right: 8px;
+  margin-left: 4px;
+  text-align: center;
+  font-size: 16px;
+  padding-top: 7px;
+}
+
+.module-row-right-side-icons-container {
+
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  align-items: flex-end;
+}
+
+.module-row-icon-container-end {
+  width: 20px;
+  height: 30px;
+  text-align: center;
+  /*margin-left: auto;*/
+  font-size: 16px;
+  padding-top: 7px;
+  float: right;
+  /*margin-left: 10px;*/
+  /*position: relative;
+  right: 0%;*/
+  /*margin-right: 8px;
+  margin-left: 4px;
+
+  font-size: 16px;
+  padding-top: 7px;*/
+}
+
+.list-group-item-secondary > .module-row-icon-container {
+  width: 20px;
+  height: 27px;
+  margin-left: 0px;
+  padding-top: 5px;
+}
+
+.list-group-item-secondary > .module-row-icon-container-end {
+  width: 20px;
+  height: 27px;
+
+  /*margin-left: 0px;
+  padding-top: 5px;*/
+}
+
+.list-group-item-secondary > .module-row-icon-container.link-icon-container {
+  /*width: 20px;
+  height: 30px;*/
+  margin-right: 10px;
+  margin-left: 10px;
+  /*text-align: center;
+  font-size: 16px;
+  padding-top: 7px;*/
 }
 
 .home-side-content {
