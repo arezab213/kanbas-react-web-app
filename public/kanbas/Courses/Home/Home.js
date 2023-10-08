@@ -5,10 +5,10 @@ function Home() {
   return `
     <div class="flex-row-container">
       <div class="kanbas-navigation">
-        <div class="logo-container">
-          <img class="logo-mark" src="../../../images/nu_logo.png" alt="..."/>
-        </div>
-        <div>
+        <div class="kn-navigation-wrapper">
+          <div class="logo-container">
+            <img class="logo-mark" src="../../../images/nu_logo.png" alt="..."/>
+          </div>
           ${KanbasNavigation("Courses")}
         </div>
       </div>
@@ -85,6 +85,13 @@ function Home() {
             </div>
           </div>
           <div class="home-side-content">
+            <button type="button" class="btn btn-primary"><i class="fa-solid fa-file-import button-icon"></i>Import Existing Content</button>
+            <button type="button" class="btn btn-primary"><i class="fa-solid fa-file-import button-icon"></i>Import from Commons</button>
+            <button type="button" class="btn btn-primary"><i class="fa-solid fa-file-import button-icon"></i>Choose Home Page</button>
+            <button type="button" class="btn btn-primary"><i class="fa-solid fa-file-import button-icon"></i>View Course Stream</button>
+            <button type="button" class="btn btn-primary"><i class="fa-solid fa-file-import button-icon"></i>New Announcement</button>
+            <button type="button" class="btn btn-primary"><i class="fa-solid fa-file-import button-icon"></i>New Analytics</button>
+            <button type="button" class="btn btn-primary"><i class="fa-solid fa-file-import button-icon"></i>View Course Notifications</button>
           </div>
         </div>
       </div>
