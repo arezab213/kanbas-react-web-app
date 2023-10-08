@@ -37,7 +37,12 @@ function Home() {
           </div>
           <div class="home-main-content">
             <div class="secondary-header-bar">
+              <button type="button" class="btn btn-primary ellipses"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+              <button type="button" class="btn btn-secondary"><i class="fa-solid fa-plus" id="add-module-icon"></i>Module</button>
+              <button type="button" class="btn btn-primary dropdown-toggle"><i class="fa-regular fa-circle-check"  id="publish-all-check-icon"></i>Publish All</button>
+              <button type="button" class="btn btn-primary">View Progress</button>
               <button type="button" class="btn btn-primary">Collapse All</button>
+
             </div>
           </div>
           <div class="home-side-content">

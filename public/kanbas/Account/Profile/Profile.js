@@ -70,7 +70,7 @@ function Profile() {
                 </div>
                 <div class="edit-profile-final-btn-row">
                   <a href="/Kanbas/Account/Profile/index.html"><button type="button" class="btn btn-primary">Cancel</button></a>
-                  <a href="/Kanbas/Account/Profile/index.html"><button type="button" class="btn btn-primary" id="profile-save-btn">Save Profile</button></a>
+                  <a href="/Kanbas/Account/Profile/index.html"><button type="button" class="btn btn-secondary">Save Profile</button></a>
                 </div>
               </div>
               <div class="acc-profile-layout-secondary">
