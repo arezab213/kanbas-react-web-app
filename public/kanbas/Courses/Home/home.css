@@ -1,0 +1,22 @@
+.home-main-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.home-main-content > .secondary-header-bar {
+  /*padding: 36px;*/
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #c7cdd1;
+  min-height: 33px;
+  padding-bottom: 12px;
+}
+
+.home-side-content {
+  display: block;
+  width: 288px;
+  padding: 24px;
+}

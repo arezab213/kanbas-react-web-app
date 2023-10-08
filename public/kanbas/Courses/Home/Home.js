@@ -30,11 +30,18 @@ function Home() {
           </div>
         </div>
         <div class="below-header-content">
-        <div class="secondary-navigation">
-          <div class="sn-list-container">
-            ${SecondaryNavigation("Home", "courses")}
-          <div>
-        </div>
+          <div class="secondary-navigation">
+            <div class="sn-list-container">
+              ${SecondaryNavigation("Home", "courses")}
+            </div>
+          </div>
+          <div class="home-main-content">
+            <div class="secondary-header-bar">
+              <button type="button" class="btn btn-primary">Collapse All</button>
+            </div>
+          </div>
+          <div class="home-side-content">
+          </div>
         </div>
       </div>
     </div>
