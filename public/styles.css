@@ -7,6 +7,29 @@ body * {
     box-shadow: none !important;
 }
 
+a {
+  text-decoration: none;
+  color: #A32424;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #A32424;
+}
+
+/*i#link-logo {
+  height: 16px;
+  width: 16px;
+  margin-right: 6px;
+  font-size: 12px;
+  color: #66696e;
+}
+
+i#external-link-icon {
+  margin-left: 5px;
+  font-size: 12px;
+}*/
+
 .btn {
   background-color: #f5f5f5;
   color: #2d3b45;

@@ -17,7 +17,6 @@
   border-bottom-color: #c7cdd1;
   min-height: 33px;
   padding-bottom: 12px;
-
   /*float: right;*/
 }
 
@@ -38,6 +37,72 @@ i#add-module-icon {
   font-size: 16px;
   margin-right: 5px;
   color: #ffffff;
+}
+
+.home-module-content {
+  padding: 9px;
+  margin-top: 15px;
+  padding-bottom: 24px;
+}
+
+/*.module-header {
+
+}*/
+
+ul.module-content.list-group {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  border-radius: 0px;
+  /*border-collapse: collapse;*/
+}
+
+ul.module-content .list-group-item {
+  margin-top: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 6px;
+  padding-left: 6px;
+  color: #4c5860;
+  background-color: #f5f5f5;
+  border: 1px solid #c7cdd1;
+  font-size: 20px;
+  font-weight: 400;
+  /*box-sizing: content-box;*/
+}
+
+ul.module-content .list-group-item-secondary {
+  /*width: 100%*/
+  padding-top: 12px;
+  padding-right: 6px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  border: 1px solid #c7cdd1;
+  border-top: 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #4c5860;
+  background-color: #ffffff;
+
+}
+
+span.module-list-item-indent {
+  padding-left: 40px;
+  width: 0px;
+}
+
+.home-module-content i#link-logo {
+  height: 16px;
+  width: 16px;
+  margin-right: 12px;
+  margin-left: 12px;
+  font-size: 12px;
+  color: #66696e;
+}
+
+.home-module-content i#external-link-icon {
+  margin-left: 10px;
+  font-size: 12px;
 }
 
 .home-side-content {
