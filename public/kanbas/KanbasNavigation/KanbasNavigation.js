@@ -1,7 +1,7 @@
 function KanbasNavigation(active) {
   const links = [
     { text: "Account", url: "/Kanbas/Account/Profile/index.html", icon: "fa-regular fa-circle-user" },
-    { text: "Dashboard", url: "#", icon: "fa-solid fa-gauge-high"  },
+    { text: "Dashboard", url: "/Kanbas/Dashboard/index.html", icon: "fa-solid fa-gauge-high"  },
     { text: "Courses", url: "/Kanbas/Courses/Home/home.html", icon: "fa-solid fa-book"  },
     { text: "Calendar", url: "#", icon: "fa-solid fa-calendar-days"  },
     { text: "Inbox", url: "#", icon: "fa-solid fa-inbox"  },

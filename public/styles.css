@@ -80,6 +80,11 @@ ul.breadcrumbs .list-group-item {
   font-weight: 300;
 }
 
+ul.breadcrumbs .list-group-item#dashboard-header {
+  font-size: 35px;
+  font-weight: 200;
+}
+
 ul.breadcrumbs .list-group-item a {
   color:  #a32424;
   text-decoration: none;
