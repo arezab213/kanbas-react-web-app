@@ -42,6 +42,7 @@ function Dashboard() {
           <a class="mobile-header-title" data-bs-toggle="collapse" href="#collapseKN" role="button">
             <div>Dashboard</div>
           </a>
+          <div class="mobile-header-bar-icon-container"></div>
         </div>
         <div class="dashboard-main-content-wrapper">
           <div class="header-bar">

@@ -91,6 +91,8 @@ i#Account {
   padding: 24px;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 ul.mkn.list-group {
