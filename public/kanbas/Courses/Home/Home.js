@@ -22,12 +22,10 @@ function Home() {
     </div>
     <div class="flex-row-container">
       <div class="d-none d-md-flex kanbas-navigation">
-        <div class="kn-navigation-wrapper">
-          <div class="logo-container">
-            <img class="logo-mark" src="../../../images/nu_logo.png" alt="..."/>
-          </div>
-          ${KanbasNavigation("Courses")}
+        <div class="logo-container">
+          <img class="logo-mark" src="../../../images/nu_logo.png" alt="..."/>
         </div>
+        ${KanbasNavigation("Courses")}
       </div>
       <div class="main-content-wrapper">
         <div class="d-none d-md-flex header-bar">
