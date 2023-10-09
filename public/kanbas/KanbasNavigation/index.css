@@ -125,7 +125,7 @@ ul.mkn .list-group-item a {
 }
 
 ul.mkn .list-group-item.active a {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 ul.mkn .list-group-item a:hover {
@@ -140,7 +140,6 @@ ul.mkn .list-group-item .icon-container {
   margin-right: 20px;
   display: inline-block;
 }
-
 
 ul.mkn .list-group-item i {
   font-size: 30px;

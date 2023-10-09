@@ -265,3 +265,14 @@ button#profile-add-link-btn {
 i#remove-link-icon {
   color: #d41b2c;
 }
+
+@media only screen and (max-width:767px) {
+    /*.mobile-header-bar {
+      height: 55px;
+    }*/
+
+    .acc-main-content {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+}

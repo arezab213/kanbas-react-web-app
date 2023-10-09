@@ -197,7 +197,7 @@ ul.breadcrumbs .list-group-item a:hover {
   flex-grow: 1;
   align-items: center;
   background-color: #000000;
-  height: 80px;
+  height: 55px;
   color: #ffffff;
 }
 
@@ -218,6 +218,12 @@ ul.breadcrumbs .list-group-item a:hover {
   color: #ffffff;
 }
 /* ***********************mobile-header bar styling end************************** */
+.icon-toggle[aria-expanded=true] i#chevron-down {
+  display: none;
+}
+.icon-toggle[aria-expanded=false] i#xmark {
+  display: none;
+}
 
 @media only screen and (max-width:767px) {
     .main-content-wrapper {
