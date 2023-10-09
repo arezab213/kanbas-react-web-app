@@ -37,8 +37,9 @@ function Home() {
             <div>CS4550.19753.202410</div>
             <div>Modules</div>
           </a>
-          <a class="mobile-header-bar-icon-container" data-bs-toggle="collapse" href="#collapseSN" role="button">
-            <i class="fa-solid fa-chevron-down"></i>
+          <a class="mobile-header-bar-icon-container icon-toggle" data-bs-toggle="collapse" aria-expanded="false" href="#collapseSN" role="button">
+            <i class="fa-solid fa-chevron-down" id="chevron-down"></i>
+            <i class="fa-solid fa-xmark" id="xmark"></i>
           </a>
         </div>
         <div class="collapse" id="collapseSN">

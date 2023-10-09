@@ -285,6 +285,13 @@ h6#home-side-panel-subheader {
   margin-top: 17px;
 }
 
+.icon-toggle[aria-expanded=true] i#chevron-down {
+  display: none;
+}
+.icon-toggle[aria-expanded=false] i#xmark {
+  display: none;
+}
+
 @media only screen and (max-width:767px) {
     .home-main-content {
       padding-left: 12px;
