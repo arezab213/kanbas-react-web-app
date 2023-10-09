@@ -13,7 +13,7 @@ function Home() {
         </div>
       </div>
       <div class="main-content-wrapper">
-        <div class="header-bar">
+        <div class="d-none d-md-flex header-bar">
           <i class="fa-solid fa-bars" id="menu-button"></i>
           <div class="breadcrumb-wrapper">
             <nav id="breadcrumbs">

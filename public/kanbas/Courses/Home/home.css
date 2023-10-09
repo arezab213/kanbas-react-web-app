@@ -284,3 +284,10 @@ h6#home-side-panel-subheader {
 .home-side-content .btn-subsections {
   margin-top: 17px;
 }
+
+@media only screen and (max-width:767px) {
+    .home-main-content {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+}
