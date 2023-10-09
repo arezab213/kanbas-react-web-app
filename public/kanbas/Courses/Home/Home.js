@@ -4,7 +4,7 @@ import KanbasNavigation from "../../KanbasNavigation/KanbasNavigation.js"
 function Home() {
   return `
     <div class="flex-row-container">
-      <div class="kanbas-navigation">
+      <div class="d-none d-md-flex kanbas-navigation">
         <div class="kn-navigation-wrapper">
           <div class="logo-container">
             <img class="logo-mark" src="../../../images/nu_logo.png" alt="..."/>
@@ -30,7 +30,7 @@ function Home() {
           </div>
         </div>
         <div class="below-header-content">
-          <div class="secondary-navigation">
+          <div class="d-none d-md-block secondary-navigation">
             <div class="sn-list-container">
               ${SecondaryNavigation("Home", "courses")}
             </div>
@@ -84,7 +84,7 @@ function Home() {
               </ul>
             </div>
           </div>
-          <div class="home-side-content">
+          <div class="d-none d-xl-flex home-side-content">
             <div id="course-status-btns">
               <h5 id="home-side-panel-header">Course Status</h5>
               <div class="btn-group" role="group" aria-label="Basic example">
