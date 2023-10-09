@@ -4,6 +4,11 @@ import KanbasNavigation from "../../KanbasNavigation/KanbasNavigation.js"
 function Home() {
   return `
     <div class="flex-row-container">
+      <div class="d-xs-flex d-sm-flex d-md-none mobile-kanbas-nav">
+        <div class="collapse collapse-horizontal" id="collapseKN">
+          ${KanbasNavigation("Courses", true)}
+        </div>
+      </div>
       <div class="d-none d-md-flex kanbas-navigation">
         <div class="kn-navigation-wrapper">
           <div class="logo-container">
@@ -30,7 +35,7 @@ function Home() {
           </div>
         </div>
         <div class="d-xs-flex d-sm-flex d-md-none mobile-header-bar">
-          <a class="mobile-header-bar-icon-container" data-bs-toggle="collapse" href="#collapseSN" role="button">
+          <a class="mobile-header-bar-icon-container" data-bs-toggle="collapse" href="#collapseKN" role="button">
             <i class="fa-solid fa-bars"></i>
           </a>
           <a class="mobile-header-title" data-bs-toggle="collapse" href="#collapseSN" role="button">
