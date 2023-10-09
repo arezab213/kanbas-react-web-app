@@ -3,12 +3,24 @@ import KanbasNavigation from "../../KanbasNavigation/KanbasNavigation.js"
 
 function Home() {
   return `
-    <div class="flex-row-container">
+    <div class="collapse collapse-horizontal" id="collapseKN">
       <div class="d-xs-flex d-sm-flex d-md-none mobile-kanbas-nav">
-        <div class="collapse collapse-horizontal" id="collapseKN">
-          ${KanbasNavigation("Courses", true)}
+        <div class="kn-mobile-header-bar">
+          <a class="kn-mobile-header-bar-title" href="#">
+            <div class="kn-mobile-header-bar-icon-container">
+              <img class="logo-mark" src="../../../images/canvas_logo_single_mark.png" alt="..."/>
+            </div>
+            <div class="logo-label">KANBAS</div>
+          </a>
+          <a class="kn-mobile-header-bar-icon-container" id="xmark" data-bs-toggle="collapse" href="#collapseKN" role="button">
+            <i class="fa-solid fa-xmark" id="kn-xmark"></i>
+          </a>
         </div>
+        ${KanbasNavigation("Courses", true)}
       </div>
+    </div>
+    </div>
+    <div class="flex-row-container">
       <div class="d-none d-md-flex kanbas-navigation">
         <div class="kn-navigation-wrapper">
           <div class="logo-container">
