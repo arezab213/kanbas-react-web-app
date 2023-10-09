@@ -1,24 +1,24 @@
-function SecondaryNavigation(active, page) {
-
+function SecondaryNavigation(active, page, mobile) {
   const courses_links = [
-      { text: "Home", url: "/Kanbas/Courses/Home/home.html" },
-      { text: "Modules", url: "#" },
-      { text: "Piazza", url: "#" },
-      { text: "Zoom Meetings", url: "#" },
-      { text: "Assignments", url: "/Kanbas/Courses/Assignments/index.html" },
-      { text: "Quizzes", url: "#" },
-      { text: "Grades", url: "/Kanbas/Courses/Grades/index.html" },
-      { text: "People", url: "#"},
-      { text: "Panopto Video", url: "#"},
-      { text: "Discussions", url: "#"},
-      { text: "Announcements", url: "#"},
-      { text: "Pages", url: "#"},
-      { text: "Files", url: "#"},
-      { text: "Rubrics", url: "#"},
-      { text: "Outcomes", url: "#"},
-      { text: "Collaborations", url: "#"},
-      { text: "Syllabus", url: "#"},
-      { text: "Settings", url: "#"},
+      { text: "Home", url: "/Kanbas/Courses/Home/home.html", icon: "fa-solid fa-house" },
+      { text: "Modules", url: "#", icon: "fa-solid fa-circle-nodes" },
+      { text: "Piazza", url: "#", icon: "fa-solid fa-plug" },
+      { text: "Zoom Meetings", url: "#", icon: "fa-solid fa-plug" },
+      { text: "Assignments", url: "/Kanbas/Courses/Assignments/index.html", icon: "fa-solid fa-pencil" },
+      { text: "Quizzes", url: "#", icon: "fa-solid fa-rocket" },
+      { text: "Grades", url: "/Kanbas/Courses/Grades/index.html", icon: "fa-solid fa-book" },
+      { text: "People", url: "#", icon: "fa-solid fa-user-group"},
+      { text: "Panopto Video", url: "#", icon: "fa-solid fa-plug"},
+      { text: "Discussions", url: "#", icon: "fa-regular fa-comments"},
+      { text: "Announcements", url: "#", icon: "fa-solid fa-bullhorn"},
+      { text: "Pages", url: "#", icon: "fa-regular fa-file-lines"},
+      { text: "Files", url: "#", icon: "fa-regular fa-folder"},
+      { text: "Rubrics", url: "#", icon: "fa-solid fa-clipboard-list"},
+      { text: "Outcomes", url: "#", icon: "fa-regular fa-bullseye"},
+      { text: "Collaborations", url: "#", icon: "fa-regular fa-circle"},
+      { text: "Syllabus", url: "#", icon: "fa-solid fa-list-ul"},
+      { text: "Progress Reports (EAB Navigate)", url: "#", icon: "fa-solid fa-plug"},
+      { text: "Settings", url: "#", icon: "fa-solid fa-gear"},
     ];
     const account_links = [
           { text: "Notifications", url: "#" },
@@ -33,19 +33,11 @@ function SecondaryNavigation(active, page) {
         ];
     var links;
     page == "courses" ? links = courses_links : links = account_links;
-  return `
-<ul class="secondary-navigation list-group">
-  ${links
-    .map(
-      (link) => `
-    <li class="list-group-item ${active === link.text ? "active" : ""}">
-      <a href="${link.url}" class="secondary-navigation-link ">${link?.text}</a>
-    </li>
-  `
-    )
-    .join("")}
-</ul>
-`;
-}
+    if (mobile) {
+      return `<ul class="mobile-secondary-nav list-group">${links.map((link) => `<li class="list-group-item ${active === link.text ? "active" : ""}"">
+      <a href="${link.url}" class="secondary-navigation-link "><i class="${link.icon}" id="${link.text}"></i>${link?.text}</a></li>`).join("")}</ul>`;
+    }
+    return `<ul class="secondary-navigation list-group">${links.map((link) => `<li class="list-group-item ${active === link.text ? "active" : ""}"">
+    <a href="${link.url}" class="secondary-navigation-link ">${link?.text}</a></li>`).join("")}</ul>`;}
 
 export default SecondaryNavigation;

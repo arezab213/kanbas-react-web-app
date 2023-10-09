@@ -14,7 +14,8 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: #A32424;
+  /*color: #A32424;*/
+  color: inherit;
 }
 
 /*i#link-logo {
@@ -111,7 +112,7 @@ i#external-link-icon {
   width: 100%;
 }
 
-/*header bar styling start */
+/* ***********************header bar styling end************************** */
 .header-bar {
   display: flex;
   align-items: center;
@@ -187,7 +188,37 @@ ul.breadcrumbs .list-group-item a:hover {
   font-size: 10px;
 }
 
-/*header bar styling end*/
+/* ***********************header bar styling end************************** */
+
+/* ***********************mobile-header bar styling start************************** */
+.mobile-header-bar {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  background-color: #000000;
+  height: 80px;
+  color: #ffffff;
+}
+
+.mobile-header-title {
+  text-align: center;
+  display: block;
+  flex-grow: 1;
+  color: #ffffff;
+}
+
+.mobile-header-bar-icon-container {
+  /*height: 80px;
+
+  color: #ffffff;
+  padding: 20px;*/
+  text-align: center;
+  width: 60px;
+  color: #ffffff;
+}
+/* ***********************mobile-header bar styling end************************** */
+
 @media only screen and (max-width:767px) {
     .main-content-wrapper {
         margin-left: 0px;

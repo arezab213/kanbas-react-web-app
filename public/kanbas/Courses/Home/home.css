@@ -4,7 +4,7 @@
   flex-direction: column;
   flex-grow: 1;
   flex-shrink: 1;
-  min-width: 600px;
+  /*min-width: 600px;*/
 }
 
 .home-main-content > .secondary-header-bar {
@@ -290,4 +290,17 @@ h6#home-side-panel-subheader {
       padding-left: 12px;
       padding-right: 12px;
     }
+}
+
+@media only screen and (max-width:992px) {
+  .secondary-header-bar .btn {
+    margin-left: 5px;
+    max-height: 42px;
+  }
+  .home-main-content > .secondary-header-bar {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

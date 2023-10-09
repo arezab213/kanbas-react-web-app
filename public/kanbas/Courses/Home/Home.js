@@ -29,10 +29,27 @@ function Home() {
             </nav>
           </div>
         </div>
+        <div class="d-xs-flex d-sm-flex d-md-none mobile-header-bar">
+          <a class="mobile-header-bar-icon-container" data-bs-toggle="collapse" href="#collapseSN" role="button">
+            <i class="fa-solid fa-bars"></i>
+          </a>
+          <a class="mobile-header-title" data-bs-toggle="collapse" href="#collapseSN" role="button">
+            <div>CS4550.19753.202410</div>
+            <div>Modules</div>
+          </a>
+          <a class="mobile-header-bar-icon-container" data-bs-toggle="collapse" href="#collapseSN" role="button">
+            <i class="fa-solid fa-chevron-down"></i>
+          </a>
+        </div>
+        <div class="collapse" id="collapseSN">
+          <div class="d-xs-block d-sm-block d-md-none mobile-secondary-nav">
+            ${SecondaryNavigation("Home", "courses", true)}
+          </div>
+        </div>
         <div class="below-header-content">
           <div class="d-none d-md-block secondary-navigation">
             <div class="sn-list-container">
-              ${SecondaryNavigation("Home", "courses")}
+              ${SecondaryNavigation("Home", "courses", false)}
             </div>
           </div>
           <div class="home-main-content">
