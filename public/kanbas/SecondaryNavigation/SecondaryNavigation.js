@@ -21,15 +21,15 @@ function SecondaryNavigation(active, page, mobile) {
       { text: "Settings", url: "#", icon: "fa-solid fa-gear"},
     ];
     const account_links = [
-          { text: "Notifications", url: "#" },
-          { text: "Profile", url: "/Kanbas/Account/Profile/index.html" },
-          { text: "Files", url: "#" },
-          { text: "Settings", url: "#" },
-          { text: "ePortfolios", url: "#" },
-          { text: "Shared Content", url: "#" },
-          { text: "The Hub", url: "#" },
-          { text: "Qwickly Course Tools", url: "#"},
-          { text: "Global Announcements", url: "#"},
+          { text: "Notifications", url: "#", icon: "fa-solid fa-bullhorn" },
+          { text: "Profile", url: "/Kanbas/Account/Profile/index.html", icon: "fa-regular fa-user" },
+          { text: "Files", url: "#", icon: "a-regular fa-folder" },
+          { text: "Settings", url: "#", icon: "fa-solid fa-gear" },
+          { text: "ePortfolios", url: "#", icon: "fa-solid fa-bullhorn" },
+          { text: "Shared Content", url: "#", icon: "fa-regular fa-circle" },
+          { text: "The Hub", url: "#", icon: "fa-solid fa-plug" },
+          { text: "Qwickly Course Tools", url: "#", icon: "fa-solid fa-plug"},
+          { text: "Global Announcements", url: "#", icon: "fa-regular fa-circle"},
         ];
     var links;
     page == "courses" ? links = courses_links : links = account_links;
