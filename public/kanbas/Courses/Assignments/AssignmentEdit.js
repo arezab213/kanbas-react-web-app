@@ -81,6 +81,20 @@ function AssignmentEdit() {
                 </div>
               </div>
             </div>
+            <div class="assignment-edit-form">
+              <label for="assignment-name" class="form-label">Assignment Name</label>
+              <input class="form-control profile-text-input" type="text" value="A# - Assignment Name">
+            </div>
+            <div class="edit-form-end-btn-row">
+              <div class="form-check notify-users-option">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Notify users that this content has changed
+                </label>
+              </div>
+              <button type="button" class="btn btn-primary">Cancel</button>
+              <button type="button" class="btn btn-secondary"></i>Save</button>
+            </div>
           </div>
         </div>
       </div>

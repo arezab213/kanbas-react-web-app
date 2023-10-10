@@ -35,7 +35,7 @@
   color: #05a82b;
 }
 
-.secondary-header-bar .btn {
+.secondary-header-bar .btn, .edit-form-end-btn-row .btn {
   margin-left: 5px;
 }
 
@@ -231,6 +231,81 @@ i.fa-plus {
 .assignment-main-content a:hover {
   text-decoration: underline;
 }
+
+/**********************************edit********************************************/
+.assignment-edit-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #c7cdd1;
+  padding-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.edit-form-end-btn-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #c7cdd1;
+  min-height: 33px;
+  padding-bottom: 12px;
+  padding-right: 8px;
+  padding-left: 8px;
+  align-items: center;
+}
+
+.form-check.notify-users-option {
+  display: flex;
+  flex-grow: 1;
+}
+
+.form-check.notify-users-option * {
+  display: flex;
+  font-size: 14px;
+  font-weight: 300;
+  color: #333333;
+  margin-right: 7px;
+}
+
+.form-control.profile-text-input {
+  width: 100%;
+  height: 38px;
+  display: block;
+  box-shadow: none;
+  border-width: 1px;
+  border-style: solid;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-color: #d8e0e6;
+  font-size: 14px;
+  font-weight: 200;
+  border-radius: 3px;
+}
+
+/*.form-control:focus {
+  outline: 0px !important;
+}*/
+
+.form-control.profile-text-input:focus {
+  border-color: #d41b2c;
+  border-width: 2px;
+  /*outline: 0px none #ffffff !important;*/
+  /*box-shadow: none !important;*/
+}
+
+
+
+/**********************************edit********************************************/
+
+
+
 
 @media only screen and (max-width:767px) {
     .assignment-main-content {
