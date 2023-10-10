@@ -68,7 +68,7 @@ function Assignments() {
             </div>
           </div>
           <div class="assignment-main-content">
-            <div class="secondary-header-bar">
+            <div class="secondary-header-bar main-page">
               <input class="form-control assignment-text-input" type="text" placeholder="Search for Assignment">
               <div class="btns-row">
                 <button type="button" class="btn btn-primary ellipses"><i class="fa-solid fa-ellipsis-vertical"></i></button>

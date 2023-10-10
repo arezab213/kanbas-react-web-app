@@ -4,6 +4,7 @@
   flex-direction: column;
   flex-grow: 1;
   flex-shrink: 1;
+  margin-bottom: 50px;
 }
 
 .assignment-main-content > .secondary-header-bar {
@@ -39,7 +40,7 @@
   margin-left: 5px;
 }
 
-.secondary-header-bar .btn :not(i.fa-ellipsis-vertical) {
+.assignment-main-content .btn :not(i.fa-ellipsis-vertical) {
   color: #2d3b45;
   margin-right: 5px;
 }
@@ -241,7 +242,7 @@ i.fa-plus {
   border-bottom-style: solid;
   border-bottom-color: #c7cdd1;
   padding-bottom: 50px;
-  margin-top: 20px;
+  margin-top: 12px;
   margin-bottom: 12px;
 }
 
@@ -259,12 +260,13 @@ i.fa-plus {
   align-items: center;
 }
 
-.form-check.notify-users-option {
+.form-check.assignment-edit-checkbox {
   display: flex;
   flex-grow: 1;
+  margin-bottom: 0px;
 }
 
-.form-check.notify-users-option * {
+.form-check.assignment-edit-checkbox * {
   display: flex;
   font-size: 14px;
   font-weight: 300;
@@ -272,8 +274,8 @@ i.fa-plus {
   margin-right: 7px;
 }
 
-.form-control.profile-text-input {
-  width: 100%;
+.form-control.assignment-edit-input {
+  /*width: 100%;*/
   height: 38px;
   display: block;
   box-shadow: none;
@@ -285,21 +287,126 @@ i.fa-plus {
   padding-right: 12px;
   border-color: #d8e0e6;
   font-size: 14px;
-  font-weight: 200;
+  font-weight: 300;
   border-radius: 3px;
 }
 
-/*.form-control:focus {
-  outline: 0px !important;
-}*/
-
-.form-control.profile-text-input:focus {
+.form-control.assignment-edit-input:focus {
   border-color: #d41b2c;
   border-width: 2px;
-  /*outline: 0px none #ffffff !important;*/
-  /*box-shadow: none !important;*/
 }
 
+.assignment-edit-form .edit-form-section {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+
+.edit-form-section .above-label {
+  margin-bottom: 5px;
+}
+
+.form-control.assignment-edit-text-area {
+  height: 130px;
+  display: block;
+  box-shadow: none;
+  border-width: 1px;
+  border-style: solid;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-color: #d8e0e6;
+  font-size: 14px;
+  font-weight: 300;
+  border-radius: 3px;
+}
+
+.form-select.assignment-edit-dropdown {
+  /*width: 220px;*/
+  height: 38px;
+  display: block;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d8e0e6;
+  border-radius: 3px;
+  background-color: #ffffff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.form-control.assignment-edit-text-area:focus {
+  border-color: #d41b2c;
+  border-width: 2px;
+}
+
+.assignment-edit-form .edit-form-section.extra-margin {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20%;
+  /*margin-left: 15%;*/
+}
+
+.edit-form-section.extra-margin.last {
+  margin-bottom: 0px;
+  /*margin-left: 15%;*/
+}
+
+.edit-form-section.extra-margin > .form-label {
+  /*margin-bottom: 5px;*/
+  width: 33.33%;
+  display: flex;
+  text-align: right;
+  justify-content: right;
+  padding-right: 15px;
+  margin-bottom: 0px;
+  /*padding-top: 2px;*/
+}
+
+.edit-form-section.extra-margin > .form-check.assignment-edit-checkbox {
+  width: 100%;
+}
+
+.assignment-edit-input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d8e0e6;
+  border-radius: 3px;
+  padding: 15px;
+  padding-bottom: 0px;
+}
+
+.assignment-edit-input-group .form-select.assignment-edit-dropdown {
+  width: 66%;
+}
+
+.assignment-edit-input-group .form-select.assignment-edit-dropdown {
+  width: 66%;
+}
+
+button#add-assign-btn {
+  width: 100%;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-top-width: 1px;
+}
+
+.last .assignment-edit-input-group {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-width: 0px;
+}
 
 
 /**********************************edit********************************************/
@@ -319,10 +426,14 @@ i.fa-plus {
 }
 
 @media only screen and (max-width:822px) {
-  .secondary-header-bar .btns-row {
+  .secondary-header-bar.main-page .btns-row {
     display: flex;
     flex-direction: row-reverse;
     flex-grow: 1;
     justify-content: left;
+  }
+
+  .form-control.assignment-text-input {
+    margin-bottom: 5px;
   }
 }
