@@ -44,6 +44,7 @@ i#external-link-icon {
   padding-left: 14px;
   text-decoration: none;
   font-weight: 300;
+  height: 40px;
 }
 
 .btn:hover {
@@ -90,7 +91,7 @@ i#external-link-icon {
 }
 
 .btn.ellipses {
-  height: 42;
+  height: 40;
   font-size: 20px;
 }
 

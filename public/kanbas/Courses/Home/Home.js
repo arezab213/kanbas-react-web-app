@@ -19,13 +19,12 @@ function Home() {
         ${KanbasNavigation("Courses", true)}
       </div>
     </div>
-    </div>
     <div class="flex-row-container">
       <div class="d-none d-md-flex kanbas-navigation">
         <div class="logo-container">
           <img class="logo-mark" src="../../../images/nu_logo.png" alt="..."/>
         </div>
-        ${KanbasNavigation("Courses")}
+        ${KanbasNavigation("Courses", false)}
       </div>
       <div class="main-content-wrapper">
         <div class="d-none d-md-flex header-bar">
