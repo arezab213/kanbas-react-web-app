@@ -23,13 +23,23 @@
   display: flex;
   flex-direction: row-reverse;
   flex-grow: 1;
+  /*align-items: center;*/
+}
+
+.btn-row-publish-status {
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+  align-items: center;
+  margin-right: 15px;
+  color: #05a82b;
 }
 
 .secondary-header-bar .btn {
   margin-left: 5px;
 }
 
-.secondary-header-bar .btn i {
+.secondary-header-bar .btn :not(i.fa-ellipsis-vertical) {
   color: #2d3b45;
   margin-right: 5px;
 }
@@ -42,8 +52,9 @@ i#publish-all-check-icon {
   color: #05a82b;
 }
 
-i#solid-check-circle {
+.btn-row-publish-status i.fa-circle-check {
   color: #05a82b;
+  margin-right: 5px;
 }
 
 .assignment-main-content .form-control.assignment-text-input {
