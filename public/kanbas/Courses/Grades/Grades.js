@@ -19,7 +19,7 @@ function Grades() {
             <nav id="breadcrumbs">
               <ul class="breadcrumbs list-group">
                 <li class="list-group-item">
-                  <a href="#">Main Section</a>
+                  <a href="/Kanbas/Courses/Home/home.html">Main Section</a>
                 </li>
                 <li class="list-group-item">
                   <i class="fa-solid fa-chevron-right" id="subsection-arrow"></i>

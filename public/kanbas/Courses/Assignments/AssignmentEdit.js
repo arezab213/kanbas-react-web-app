@@ -33,7 +33,7 @@ function AssignmentEdit() {
             <nav id="breadcrumbs">
               <ul class="breadcrumbs list-group">
                 <li class="list-group-item">
-                  <a href="#">CS4550.19753.202410</a>
+                  <a href="/Kanbas/Courses/Home/home.html">CS4550.19753.202410</a>
                 </li>
                 <li class="list-group-item">
                   <i class="fa-solid fa-chevron-right" id="subsection-arrow"></i>
@@ -111,7 +111,7 @@ function AssignmentEdit() {
                 </div>
               </div>
               <div class="edit-form-section extra-margin">
-                <label for="assignment-submission-type" class="form-label">Submission Type</label>
+                <label for="assignment-submission-type" class="form-label" id="input-group-label">Submission Type</label>
                 <div class="assignment-edit-input-group">
                   <div class="edit-form-section">
                     <select class="form-select assignment-edit-dropdown" id="assignment-submission-type"><option>Online</option></select>
@@ -162,7 +162,7 @@ function AssignmentEdit() {
                 </div>
               </div>
               <div class="edit-form-section extra-margin last">
-                <label for="assignment-submission-type" class="form-label">Assign</label>
+                <label for="assignment-submission-type" class="form-label" id="input-group-label">Assign</label>
                 <div class="assignment-edit-input-group">
                   <div class="edit-form-section">
                     <label class="form-label above-label" for="assign_to">Assign to</label>

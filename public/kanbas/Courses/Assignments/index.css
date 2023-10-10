@@ -411,8 +411,42 @@ button#add-assign-btn {
 
 /**********************************edit********************************************/
 
+@media only screen and (max-width:576px) {
+    .assignment-edit-form .edit-form-section.extra-margin {
+      margin-right: 0;
+      flex-direction: column;
+      /*margin-left: 15%;*/
+    }
 
+    .edit-form-section.extra-margin > .form-label {
+      text-align: left;
+      justify-content: left;
+/*      margin-bottom: 5px;*/
+      padding-right: 0px;
+      width: 100%
+      /*margin-left: 10vw;
+      margin-right: 10vw;*/
+    }
 
+    .assignment-edit-input-group {
+      width: 70%;
+      margin-left: 15%;
+    }
+
+    button#add-assign-btn {
+      width: 70%;
+      margin-left: 15%;
+    }
+
+    label#input-group-label {
+      text-align: center;
+      justify-content: center;
+    }
+
+    .badge.rounded-pill {
+      margin-left: 15px;
+    }
+}
 
 @media only screen and (max-width:767px) {
     .assignment-main-content {

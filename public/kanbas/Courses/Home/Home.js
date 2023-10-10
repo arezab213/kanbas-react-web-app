@@ -33,7 +33,7 @@ function Home() {
             <nav id="breadcrumbs">
               <ul class="breadcrumbs list-group">
                 <li class="list-group-item">
-                  <a href="#">CS4550.19753.202410</a>
+                  <a href="/Kanbas/Courses/Home/home.html">CS4550.19753.202410</a>
                 </li>
                 <li class="list-group-item">
                   <i class="fa-solid fa-chevron-right" id="subsection-arrow"></i>
