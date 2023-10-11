@@ -104,11 +104,9 @@ function Grades() {
               <div class="grades-page-section">
                 <button type="button" class="btn btn-primary"><i class="fa-solid fa-filter"></i>Apply Filters</button>
               </div>
-
-
-              <div class="table-responsive">
-                <div class="grades-page-section grades-table">
-                  <table class="table table-striped table-bordered table-hover">
+              <div class="grades-page-section">
+                <div class="table-responsive grades-table-container">
+                  <table class="table table-striped table-bordered table-hover grades-table">
                     <thead>
                       <tr>
                         <th scope="col">Student Name</th>
@@ -161,9 +159,8 @@ function Grades() {
                   </table>
                 </div>
               </div>
-
             </div>
-
+          </div>
         </div>
       </div>
     </div>

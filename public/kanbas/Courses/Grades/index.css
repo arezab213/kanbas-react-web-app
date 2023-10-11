@@ -5,16 +5,12 @@
   flex-direction: column;
   flex-grow: 1;
   flex-shrink: 1;
-  /*overflow-x: hidden;*/
-  /*margin-bottom: 50px;*/
 }
 
 .grades-page-section {
   display: flex;
   flex-direction: row;
-  /*flex-grow: 1;*/
   margin-top: 15px;
-  /*margin-bottom: 15px;*/
 }
 
 .grades-main-content .btn :not(i.fa-gear) {
@@ -53,11 +49,6 @@ button#settings-btn {
   border-left-width: 1px;
 }
 
-/*.form-control.grades-input:focus {
-  border-color: #d41b2c;
-  border-width: 2px;
-}*/
-
 .input-group:focus-within {
   border: 1px solid #d41b2c;
   border-radius: 3px;
@@ -87,7 +78,11 @@ button#settings-btn {
   background-color: #ffffff;
 }
 
-.grades-page-section.grades-table {
-  width: 100%;
+.grades-table {
+  width: 1200;
+  table-layout: fixed;
+}
 
+.grades-table-container {
+  width: calc(100vw - 324px)
 }
