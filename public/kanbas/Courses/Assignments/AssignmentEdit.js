@@ -172,7 +172,7 @@ function AssignmentEdit() {
                     <label class="form-label above-label" for="due_date">Due</label>
                     <input class="form-control assignment-edit-input" type="date" value="2023-09-18" id="due_date">
                   </div>
-                  <div class="d-flex flex-row">
+                  <div class="d-flex flex-row gap-2">
                     <div class="flex-grow-1 edit-form-section">
                       <label class="form-label above-label" for="avl_from">Available from</label>
                       <input class="form-control assignment-edit-input" type="date" id="avl_from">
