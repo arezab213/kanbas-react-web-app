@@ -66,6 +66,105 @@ function Grades() {
               ${SecondaryNavigation("Grades", "courses", false)}
             </div>
           </div>
+          <div class="main-content-area">
+            <div class="grades-main-content">
+              <div class="grades-page-section justify-content-end">
+                <button type="button" class="btn btn-primary top-row"><i class="fa-solid fa-file-import"></i></i>Import</button>
+                <button type="button" class="btn btn-primary dropdown-toggle top-row"><i class="fa-solid fa-file-export"></i>Export</button>
+                <button type="button" class="btn btn-primary icon" id="settings-btn"><i class="fa-solid fa-gear"></i></button>
+              </div>
+              <div class="search-fields">
+                <div class="row g-3">
+                  <div class="col">
+                    <label for="student-names" class="form-label above-label">Student Names</label>
+                  </div>
+                  <div class="col">
+                    <label for="assignment-names" class="form-label above-label">Assignment Names</label>
+                  </div>
+                </div>
+                <div class="row g-3">
+                  <div class="col">
+                    <div class="input-group">
+                      <div class="input-group-prepend grades-search">
+                        <div class="input-group-text"><i class="fa fa-search"></i></div>
+                      </div>
+                      <input class="form-control grades-input" type="search" placeholder="Search Students" id="student-names">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="input-group">
+                      <div class="input-group-prepend grades-search">
+                        <div class="input-group-text"><i class="fa fa-search"></i></div>
+                      </div>
+                      <input class="form-control grades-input" type="search" placeholder="Search Assignments" id="assignment-names">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="grades-page-section">
+                <button type="button" class="btn btn-primary"><i class="fa-solid fa-filter"></i>Apply Filters</button>
+              </div>
+
+
+                <div class="table-responsive">
+                <div class="grades-page-section grades-table">
+                  <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">Student Name</th>
+                        <th scope="col">A1 SETUP</th>
+                        <th scope="col">A2 HTML</th>
+                        <th scope="col">A3 CSS</th>
+                        <th scope="col">A4 BOOTSTRAP</th>
+                        <th scope="col">A5 JAVASCRIPT</th>
+                        <th scope="col">A6 REACT</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Anthony Kiedis</th>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Flea</th>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Chad Smith</th>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">John Frusciante</th>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

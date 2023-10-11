@@ -95,6 +95,13 @@ i#external-link-icon {
   font-size: 20px;
 }
 
+.btn.icon {
+  height: 40;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .flex-row-container {
   display: flex;
   flex-direction: row;
