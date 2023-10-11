@@ -182,7 +182,6 @@ ul.module-content .list-group-item-secondary:hover {
 
 .home-side-content .btn {
   float: right;
-  /*margin-top: 5px;*/
   margin-top: 5px;
   margin-right: 0px;
   margin-left: 0px;
@@ -192,21 +191,10 @@ ul.module-content .list-group-item-secondary:hover {
 
 .home-side-content .btn-group {
   float: right;
-  /*margin-top: 5px;*/
-  /*margin-bottom: 5px;
-  margin-right: 0px;
-  margin-left: 0px;*/
   width: 100%;
-  /*text-align: center;*/
 }
 
 .home-side-content .btn-group .btn {
- /* float: right;*/
-  /*margin-top: 5px;*/
-  /*margin-bottom: 5px;
-  margin-right: 0px;
-  margin-left: 0px;*/
- /* width: 100%;*/
   padding-left: 12px;
   padding-right: 12px;
   text-align: center;
@@ -225,8 +213,6 @@ button#publish-btn {
 }
 
 button#publish-btn:hover, button#publish-btn:active, button#publish-btn:focus {
-  /*border-color: #2d3b45;
-  color: #ffffff;*/
   background-color: #05a82b;
   border-color: #05a82b;
 }
@@ -249,7 +235,6 @@ h5#home-side-panel-header {
 }
 
 h6#home-side-panel-subheader {
-  /*margin-top: 17px;*/
   margin-bottom: 0px;
   padding-bottom: 6px;
   font-weight: 400;
