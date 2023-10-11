@@ -106,21 +106,38 @@ function Grades() {
               </div>
               <div class="grades-page-section">
                 <div class="table-responsive grades-table-container">
-                  <table class="table table-striped table-bordered table-hover grades-table">
+                  <table class="table table-striped table-bordered grades-table">
                     <thead>
                       <tr>
                         <th scope="col">Student Name</th>
-                        <th scope="col">A1 SETUP</th>
-                        <th scope="col">A2 HTML</th>
-                        <th scope="col">A3 CSS</th>
-                        <th scope="col">A4 BOOTSTRAP</th>
-                        <th scope="col">A5 JAVASCRIPT</th>
-                        <th scope="col">A6 REACT</th>
+                        <th scope="col"><div>A1 SETUP</div><div>Out of 100</div></th>
+                        <th scope="col"><div>A2 HTML</div><div>Out of 100</div></th>
+                        <th scope="col"><div>A3 CSS</div><div>Out of 100</div></th>
+                        <th scope="col"><div>A4 BOOTSTRAP</div><div>Out of 100</div></th>
+                        <th scope="col"><div>A5 JAVASCRIPT</div><div>Out of 100</div></th>
+                        <th scope="col"><div>A6 REACT</div><div>Out of 100</div></th>
                       </tr>
                     </thead>
                     <tbody>
+                      <tr></tr>
                       <tr>
-                        <th scope="row">Anthony Kiedis</th>
+                        <th scope="row"><a href="#">Anthony Kiedis</a></th>
+                        <td>
+                          <div class="input-group">
+                            <input class="form-control table-input" type="text" size="1" value="100%">
+                            <div class="input-group-append">
+                              <div class="input-group-text"><i class="fa-solid fa-arrow-right-to-bracket"></i></div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">Michael Balzary</a></th>
                         <td>100%</td>
                         <td>100%</td>
                         <td>100%</td>
@@ -129,7 +146,7 @@ function Grades() {
                         <td>100%</td>
                       </tr>
                       <tr>
-                        <th scope="row">Flea</th>
+                        <th scope="row"><a href="#">Chad Smith</a></th>
                         <td>100%</td>
                         <td>100%</td>
                         <td>100%</td>
@@ -138,16 +155,7 @@ function Grades() {
                         <td>100%</td>
                       </tr>
                       <tr>
-                        <th scope="row">Chad Smith</th>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                        <td>100%</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">John Frusciante</th>
+                        <th scope="row"><a href="#">John Frusciante</a></th>
                         <td>100%</td>
                         <td>100%</td>
                         <td>100%</td>
