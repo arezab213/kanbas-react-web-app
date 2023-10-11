@@ -267,12 +267,17 @@ i#remove-link-icon {
 }
 
 @media only screen and (max-width:767px) {
-    /*.mobile-header-bar {
-      height: 55px;
-    }*/
-
     .acc-main-content {
       padding-left: 24px;
       padding-right: 24px;
+    }
+
+    .acc-main-content {
+      flex-direction: column-reverse;
+    }
+
+    .acc-profile-layout-secondary {
+      text-align: left;
+      margin-bottom: 36px;
     }
 }
