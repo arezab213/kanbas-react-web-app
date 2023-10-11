@@ -24,7 +24,6 @@
   display: flex;
   flex-direction: row-reverse;
   flex-grow: 1;
-  /*align-items: center;*/
 }
 
 .btn-row-publish-status {
@@ -158,7 +157,6 @@ ul.assignments-content .list-group-item-secondary:hover {
 .assignment-information > .assignment-title,  .assignment-row-header > .assignment-title {
   font-size: 18px;
   font-weight: 400;
-  /*margin-bottom: 0px;*/
   color: #333333;
 }
 
@@ -233,7 +231,6 @@ i.fa-plus {
   text-decoration: underline;
 }
 
-/**********************************edit********************************************/
 .assignment-edit-form {
   display: flex;
   flex-direction: column;
@@ -275,7 +272,6 @@ i.fa-plus {
 }
 
 .form-control.assignment-edit-input {
-  /*width: 100%;*/
   height: 38px;
   display: block;
   box-shadow: none;
@@ -359,23 +355,19 @@ i.fa-plus {
   display: flex;
   flex-direction: row;
   margin-right: 20%;
-  /*margin-left: 15%;*/
 }
 
 .edit-form-section.extra-margin.last {
   margin-bottom: 0px;
-  /*margin-left: 15%;*/
 }
 
 .edit-form-section.extra-margin > .form-label {
-  /*margin-bottom: 5px;*/
   width: 33.33%;
   display: flex;
   text-align: right;
   justify-content: right;
   padding-right: 15px;
   margin-bottom: 0px;
-  /*padding-top: 2px;*/
 }
 
 .edit-form-section.extra-margin > .form-check.assignment-edit-checkbox {
@@ -414,9 +406,6 @@ button#add-assign-btn {
   border-bottom-right-radius: 0px;
   border-bottom-width: 0px;
 }
-
-
-/**********************************edit********************************************/
 
 @media only screen and (max-width:576px) {
     .assignment-edit-form .edit-form-section.extra-margin {
