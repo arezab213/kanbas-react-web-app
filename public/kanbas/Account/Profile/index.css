@@ -19,7 +19,6 @@
   margin-bottom: 18px;
   display: flex;
   flex-direction: column;
-  /*position: relative;*/
 }
 
 .acc-profile-logo-wrapper {
@@ -29,12 +28,8 @@
 }
 
 .acc-profile-logo-wrapper i#profile-logo {
-  /*margin-right: 22px;*/
   padding-top: 5px;
-  /*width: 36px;
-  height: 30px; */
   color: #c4c4c4;
-  /*text-align: center;*/
   font-size: 120px;
 }
 
@@ -87,42 +82,8 @@ h6#input-header {
 
 .acc-profile-layout-secondary {
   flex-grow: 1;
-  /*flex-shrink: 1;
-  flex-basis: 0%;*/
   text-align: right;
 }
-
-/*.acc-main-content button {
-  background-color: #f5f5f5;
-  color: #000000;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #c7cdd1;
-  border-radius: 3px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-right: 14px;
-  padding-left: 14px;
-  text-decoration: none;
-  font-weight: 300;
-}
-
-.acc-main-content button:hover {
-  background-color: #e5e5e5;
-  transition: 0.2s;
-  color: #000000;
-  border-color: #c7cdd1;
-}
-
-.acc-main-content button:focus, button:active {
-  background-color: #e5e5e5;
-  transition: 0.1s;
-  color: #000000;
-  border-color: #a32424;
-  border-width: 2px;
-  outline: none !important;
-  box-shadow: none !important;
-}*/
 
 i#edit-button-icon {
   font-size: 16px;
@@ -152,23 +113,10 @@ i#edit-button-icon {
   border-radius: 3px;
 }
 
-/*.form-control:focus {
-  outline: 0px !important;
-}*/
-
 .form-control.profile-text-input:focus {
   border-color: #d41b2c;
   border-width: 2px;
-  /*outline: 0px none #ffffff !important;*/
-  /*box-shadow: none !important;*/
 }
-
-/*
-.form-control.profile-text-input:active {
-  border-color: #d41b2c;
-  border-width: 2px;
-  outline: none !important;
-}*/
 
 .profile-dropdown {
   width: 220px;
@@ -208,8 +156,6 @@ i#edit-button-icon {
 .form-control.profile-text-area:focus {
   border-color: #d41b2c;
   border-width: 2px;
-  /*outline: 0px none #ffffff !important;*/
-  /*box-shadow: none !important;*/
 }
 
 .edit-profile-final-btn-row {
@@ -220,18 +166,6 @@ i#edit-button-icon {
   border-top-style: solid;
   border-top-color: #e5e5e5;
 }
-
-/*button#profile-save-btn {
-  background-color: #d41b2c;
-  color: #ffffff;
-  border-color: #b51726;
-  margin-left: 0px;
-}
-
-button#profile-save-btn:focus, button#profile-save-btn:active, button#profile-save-btn:hover {
-  background-color: #b51726;
-  transition: 0.1s;
-}*/
 
 button#profile-add-link-btn {
   font-size: 12px;
@@ -245,13 +179,11 @@ button#profile-add-link-btn {
 
 #links-icon-container {
   max-width: 40px;
-/*  height: 40px;*/
   text-align: center;
   padding: 10px;
 }
 
 #links-header-container {
-/*  height: 40px;*/
   text-align: center;
 }
 
