@@ -170,16 +170,16 @@ function AssignmentEdit() {
                   </div>
                   <div class="edit-form-section">
                     <label class="form-label above-label" for="due_date">Due</label>
-                    <input class="form-control assignment-edit-input" type="text" value="Sep 18 2023 11:59 PM" id="due_date">
+                    <input class="form-control assignment-edit-input" type="date" value="2023-09-18" id="due_date">
                   </div>
                   <div class="d-flex flex-row">
                     <div class="flex-grow-1 edit-form-section">
                       <label class="form-label above-label" for="avl_from">Available from</label>
-                      <input class="form-control assignment-edit-input" type="text" placeholder="MM/DD/YYYY" id="avl_from">
+                      <input class="form-control assignment-edit-input" type="date" id="avl_from">
                     </div>
                     <div class="flex-grow-1 edit-form-section">
                       <label class="form-label above-label" for="avl_until">Until</label>
-                      <input class="form-control assignment-edit-input" type="text" placeholder="MM/DD/YYYY" id="avl_until">
+                      <input class="form-control assignment-edit-input" type="date" id="avl_until">
                     </div>
                   </div>
                 </div>

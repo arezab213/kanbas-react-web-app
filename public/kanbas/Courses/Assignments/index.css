@@ -300,6 +300,13 @@ i.fa-plus {
   margin-bottom: 20px;
 }
 
+.assignment-edit-input-group .edit-form-section {
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .form-label {
   font-size: 14px;
   font-weight: 400;
@@ -415,17 +422,13 @@ button#add-assign-btn {
     .assignment-edit-form .edit-form-section.extra-margin {
       margin-right: 0;
       flex-direction: column;
-      /*margin-left: 15%;*/
     }
 
     .edit-form-section.extra-margin > .form-label {
       text-align: left;
       justify-content: left;
-/*      margin-bottom: 5px;*/
       padding-right: 0px;
       width: 100%
-      /*margin-left: 10vw;
-      margin-right: 10vw;*/
     }
 
     .assignment-edit-input-group {
@@ -456,6 +459,11 @@ button#add-assign-btn {
 
     .mobile-header-bar {
       height: 80px;
+    }
+
+    .secondary-header-bar .btn, .edit-form-end-btn-row .btn {
+      margin-left: 0px;
+      margin-right: 10px;
     }
 }
 
