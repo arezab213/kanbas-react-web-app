@@ -66,7 +66,7 @@ function Grades() {
               ${SecondaryNavigation("Grades", "courses", false)}
             </div>
           </div>
-          <div class="main-content-area">
+
             <div class="grades-main-content">
               <div class="grades-page-section justify-content-end">
                 <button type="button" class="btn btn-primary top-row"><i class="fa-solid fa-file-import"></i></i>Import</button>
@@ -106,7 +106,7 @@ function Grades() {
               </div>
 
 
-                <div class="table-responsive">
+              <div class="table-responsive">
                 <div class="grades-page-section grades-table">
                   <table class="table table-striped table-bordered table-hover">
                     <thead>
@@ -160,11 +160,10 @@ function Grades() {
                     </tbody>
                   </table>
                 </div>
-
-
               </div>
+
             </div>
-          </div>
+
         </div>
       </div>
     </div>
