@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: row;
   margin-top: 15px;
+  justify-content: end;
 }
 
 .grades-main-content .btn :not(i.fa-gear) {
@@ -83,9 +84,8 @@ button#settings-btn {
 }
 
 .grades-table {
-  width: 1200;
+  width: 1000;
  /* table-layout: fixed;*/
-
 }
 
 .grades-table * {
@@ -214,4 +214,42 @@ grades-table tr:nth-child(odd) {
   border-top-left-radius: 0px;
   border-left-width: 0px;
   padding: .375rem;
+}
+
+@media only screen and (max-width:767px) {
+    .home-main-content {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    .grades-table-container {
+      width: calc(100vw - 48px)
+    }
+
+    .mobile-header-bar {
+      height: 80px;
+    }
+
+    /*.grades-page-section {
+      justify-content: start;
+    }*/
+
+    button.top-row {
+      margin-right: 5px;
+      margin-left: 0px;
+    }
+
+    button#settings-btn {
+      margin-left: 0px;
+    }
+
+    .form-label {
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 5px;
+    }
+
+    .form-control.grades-input {
+      font-size: 14px;
+    }
 }

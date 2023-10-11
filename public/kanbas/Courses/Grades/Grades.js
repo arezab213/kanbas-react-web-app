@@ -49,6 +49,7 @@ function Grades() {
           </a>
           <a class="mobile-header-title" data-bs-toggle="collapse" href="#collapseSN" role="button">
             <div>CS4550.19753.202410</div>
+            <div>Grades</div>
           </a>
           <a class="mobile-header-bar-icon-container icon-toggle" data-bs-toggle="collapse" aria-expanded="false" href="#collapseSN" role="button">
             <i class="fa-solid fa-chevron-down" id="chevron-down"></i>
@@ -68,7 +69,7 @@ function Grades() {
           </div>
 
             <div class="grades-main-content">
-              <div class="grades-page-section justify-content-end">
+              <div class="grades-page-section">
                 <button type="button" class="btn btn-primary top-row"><i class="fa-solid fa-file-import"></i></i>Import</button>
                 <button type="button" class="btn btn-primary dropdown-toggle top-row"><i class="fa-solid fa-file-export"></i>Export</button>
                 <button type="button" class="btn btn-primary icon" id="settings-btn"><i class="fa-solid fa-gear"></i></button>
@@ -101,7 +102,7 @@ function Grades() {
                   </div>
                 </div>
               </div>
-              <div class="grades-page-section">
+              <div class="grades-page-section justify-content-start">
                 <button type="button" class="btn btn-primary"><i class="fa-solid fa-filter"></i>Apply Filters</button>
               </div>
               <div class="grades-page-section">
@@ -156,6 +157,42 @@ function Grades() {
                       </tr>
                       <tr>
                         <th scope="row"><a href="#">John Frusciante</a></th>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">Anthony Kiedis II</a></th>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">Michael Balzary II</a></th>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">Chad Smith II</a></th>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">John Frusciante II</a></th>
                         <td>100%</td>
                         <td>100%</td>
                         <td>100%</td>
