@@ -11,9 +11,9 @@ function Courses() {
   const {courseId} = useParams();
   const course = db.courses.find((course) => course._id === courseId);
   return (
-      <div>
-        <h1>Course {course.name}</h1>
+      <div className="below-header-content">
         <CourseNavigation/>
+
         <div>
           <div
               className="overflow-y-scroll position-fixed bottom-0 end-0"

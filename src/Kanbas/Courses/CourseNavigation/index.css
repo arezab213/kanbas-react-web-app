@@ -1,0 +1,105 @@
+.secondary-navigation {
+  width: 192px;
+}
+
+.secondary-navigation .sn-list-container {
+  position: sticky;
+  top: 0;
+  padding-top: 24px;
+  padding-right: 12px;
+  padding-left: 24px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior-y: contain;
+  max-height: 100vh;
+}
+
+ul.secondary-navigation.list-group {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-radius: 0;
+}
+
+ul.secondary-navigation .list-group-item {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-size: 16px;
+  height: auto;
+  min-height: 36px;
+  display: inline-block;
+}
+
+ul.secondary-navigation .list-group-item.active {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+ul.secondary-navigation .list-group-item a {
+  color: #a32424;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0 8px 6px;
+  text-decoration: none;
+  max-width: 140px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-weight: 300;
+}
+
+ul.secondary-navigation .list-group-item a:hover {
+  text-decoration: underline;
+}
+
+ul.secondary-navigation .list-group-item.active a {
+  color: #000000;
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-left-color: #000000;
+  font-weight: 400;
+  padding-left: 4px;
+}
+
+.mobile-secondary-nav {
+  max-height: 3000px;
+  margin-bottom: 50px;
+  box-shadow: 0 .375rem .4375rem rgba(0, 0, 0, .1), 0 .625rem 1.75rem rgba(0, 0, 0, .25);
+}
+
+ul.mobile-secondary-nav.list-group {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-radius: 0;
+}
+
+ul.mobile-secondary-nav .list-group-item {
+  padding: 0 0 0 20px;
+  margin: 0;
+  font-size: 16px;
+  height: 27px;
+  align-items: center;
+  background-color: #ffffff;
+  border: none #ffffff;
+  color: #a32424;
+}
+
+ul.mobile-secondary-nav .list-group-item a {
+  color: #a32424;
+  font-weight: 300;
+}
+
+ul.mobile-secondary-nav .list-group-item.active a {
+  font-weight: 500;
+}
+
+ul.mobile-secondary-nav .list-group-item a:hover {
+  text-decoration: underline;
+}
+
+ul.mobile-secondary-nav .list-group-item i {
+  margin-right: 7px;
+  width: 16px;
+  text-align: center;
+}
