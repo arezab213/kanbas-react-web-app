@@ -6,6 +6,7 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
+import "./index.css"
 
 import {FaBars} from "react-icons/fa6";
 
@@ -28,27 +29,17 @@ function Courses() {
         </div>
         <div className="below-header-content">
           <CourseNavigation/>
-          <div>
-            <div
-                className="overflow-y-scroll position-fixed bottom-0 end-0"
-                style={{
-                  left: "320px",
-                  top: "50px",
-                }}
-            >
-              <Routes>
-                <Route path="/" element={<Navigate to="Home"/>}/>
-                <Route path="Home" element={<Home/>}/>
-                <Route path="Modules" element={<Modules/>}/>
-                <Route path="Assignments" element={<Assignments/>}/>
-                <Route
-                    path="Assignments/:assignmentId"
-                    element={<AssignmentEditor/>}/>
-                />
-                <Route path="Grades" element={<Grades/>}/>
-              </Routes>
-            </div>
-          </div>
+          <Routes>
+            <Route path="/" element={<Navigate to="Home"/>}/>
+            <Route path="Home" element={<Home/>}/>
+            <Route path="Modules" element={<Modules/>}/>
+            <Route path="Assignments" element={<Assignments/>}/>
+            <Route
+                path="Assignments/:assignmentId"
+                element={<AssignmentEditor/>}/>
+            />
+            <Route path="Grades" element={<Grades/>}/>
+          </Routes>
         </div>
       </div>
   );
