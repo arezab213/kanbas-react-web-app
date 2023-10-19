@@ -108,7 +108,7 @@ a:hover {
   height: 72px;
 }
 
-.header-bar i#menu-button {
+.header-bar svg {
   margin-right: 22px;
   padding-top: 5px;
   width: 36px;

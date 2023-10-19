@@ -10,7 +10,7 @@ import {FaRegComments} from "react-icons/fa6";
 function Dashboard() {
   const courses = db.courses;
   return (
-      <div>
+      <div className="main-content-wrapper">
         <div className="d-none d-md-flex header-bar">
           <div className="breadcrumb-wrapper">
             <nav id="breadcrumbs">
