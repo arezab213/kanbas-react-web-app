@@ -67,7 +67,7 @@
   text-overflow: ellipsis;
 }
 
-.form-label {
+.assignment-edit-form .form-label {
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 0 !important;
