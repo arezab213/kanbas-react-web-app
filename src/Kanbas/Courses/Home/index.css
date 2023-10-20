@@ -1,0 +1,78 @@
+.home-side-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 288px;
+  width: 288px;
+  padding: 24px;
+}
+
+.home-side-content .btn {
+  display: flex;
+  float: right;
+  margin-top: 5px;
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+  text-align: left;
+  align-items: center;
+}
+
+.home-side-content .btn svg {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.home-side-content .btn-group {
+  float: right;
+  width: 100%;
+}
+
+.home-side-content .btn-group .btn {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  text-align: center !important;
+  font-size: 16px !important;
+  margin-top: 5px !important;
+  margin-bottom: 12px !important;
+
+}
+
+button#unpublish-btn:active, button#unpublish-btn:focus {
+  border-color: #2d3b45 !important;
+}
+
+button#publish-btn {
+  border-color: #2d3b45 !important;
+  color: #ffffff !important;
+}
+
+button#publish-btn:hover, button#publish-btn:active, button#publish-btn:focus {
+  background-color: #05a82b !important;
+  border-color: #05a82b !important;
+}
+
+button#publish-btn {
+  color: #ffffff !important;
+  background-color: #6bd67d !important;
+  border-color: #6bd67d !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+h5#home-side-panel-header {
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+h6#home-side-panel-subheader {
+  margin-bottom: 0;
+  padding-bottom: 6px;
+  font-weight: 400;
+  font-size: 18px;
+  border-bottom: 1px solid #c7cdd1;
+}
+
+.home-side-content .btn-subsections {
+  margin-top: 17px;
+}

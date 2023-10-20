@@ -169,101 +169,27 @@ ul.module-content .list-group-item-secondary:hover {
   margin-left: 10px;
 }
 
-.home-side-content {
-  display: flex;
-  flex-direction: column;
-  min-width: 288px;
-  width: 288px;
-  padding: 24px;
-}
+/*@media only screen and (max-width: 767px) {*/
+/*  .home-main-content {*/
+/*    padding-left: 12px;*/
+/*    padding-right: 12px;*/
+/*  }*/
 
-.home-side-content .btn {
-  float: right;
-  margin-top: 5px;
-  margin-right: 0;
-  margin-left: 0;
-  width: 100%;
-  text-align: left;
-}
+/*  .mobile-header-bar {*/
+/*    height: 80px;*/
+/*  }*/
+/*}*/
 
-.home-side-content .btn-group {
-  float: right;
-  width: 100%;
-}
+/*@media only screen and (max-width: 992px) {*/
+/*  .secondary-header-bar .btn {*/
+/*    margin-left: 5px;*/
+/*    max-height: 42px;*/
+/*  }*/
 
-.home-side-content .btn-group .btn {
-  padding-left: 12px;
-  padding-right: 12px;
-  text-align: center;
-  font-size: 16px;
-  margin-top: 5px;
-  margin-bottom: 12px;
-}
-
-button#unpublish-btn:active, button#unpublish-btn:focus {
-  border-color: #2d3b45;
-}
-
-button#publish-btn {
-  border-color: #2d3b45;
-  color: #ffffff;
-}
-
-button#publish-btn:hover, button#publish-btn:active, button#publish-btn:focus {
-  background-color: #05a82b;
-  border-color: #05a82b;
-}
-
-button#publish-btn {
-  color: #ffffff;
-  background-color: #6bd67d;
-  border-color: #6bd67d;
-}
-
-i.button-icon {
-  font-size: 16px;
-  margin-right: 5px;
-}
-
-h5#home-side-panel-header {
-  margin-bottom: 0;
-  font-weight: 300;
-  font-size: 18px;
-}
-
-h6#home-side-panel-subheader {
-  margin-bottom: 0;
-  padding-bottom: 6px;
-  font-weight: 400;
-  font-size: 18px;
-  border-bottom: 1px solid #c7cdd1;
-}
-
-.home-side-content .btn-subsections {
-  margin-top: 17px;
-}
-
-@media only screen and (max-width: 767px) {
-  .home-main-content {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  .mobile-header-bar {
-    height: 80px;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .secondary-header-bar .btn {
-    margin-left: 5px;
-    max-height: 42px;
-  }
-
-  .home-main-content > .secondary-header-bar {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    justify-content: left;
-  }
-}
+/*  .home-main-content > .secondary-header-bar {*/
+/*    display: flex;*/
+/*    flex-direction: row-reverse;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: left;*/
+/*  }*/
+/*}*/
