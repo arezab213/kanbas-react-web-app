@@ -179,7 +179,7 @@ ul.assignments-content .list-group-item-secondary:hover {
   font-size: 16px;
 }
 
-.assignment-row-ellipses-container {
+.assignment-row-ellipsis-container {
   display: flex;
   width: 20px;
   font-size: 20px;
@@ -199,18 +199,19 @@ ul.assignments-content .list-group-item-secondary:hover {
   color: #05a82b;
 }
 
-i.fa-plus {
+.assignment-row-icon-container.plus {
   color: #333333;
 }
 
 .assignment-main-content .badge {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #333333;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #333333;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: #333333 !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: #333333 !important;
+  background-color: #f5f5f5 !important;
 }
 
 .assignment-main-content a {
