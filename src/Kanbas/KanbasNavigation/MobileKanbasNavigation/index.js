@@ -34,7 +34,7 @@ function MobileKanbasNavigation() {
             <Link to={"#"} className="kn-mobile-header-bar-title">
               <div className="kn-mobile-header-bar-icon-container">
                 <img className="logo-mark"
-                     src="../../../Images/canvas_logo_single_mark.png"
+                     src="../../../Images/Canvas_logo_single_mark.png"
                      alt="..."/>
               </div>
               <div className="logo-label">
