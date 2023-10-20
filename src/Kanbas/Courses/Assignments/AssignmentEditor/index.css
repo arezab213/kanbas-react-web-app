@@ -1,0 +1,168 @@
+.assignment-edit-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #c7cdd1;
+  padding-bottom: 50px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.edit-form-end-btn-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #c7cdd1;
+  min-height: 33px;
+  padding-bottom: 12px;
+  padding-right: 8px;
+  padding-left: 8px;
+  align-items: center;
+}
+
+.form-check.assignment-edit-checkbox {
+  display: flex;
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+
+.form-check.assignment-edit-checkbox * {
+  display: flex;
+  font-size: 14px;
+  font-weight: 300;
+  color: #333333;
+  margin-right: 7px;
+}
+
+.form-control.assignment-edit-input {
+  height: 38px;
+  display: block;
+  box-shadow: none;
+  border-width: 1px;
+  border-style: solid;
+  padding: 8px 12px;
+  border-color: #d8e0e6;
+  font-size: 14px;
+  font-weight: 300;
+  border-radius: 3px;
+}
+
+.form-control.assignment-edit-input:focus {
+  border-color: #d41b2c;
+  border-width: 2px;
+}
+
+.assignment-edit-form .edit-form-section {
+  margin-bottom: 20px;
+}
+
+.assignment-edit-input-group .edit-form-section {
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0 !important;
+}
+
+.edit-form-section .above-label {
+  margin-bottom: 5px !important;
+}
+
+.form-control.assignment-edit-text-area {
+  height: 130px;
+  display: block;
+  box-shadow: none;
+  border-width: 1px;
+  border-style: solid;
+  padding: 8px;
+  border-color: #d8e0e6;
+  font-size: 14px;
+  font-weight: 300;
+  border-radius: 3px;
+}
+
+.form-select.assignment-edit-dropdown {
+  /*width: 220px;*/
+  height: 38px;
+  display: block;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d8e0e6;
+  border-radius: 3px;
+  background-color: #ffffff;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.form-control.assignment-edit-text-area:focus {
+  border-color: #d41b2c;
+  border-width: 2px;
+}
+
+.assignment-edit-form .edit-form-section.extra-margin {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20%;
+}
+
+.edit-form-section.extra-margin.last {
+  margin-bottom: 0;
+}
+
+.edit-form-section.extra-margin > .form-label {
+  width: 33.33%;
+  display: flex;
+  text-align: right;
+  justify-content: right;
+  padding-right: 15px;
+  margin-bottom: 0;
+}
+
+.edit-form-section.extra-margin > .form-check.assignment-edit-checkbox {
+  width: 100%;
+}
+
+.assignment-edit-input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d8e0e6;
+  border-radius: 3px;
+  padding: 15px 15px 0;
+}
+
+.assignment-edit-input-group .form-select.assignment-edit-dropdown {
+  width: 66%;
+}
+
+.assignment-edit-input-group .form-select.assignment-edit-dropdown {
+  width: 66%;
+}
+
+button#add-assign-btn {
+  width: 100% !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-top-width: 1px !important;
+  align-items: center !important;
+  justify-content: center;
+}
+
+
+.last .assignment-edit-input-group {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-width: 0;
+}
