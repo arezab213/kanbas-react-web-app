@@ -125,20 +125,18 @@ a:hover {
 }
 
 .header-bar svg {
-  margin-right: 22px;
-  padding-top: 5px;
-  width: 36px;
-  height: 30px;
+  margin-left: 5px;
+  margin-right: 30px;
+  width: 25px;
+  height: 26px;
   color: #A32424;
   text-align: center;
-  font-size: 25px;
 }
 
 ul.breadcrumbs.list-group {
   list-style: none;
   display: flex;
   flex-direction: row;
-
 }
 
 ul.breadcrumbs .list-group-item {
@@ -164,10 +162,10 @@ ul.breadcrumbs .list-group-item a:hover {
   text-decoration: underline;
 }
 
-.header-bar i#subsection-arrow {
+.header-bar li svg {
   margin-right: 9px;
   margin-left: 9px;
-  width: 5px;
+  width: 8px;
   height: 14px;
   color: #000000;
   font-size: 10px;
