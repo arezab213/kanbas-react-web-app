@@ -19,8 +19,18 @@ import {FaRegComments} from "react-icons/fa6";
 import {FaXmark} from "react-icons/fa6";
 
 function Dashboard() {
-  const [basicModal, setBasicModal] = useState(false);
-  const toggleOpen = () => setBasicModal(!basicModal);
+  const [modalTitles, setModalTitles] = useState(
+      {header: "Add Course", button: "Add"})
+  const [dashboardModal, setDashboardModal] = useState(false);
+  const toggleOpen = (resetInitialCourse = true) => {
+    setDashboardModal(!dashboardModal);
+    if (resetInitialCourse) {
+      setCourse({
+        name: "New Course", number: "New Number",
+        startDate: "2023-09-10", endDate: "2023-12-15",
+      })
+    }
+  }
   const [courses, setCourses] = useState(db.courses);
   const [course, setCourse] = useState({
     name: "New Course", number: "New Number",
@@ -41,15 +51,25 @@ function Dashboard() {
     setCourses(courses.filter((course) => course._id !== courseId));
   };
   const saveButtonClick = () => {
-    // Call both functions
-    addNewCourse();
-    toggleOpen();
-    setCourse({
-      name: "New Course", number: "New Number",
-      startDate: "2023-09-10", endDate: "2023-12-15",
-    })
+    if (modalTitles.header === "Add Course") {
+      addNewCourse();
+      toggleOpen();
+    } else {
+      updateCourse();
+      toggleOpen(false);
+    }
   };
-
+  const updateCourse = () => {
+    setCourses(
+        courses.map((c) => {
+          if (c._id === course._id) {
+            return course;
+          } else {
+            return c;
+          }
+        })
+    );
+  };
   return (
       <div className="main-content-wrapper">
         <div className="d-none d-md-flex header-bar">
@@ -66,16 +86,21 @@ function Dashboard() {
         <div className="dashboard-main-content-wrapper">
           <div className="header-bar">
             Published Courses ({courses.length})
-            <button className="btn btn-primary" onClick={toggleOpen}>
+            <button className="btn btn-primary" onClick={() => {
+              setModalTitles({header: "Add Course", button: "Add"})
+              toggleOpen();
+            }}>
               Add Course
             </button>
-            <MDBModal open={basicModal} setOpen={setBasicModal} tabIndex='-1'>
+            <MDBModal open={dashboardModal} setOpen={setDashboardModal}
+                      tabIndex='-1'>
               <MDBModalDialog>
                 <MDBModalContent>
                   <MDBModalHeader>
-                    <MDBModalTitle>Add Course</MDBModalTitle>
+                    <MDBModalTitle>{modalTitles.header}</MDBModalTitle>
                     <MDBBtn className='btn-close' color='none'
-                            onClick={toggleOpen}></MDBBtn>
+                            onClick={() => toggleOpen(false)}>
+                    </MDBBtn>
                   </MDBModalHeader>
                   <MDBModalBody>
                     <label htmlFor="courseName" className="form-label">Course
@@ -107,11 +132,12 @@ function Dashboard() {
                         {...course, endDate: e.target.value})}/>
                   </MDBModalBody>
                   <MDBModalFooter>
-                    <button className="btn btn-secondary" onClick={toggleOpen}>
+                    <button className="btn btn-secondary"
+                            onClick={() => toggleOpen(false)}>
                       Cancel
                     </button>
                     <button className="btn btn-primary"
-                            onClick={saveButtonClick}>Add
+                            onClick={saveButtonClick}>{modalTitles.button}
                     </button>
                   </MDBModalFooter>
                 </MDBModalContent>
@@ -144,7 +170,14 @@ function Dashboard() {
                       </div>
                     </Link>
                     <div className="dashboard-card-base">
-                      <Link to={`/Kanbas/Courses/${course._id}`}>
+                      <Link to={`/Kanbas/Courses/${course._id}`}
+                            onClick={(event) => {
+                              event.preventDefault();
+                              setCourse(course);
+                              setModalTitles(
+                                  {header: "Edit Course", button: "Save"})
+                              toggleOpen(false);
+                            }}>
                         <FaRegPenToSquare/>
                       </Link>
                       <Link to={`/Kanbas/Courses/${course._id}`}>

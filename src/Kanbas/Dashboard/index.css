@@ -156,6 +156,16 @@ h6.dashboard-card-title {
   color: #677179;
 }
 
+.dashboard-card-base #edit-button {
+  height: 36px;
+  width: 66px;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 4px;
+  text-decoration: none;
+  color: #677179;
+}
+
 .dashboard-course-card svg {
   vertical-align: top;
 }
