@@ -13,10 +13,10 @@ import {Link} from "react-router-dom";
 import db from "../Database";
 import "./index.css"
 
-import {FaEllipsisVertical} from "react-icons/fa6";
 import {FaRegPenToSquare} from "react-icons/fa6";
 import {FaBullhorn} from "react-icons/fa6";
 import {FaRegComments} from "react-icons/fa6";
+import {FaXmark} from "react-icons/fa6";
 
 function Dashboard() {
   const [basicModal, setBasicModal] = useState(false);
@@ -36,6 +36,9 @@ function Dashboard() {
         ...course,
         _id: result
       }]);
+  };
+  const deleteCourse = (courseId) => {
+    setCourses(courses.filter((course) => course._id !== courseId));
   };
   const saveButtonClick = () => {
     // Call both functions
@@ -120,8 +123,11 @@ function Dashboard() {
               {courses.map((course) => (
                   <div className="card dashboard-course-card">
                     <div className="dashboard-card-header">
-                      <div className="card-header-button">
-                        <FaEllipsisVertical/>
+                      <div className="card-header-button" onClick={(event) => {
+                        event.preventDefault();
+                        deleteCourse(course._id);
+                      }}>
+                        <FaXmark/>
                       </div>
                     </div>
                     <Link key={course._id} to={`/Kanbas/Courses/${course._id}`}>
