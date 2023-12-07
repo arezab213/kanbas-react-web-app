@@ -8,9 +8,8 @@ import {FaChevronRight} from "react-icons/fa";
 import CourseNavigation from "../CourseNavigation";
 import db from "../../Database";
 
-function Assignments() {
+function Assignments({course}) {
   const {courseId} = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
 
   return (
       <div className="main-content-wrapper">

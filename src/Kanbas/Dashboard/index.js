@@ -10,7 +10,6 @@ import {
   MDBModalFooter,
 } from 'mdb-react-ui-kit';
 import {Link} from "react-router-dom";
-import db from "../Database";
 import "./index.css"
 
 import {FaRegPenToSquare} from "react-icons/fa6";
@@ -18,7 +17,14 @@ import {FaBullhorn} from "react-icons/fa6";
 import {FaRegComments} from "react-icons/fa6";
 import {FaXmark} from "react-icons/fa6";
 
-function Dashboard() {
+function Dashboard({
+  courses,
+  course,
+  setCourse,
+  addNewCourse,
+  deleteCourse,
+  updateCourse
+}) {
   const [modalTitles, setModalTitles] = useState(
       {header: "Add Course", button: "Add"})
   const [dashboardModal, setDashboardModal] = useState(false);
@@ -31,25 +37,6 @@ function Dashboard() {
       })
     }
   }
-  const [courses, setCourses] = useState(db.courses);
-  const [course, setCourse] = useState({
-    name: "New Course", number: "New Number",
-    startDate: "2023-09-10", endDate: "2023-12-15",
-  });
-  const addNewCourse = () => {
-    const letter1 = String.fromCharCode(65 + Math.floor(Math.random() * 26));
-    const letter2 = String.fromCharCode(65 + Math.floor(Math.random() * 26));
-    const randomNumber = Math.floor(100 + Math.random() * 900);
-    const result = `${letter1}${letter2}${randomNumber}`;
-    setCourses([...courses,
-      {
-        ...course,
-        _id: result
-      }]);
-  };
-  const deleteCourse = (courseId) => {
-    setCourses(courses.filter((course) => course._id !== courseId));
-  };
   const saveButtonClick = () => {
     if (modalTitles.header === "Add Course") {
       addNewCourse();
@@ -58,17 +45,6 @@ function Dashboard() {
       updateCourse();
       toggleOpen(false);
     }
-  };
-  const updateCourse = () => {
-    setCourses(
-        courses.map((c) => {
-          if (c._id === course._id) {
-            return course;
-          } else {
-            return c;
-          }
-        })
-    );
   };
   return (
       <div className="main-content-wrapper">

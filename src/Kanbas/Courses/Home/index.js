@@ -12,9 +12,8 @@ import db from "../../Database";
 import CourseNavigation from "../CourseNavigation";
 import {FaChevronRight} from "react-icons/fa";
 
-function Home() {
+function Home({course}) {
   const {courseId} = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
 
   return (
       <div className="main-content-wrapper">

@@ -8,9 +8,8 @@ import {FaChevronRight, FaSearch} from "react-icons/fa";
 import CourseNavigation from "../CourseNavigation";
 import React from "react";
 
-function Grades() {
+function Grades({course}) {
   const {courseId} = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
 
   const assignments = db.assignments.filter(
       (assignment) => assignment.course === courseId);
