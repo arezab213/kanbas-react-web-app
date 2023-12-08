@@ -6,6 +6,8 @@ import Courses from "./Courses";
 import MobileKanbasNavigation from "./KanbasNavigation/MobileKanbasNavigation";
 import db from "./Database";
 import "./styles.css";
+import store from "./store";
+import { Provider } from "react-redux";
 
 function Kanbas() {
   const [courses, setCourses] = useState(db.courses);
@@ -39,7 +41,7 @@ function Kanbas() {
     );
   };
   return (
-      <>
+      <Provider store={store}>
         <MobileKanbasNavigation/>
         <div className="flex-row-container">
           <KanbasNavigation/>
@@ -58,7 +60,7 @@ function Kanbas() {
                    element={<Courses courses={courses}/>}/>
           </Routes>
         </div>
-      </>
+      </Provider>
   );
 }
 

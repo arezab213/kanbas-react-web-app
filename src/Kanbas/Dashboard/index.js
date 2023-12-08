@@ -85,7 +85,7 @@ function Dashboard({
                            className="form-control modal-input" id="courseName"
                            onChange={(e) => setCourse(
                                {...course, name: e.target.value})}/>
-                    <label htmlFor="courseDate" className="form-label">Course
+                    <label htmlFor="courseNumber" className="form-label">Course
                       Number</label>
                     <input value={course.number}
                            className="form-control modal-input"
