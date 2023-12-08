@@ -1,5 +1,9 @@
 import {Link, useParams} from "react-router-dom";
 import React from "react";
+import {useSelector, useDispatch} from "react-redux";
+import {
+  selectAssignment, updateAssignment, deleteAssignment
+} from "./assignmentsReducer";
 import db from "../../Database";
 import {
   FaCircleCheck,
@@ -11,7 +15,10 @@ import {
 
 function AssignmentList() {
   const {courseId} = useParams();
-  const assignments = db.assignments;
+  const assignments = useSelector(
+      (state) => state.assignmentReducer.assignments);
+  const assignment = useSelector((state) => state.assignmentReducer.assignment);
+  const dispatch = useDispatch();
   const courseAssignments = assignments.filter(
       (assignment) => assignment.course === courseId);
 
