@@ -38,6 +38,11 @@
   cursor: pointer;
 }
 
+.module-row-icon-container.x-mark:active {
+  border-radius: 3px;
+  outline: 1px solid #d41b2c;
+}
+
 .btn.add-module svg {
   font-size: 16px;
   margin-right: 5px;
@@ -156,6 +161,12 @@ ul.module-content .list-group-item-secondary:hover {
   align-items: center;
   justify-content: center;
   margin-left: 15px;
+  cursor: pointer;
+}
+
+.module-row-ellipsis-container:active {
+  border-radius: 3px;
+  outline: 1px solid #4c5860;
 }
 
 .module-row-icon-container {
