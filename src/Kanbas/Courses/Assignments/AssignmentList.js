@@ -1,8 +1,8 @@
-import {Link, useParams} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import React from "react";
 import {useSelector, useDispatch} from "react-redux";
 import {
-  selectAssignment, updateAssignment, deleteAssignment
+  selectAssignment, deleteAssignment
 } from "./assignmentsReducer";
 import {
   FaCircleCheck,
@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa6";
 
 function AssignmentList() {
+  const navigate = useNavigate();
   const {courseId} = useParams();
   const assignments = useSelector(
       (state) => state.assignmentReducer.assignments);
@@ -20,6 +21,14 @@ function AssignmentList() {
   const dispatch = useDispatch();
   const courseAssignments = assignments.filter(
       (assignment) => assignment.course === courseId);
+  const handleClickAddAssignment = () => {
+    const letter1 = String.fromCharCode(65 + Math.floor(Math.random() * 26));
+    const randomNumber = Math.floor(100 + Math.random() * 900);
+    const result = `${letter1}${randomNumber}`;
+    dispatch(selectAssignment({...assignment, _id: result, course: courseId}))
+    console.log(assignment)
+    navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`);
+  };
   return (
       <ul className="assignments-content list-group">
         <li className="list-group-item">
@@ -35,7 +44,8 @@ function AssignmentList() {
             <div className="assignment-row-ellipsis-container">
               <FaEllipsisVertical/>
             </div>
-            <div className="assignment-row-icon-container plus">
+            <div className="assignment-row-icon-container plus"
+                 onClick={handleClickAddAssignment}>
               <FaPlus/>
             </div>
             <span className="badge rounded-pill text-bg-primary">

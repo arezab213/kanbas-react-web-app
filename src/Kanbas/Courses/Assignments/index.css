@@ -197,6 +197,12 @@ ul.assignments-content .list-group-item-secondary:hover {
 
 .assignment-row-icon-container.plus {
   color: #333333;
+  cursor: pointer;
+}
+
+.assignment-row-icon-container.plus:active {
+  border-radius: 3px;
+  outline: 1px solid #333333;
 }
 
 .assignment-main-content .badge {
@@ -220,7 +226,6 @@ ul.assignments-content .list-group-item-secondary:hover {
 .assignment-main-content a:hover {
   text-decoration: underline;
 }
-
 
 
 /*@media only screen and (max-width: 576px) {
