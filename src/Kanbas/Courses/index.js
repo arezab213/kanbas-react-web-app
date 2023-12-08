@@ -18,7 +18,7 @@ function Courses({courses}) {
           <Route path="Assignments" element={<Assignments course={course}/>}/>
           <Route
               path="Assignments/:assignmentId"
-              element={<AssignmentEditor/>}/>
+              element={<AssignmentEditor course={course}/>}/>
           />
           <Route path="Grades" element={<Grades course={course}/>}/>
         </Routes>

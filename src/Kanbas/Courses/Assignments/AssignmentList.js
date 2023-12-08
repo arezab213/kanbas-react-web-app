@@ -4,7 +4,6 @@ import {useSelector, useDispatch} from "react-redux";
 import {
   selectAssignment, updateAssignment, deleteAssignment
 } from "./assignmentsReducer";
-import db from "../../Database";
 import {
   FaCircleCheck,
   FaEllipsisVertical,
@@ -21,7 +20,6 @@ function AssignmentList() {
   const dispatch = useDispatch();
   const courseAssignments = assignments.filter(
       (assignment) => assignment.course === courseId);
-
   return (
       <ul className="assignments-content list-group">
         <li className="list-group-item">
@@ -65,7 +63,8 @@ function AssignmentList() {
                     {assignment.course}
                   </div>
                   <div className="assignment-deadline-points">
-                    <strong>{assignment._id}</strong> | 100 pts
+                    <strong>{assignment._id}</strong> | {assignment.points
+                      ? assignment.points : 0} pts
                   </div>
                 </div>
                 <div className="row-right-side-icons-container">
@@ -80,9 +79,7 @@ function AssignmentList() {
           ))
         }
       </ul>
-
   )
-
 }
 
 export default AssignmentList

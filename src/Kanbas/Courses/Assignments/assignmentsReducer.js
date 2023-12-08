@@ -3,7 +3,11 @@ import db from "../../Database";
 
 const initialState = {
   assignments: db.assignments,
-  assignment: {title: "New Assignment"},
+  assignment: {
+    title: "New Assignment",
+    points: 100,
+    description: "Assignment Description"
+  },
 };
 
 const assignmentsSlice = createSlice({
@@ -11,10 +15,7 @@ const assignmentsSlice = createSlice({
   initialState,
   reducers: {
     addAssignment: (state, action) => {
-      state.assignments = [
-        {...action.payload, _id: new Date().getTime().toString()},
-        ...state.assignments,
-      ];
+      state.assignments = [{...action.payload}, ...state.assignments,];
     },
     deleteAssignment: (state, action) => {
       state.assignments = state.assignments.filter(

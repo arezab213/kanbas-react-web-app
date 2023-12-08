@@ -2,8 +2,10 @@ import React from "react";
 import {useNavigate, useParams, Link} from "react-router-dom";
 
 import "./index.css"
-import db from "../../../Database";
-
+import {useSelector, useDispatch} from "react-redux";
+import {
+  selectAssignment, updateAssignment, addAssignment
+} from "../assignmentsReducer";
 import {
   FaBars,
   FaCircleCheck,
@@ -13,17 +15,13 @@ import {
 import {FaChevronRight} from "react-icons/fa";
 import CourseNavigation from "../../CourseNavigation";
 
-function AssignmentEditor() {
-  const {assignmentId} = useParams();
-  const assignment = db.assignments.find(
-      (assignment) => assignment._id === assignmentId);
-
-  const {courseId} = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
-
+function AssignmentEditor({course}) {
+  const assignment = useSelector((state) => state.assignmentReducer.assignment);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const {courseId} = useParams();
   const handleSave = () => {
-    console.log("Actually saving assignment TBD in later assignments");
+    dispatch(addAssignment(assignment));
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   return (
@@ -73,19 +71,26 @@ function AssignmentEditor() {
                 </label>
                 <input className="form-control assignment-edit-input"
                        type="text"
-                       value={assignment.title} id="assignment-name"/>
+                       value={assignment.title} id="assignment-name"
+                       onChange={(e) => dispatch(selectAssignment(
+                           {...assignment, title: e.target.value}))}/>
               </div>
               <div className="edit-form-section">
-            <textarea className="form-control assignment-edit-text-area">
-              This assignment describes how to install the development environment for creating and working with Web applications we will be developing this semester. We will add new content every week, pushing the code to a GitHub source repository and then deploying the content to a remote server hosted on Netlify.
+            <textarea className="form-control assignment-edit-text-area"
+                      value={assignment.description}
+                      onChange={(e) => dispatch(selectAssignment(
+                          {...assignment, description: e.target.value}))}>
             </textarea>
               </div>
               <div className="edit-form-section extra-margin">
                 <label htmlFor="points-input"
                        className="form-label">Points</label>
                 <input className="form-control assignment-edit-input"
-                       type="text"
-                       value="100" id="points-input"/>
+                       type="number"
+                       value={assignment.points}
+                       id="points-input"
+                       onChange={(e) => dispatch(selectAssignment(
+                           {...assignment, points: e.target.value}))}/>
               </div>
               <div className="edit-form-section extra-margin">
                 <label htmlFor="assignment-group-dropdown"
@@ -264,7 +269,6 @@ function AssignmentEditor() {
           </div>
         </div>
       </div>
-
   );
 }
 

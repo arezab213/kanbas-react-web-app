@@ -3,14 +3,25 @@ import React from "react";
 import AssignmentList from "./AssignmentList";
 import "./index.css"
 import {FaBars, FaEllipsisVertical, FaPlus} from "react-icons/fa6";
-import {Link, useParams} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import {FaChevronRight} from "react-icons/fa";
 import CourseNavigation from "../CourseNavigation";
-import db from "../../Database";
+import {selectAssignment} from "./assignmentsReducer";
+import {useDispatch, useSelector} from "react-redux";
 
 function Assignments({course}) {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const assignment = useSelector((state) => state.assignmentReducer.assignment);
   const {courseId} = useParams();
-
+  const handleClickAddAssignment = () => {
+    const letter1 = String.fromCharCode(65 + Math.floor(Math.random() * 26));
+    const randomNumber = Math.floor(100 + Math.random() * 900);
+    const result = `${letter1}${randomNumber}`;
+    dispatch(selectAssignment({...assignment, _id: result, course: courseId}))
+    console.log(assignment)
+    navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`);
+  };
   return (
       <div className="main-content-wrapper">
         <div className="d-none d-md-flex header-bar">
@@ -39,7 +50,8 @@ function Assignments({course}) {
                 <button className="btn btn-primary ellipsis">
                   <FaEllipsisVertical/>
                 </button>
-                <button className="btn btn-secondary">
+                <button className="btn btn-secondary"
+                        onClick={handleClickAddAssignment}>
                   <FaPlus/>
                   Assignment
                 </button>
