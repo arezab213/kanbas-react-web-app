@@ -6,12 +6,18 @@ import {
   setModule,
 } from "./modulesReducer";
 import {useParams} from "react-router-dom";
-import {FaEllipsisVertical, FaGripVertical, FaPlus} from "react-icons/fa6";
+import {
+  FaEllipsisVertical,
+  FaGripVertical,
+  FaPlus,
+  FaXmark
+} from "react-icons/fa6";
 import {FaCheckCircle} from "react-icons/fa";
 
 function ModuleList() {
   const {courseId} = useParams();
   const modules = useSelector((state) => state.modulesReducer.modules);
+  const dispatch = useDispatch();
   return (
       <ul className="module-content list-group">
         {
@@ -30,6 +36,12 @@ function ModuleList() {
                 <div className="module-row-right-side-icons-container">
                   <div className="module-row-ellipsis-container">
                     <FaEllipsisVertical/>
+                  </div>
+                  <div className="module-row-icon-container x-mark"
+                       onClick={() => {
+                         dispatch(deleteModule(module._id));
+                       }}>
+                    <FaXmark/>
                   </div>
                   <div className="module-row-icon-container">
                     <FaPlus/>

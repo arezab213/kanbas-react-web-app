@@ -33,6 +33,11 @@
   color: #05a82b;
 }
 
+.module-row-icon-container.x-mark {
+  color: #d41b2c;
+  cursor: pointer;
+}
+
 .btn.add-module svg {
   font-size: 16px;
   margin-right: 5px;
