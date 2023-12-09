@@ -18,7 +18,16 @@ function Assignments({course}) {
     const letter1 = String.fromCharCode(65 + Math.floor(Math.random() * 26));
     const randomNumber = Math.floor(100 + Math.random() * 900);
     const result = `${letter1}${randomNumber}`;
-    dispatch(selectAssignment({...assignment, _id: result, course: courseId}))
+    dispatch(selectAssignment({
+      title: "New Assignment",
+      points: 100,
+      description: "Assignment Description",
+      availableFromDate: "2023-01-10",
+      availableUntilDate: "2023-05-15",
+      dueDate: "2023-05-15",
+      _id: result,
+      course: courseId
+    }))
     navigate(`/Kanbas/Courses/${courseId}/Assignments/${result}`,
         {state: {isFormForEdit: false}});
   };
