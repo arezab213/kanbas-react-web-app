@@ -22,8 +22,19 @@ function AssignmentEditor({course}) {
   const {courseId} = useParams();
   const handleSave = () => {
     dispatch(addAssignment(assignment));
+    resetInitialAssignment();
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
+  const resetInitialAssignment = () => {
+    dispatch(selectAssignment({
+      title: "New Assignment",
+      points: 100,
+      description: "Assignment Description",
+      availableFromDate: "2023-01-10",
+      availableUntilDate: "2023-05-15",
+      dueDate: "2023-05-15"
+    }))
+  }
   return (
       <div className="main-content-wrapper">
         <div className="d-none d-md-flex header-bar">
@@ -218,7 +229,9 @@ function AssignmentEditor({course}) {
                       Due
                     </label>
                     <input className="form-control assignment-edit-input"
-                           type="date" value="2023-09-18" id="due_date"/>
+                           id="due_date" type="date" value={assignment.dueDate}
+                           onChange={(e) => dispatch(selectAssignment(
+                               {...assignment, dueDate: e.target.value}))}/>
                   </div>
                   <div className="d-flex flex-row gap-2">
                     <div className="flex-grow-1 edit-form-section">
@@ -227,7 +240,12 @@ function AssignmentEditor({course}) {
                         Available from
                       </label>
                       <input className="form-control assignment-edit-input"
-                             type="date" id="avl_from"/>
+                             type="date" id="avl_from"
+                             value={assignment.availableFromDate}
+                             onChange={(e) => dispatch(selectAssignment({
+                               ...assignment,
+                               availableFromDate: e.target.value
+                             }))}/>
                     </div>
                     <div className="flex-grow-1 edit-form-section">
                       <label className="form-label above-label"
@@ -235,7 +253,12 @@ function AssignmentEditor({course}) {
                         Until
                       </label>
                       <input className="form-control assignment-edit-input"
-                             type="date" id="avl_until"/>
+                             type="date" id="avl_until"
+                             value={assignment.availableUntilDate}
+                             onChange={(e) => dispatch(selectAssignment({
+                               ...assignment,
+                               availableUntilDate: e.target.value
+                             }))}/>
                     </div>
                   </div>
                 </div>
