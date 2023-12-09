@@ -43,7 +43,6 @@ function ModuleList() {
   const saveButtonClick = (module) => {
     dispatch(updateModule(module));
     toggleOpen(false);
-    console.log(modules)
   };
   return (
       <>

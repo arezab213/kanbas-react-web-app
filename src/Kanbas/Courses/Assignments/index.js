@@ -19,8 +19,7 @@ function Assignments({course}) {
     const randomNumber = Math.floor(100 + Math.random() * 900);
     const result = `${letter1}${randomNumber}`;
     dispatch(selectAssignment({...assignment, _id: result, course: courseId}))
-    console.log(assignment)
-    navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`,
+    navigate(`/Kanbas/Courses/${courseId}/Assignments/${result}`,
         {state: {isFormForEdit: false}});
   };
   return (
