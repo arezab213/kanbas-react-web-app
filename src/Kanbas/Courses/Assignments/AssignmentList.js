@@ -26,7 +26,8 @@ function AssignmentList() {
     const randomNumber = Math.floor(100 + Math.random() * 900);
     const result = `${letter1}${randomNumber}`;
     dispatch(selectAssignment({...assignment, _id: result, course: courseId}))
-    navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`);
+    navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`,
+        {state: {isFormForEdit: false}});
   };
 
   function formatDate(inputDate) {
@@ -77,7 +78,11 @@ function AssignmentList() {
                 <div className="assignment-information">
                   <div className="assignment-title">
                     <Link key={assignment._id}
-                          to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>
+                          onClick={() => {
+                            dispatch(selectAssignment({...assignment}));
+                          }}
+                          to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+                          state={{isFormForEdit: true}}>
                       {assignment.title}
                     </Link>
                   </div>
@@ -93,7 +98,13 @@ function AssignmentList() {
                   </div>
                 </div>
                 <div className="row-right-side-icons-container">
-                  <div className="assignment-row-ellipsis-container">
+                  <div className="assignment-row-ellipsis-container"
+                       onClick={() => {
+                         dispatch(selectAssignment({...assignment}));
+                         navigate(
+                             `/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`,
+                             {state: {isFormForEdit: true}});
+                       }}>
                     <FaEllipsisVertical/>
                   </div>
                   <div className="assignment-row-icon-container">

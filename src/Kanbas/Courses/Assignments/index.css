@@ -164,7 +164,7 @@ ul.assignments-content .list-group-item-secondary:hover {
 }
 
 .assignment-information > .assignment-deadline-points strong {
-  font-weight: 500;
+  font-weight: 550;
 }
 
 .assignment-row-grip-container {
@@ -181,6 +181,12 @@ ul.assignments-content .list-group-item-secondary:hover {
   font-size: 20px;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+
+.assignment-row-ellipsis-container:active {
+  border-radius: 3px;
+  outline: 1px solid #333333;
 }
 
 .assignment-row-icon-container {

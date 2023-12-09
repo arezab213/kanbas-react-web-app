@@ -1,5 +1,5 @@
 import React from "react";
-import {useNavigate, useParams, Link} from "react-router-dom";
+import {useNavigate, useParams, Link, useLocation} from "react-router-dom";
 
 import "./index.css"
 import {useSelector, useDispatch} from "react-redux";
@@ -19,9 +19,11 @@ function AssignmentEditor({course}) {
   const assignment = useSelector((state) => state.assignmentReducer.assignment);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const {isFormForEdit} = useLocation().state;
   const {courseId} = useParams();
   const handleSave = () => {
-    dispatch(addAssignment(assignment));
+    isFormForEdit ? dispatch(updateAssignment(assignment)) : dispatch(
+        addAssignment(assignment));
     resetInitialAssignment();
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
