@@ -56,8 +56,11 @@ function ModuleList() {
                     <FaGripVertical/>
                   </div>
                   <div className="module-header">
-                    <div className="module-title">
+                    <div className="d-none d-sm-block module-title">
                       {`${module.name} - ${module.description}`}
+                    </div>
+                    <div className="d-block d-sm-none module-title">
+                      {`${module.name}`}
                     </div>
                   </div>
                   <div className="module-row-right-side-icons-container">

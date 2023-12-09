@@ -222,9 +222,13 @@ ul.breadcrumbs .list-group-item a:hover {
   margin-bottom: 10px;
 }
 
+textarea.form-control.modal-input {
+  height: 76px;
+}
+
 .form-control.modal-input:focus {
   border-color: #d41b2c;
-  border-width: 2px;
+  border-width: 1px;
 }
 
 .modal .form-label {

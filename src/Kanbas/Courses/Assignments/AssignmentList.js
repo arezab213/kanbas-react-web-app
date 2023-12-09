@@ -108,7 +108,7 @@ function AssignmentList() {
                         {assignment.title}
                       </Link>
                     </div>
-                    <div className="assignment-period">
+                    <div className="d-none d-sm-block assignment-period">
                       {assignment.course}
                     </div>
                     <div className="assignment-deadline-points">
