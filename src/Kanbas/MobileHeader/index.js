@@ -1,26 +1,40 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
-import {FaChevronDown} from "react-icons/fa";
-import {FaBars, FaXmark} from "react-icons/fa6";
-import {MDBCollapse} from 'mdb-react-ui-kit';
+import {FaChevronDown, FaBars, FaXmark} from "react-icons/fa6";
+import {
+  MDBCollapse,
+  MDBBtn,
+  MDBModal,
+  MDBModalDialog,
+  MDBModalContent,
+  MDBModalHeader,
+  MDBModalBody,
+} from 'mdb-react-ui-kit';
 import MobileCourseNavigation
   from "../Courses/CourseNavigation/MobileCourseNavigation";
 import "./index.css"
+import MobileKanbasNavigation from "../KanbasNavigation/MobileKanbasNavigation";
 
 function MobileHeader({obj}) {
   const [openCourseMenu, setOpenCourseMenu] = useState(false);
+  const [openKanbasMenu, setOpenKanbasMenu] = useState(false);
   if (obj.course != null) {
     return (
         <>
           <div className="d-xs-flex d-sm-flex d-md-none mobile-header-bar">
-            <Link className="mobile-header-bar-icon-container"
-                  data-bs-toggle="collapse" to="/">
+            <Link className="mobile-header-bar-icon-container" to="/"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setOpenKanbasMenu(!openKanbasMenu);
+                  }}>
               <FaBars/>
             </Link>
-            <Link className="mobile-header-title" data-bs-toggle="collapse"
-                  to="/">
-              <div>{obj.course == null ? null
-                  : `${obj.course._id} ${obj.course.name}`}</div>
+            <Link className="mobile-header-title" to="/"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setOpenKanbasMenu(!openKanbasMenu);
+                  }}>
+              <div>{`${obj.course._id} ${obj.course.name}`}</div>
               <div>{obj.pageName}</div>
             </Link>
             <Link className="mobile-header-bar-icon-container icon-toggle"
@@ -39,28 +53,85 @@ function MobileHeader({obj}) {
               <MobileCourseNavigation/>
             </div>
           </MDBCollapse>
+          <MDBModal open={openKanbasMenu} setOpen={setOpenKanbasMenu}
+                    tabIndex='-1'>
+            <MDBModalDialog size="fullscreen">
+              <MDBModalContent>
+                <MDBModalHeader className="kn-mobile-header-bar">
+                  <Link to="/Kanbas" className="kn-mobile-header-bar-title">
+                    <div className="kn-mobile-header-bar-icon-container">
+                      <img className="logo-mark"
+                           src="../../Images/Canvas_logo_single_mark.png"
+                           alt="..."/>
+                    </div>
+                    <div className="logo-label">
+                      KANBAS
+                    </div>
+                  </Link>
+                  <MDBBtn
+                      className='kn-mobile-header-bar-icon-container btn-close'
+                      color='none'
+                      onClick={() => setOpenKanbasMenu(!openKanbasMenu)}>
+                  </MDBBtn>
+                </MDBModalHeader>
+                <MDBModalBody>
+                  <MobileKanbasNavigation/>
+                </MDBModalBody>
+              </MDBModalContent>
+            </MDBModalDialog>
+          </MDBModal>
         </>
     );
   } else {
     return (
         <>
           <div className="d-xs-flex d-sm-flex d-md-none mobile-header-bar">
-            <Link className="mobile-header-bar-icon-container"
-                  data-bs-toggle="collapse" to="/">
+            <Link className="mobile-header-bar-icon-container" to="/"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setOpenKanbasMenu(!openKanbasMenu);
+                  }}>
               <FaBars/>
             </Link>
-            <Link className="mobile-header-title" data-bs-toggle="collapse"
-                  to="/">
-              <div>{obj.course == null ? null
-                  : `${obj.course._id} ${obj.course.name}`}</div>
+            <Link className="mobile-header-title" to="/"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setOpenKanbasMenu(!openKanbasMenu);
+                  }}>
               <div>{obj.pageName}</div>
             </Link>
             <div className="mobile-header-bar-icon-container"></div>
           </div>
+          <MDBModal open={openKanbasMenu} setOpen={setOpenKanbasMenu}
+                    tabIndex='-1'>
+            <MDBModalDialog size="fullscreen">
+              <MDBModalContent>
+                <MDBModalHeader className="kn-mobile-header-bar">
+                  <Link to="/Kanbas" className="kn-mobile-header-bar-title">
+                    <div className="kn-mobile-header-bar-icon-container">
+                      <img className="logo-mark"
+                           src="../../Images/Canvas_logo_single_mark.png"
+                           alt="..."/>
+                    </div>
+                    <div className="logo-label">
+                      KANBAS
+                    </div>
+                  </Link>
+                  <MDBBtn
+                      className='kn-mobile-header-bar-icon-container btn-close'
+                      color='none'
+                      onClick={() => setOpenKanbasMenu(!openKanbasMenu)}>
+                  </MDBBtn>
+                </MDBModalHeader>
+                <MDBModalBody>
+                  <MobileKanbasNavigation/>
+                </MDBModalBody>
+              </MDBModalContent>
+            </MDBModalDialog>
+          </MDBModal>
         </>
     );
   }
-
 }
 
 export default MobileHeader;

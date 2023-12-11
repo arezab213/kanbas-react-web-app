@@ -3,11 +3,10 @@ import KanbasNavigation from "./KanbasNavigation";
 import {Routes, Route, Navigate} from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
-import MobileKanbasNavigation from "./KanbasNavigation/MobileKanbasNavigation";
 import db from "./Database";
 import "./styles.css";
 import store from "./store";
-import { Provider } from "react-redux";
+import {Provider} from "react-redux";
 
 function Kanbas() {
   const [courses, setCourses] = useState(db.courses);
@@ -42,7 +41,6 @@ function Kanbas() {
   };
   return (
       <Provider store={store}>
-        <MobileKanbasNavigation/>
         <div className="flex-row-container">
           <KanbasNavigation/>
           <Routes>

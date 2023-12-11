@@ -28,3 +28,7 @@
 .icon-toggle[aria-expanded=false] svg#x-mark {
   display: none;
 }
+
+.modal-fullscreen .modal-header {
+  border-bottom: 0;
+}
