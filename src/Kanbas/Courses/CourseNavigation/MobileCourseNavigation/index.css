@@ -27,6 +27,7 @@ ul.mobile-secondary-nav .list-group-item a {
   color: #a32424;
   font-weight: 300;
   align-items: center;
+  text-decoration: none;
 }
 
 ul.mobile-secondary-nav .list-group-item.active a {

@@ -13,6 +13,7 @@
   display: block;
   flex-grow: 1;
   color: #ffffff;
+  text-decoration: none;
 }
 
 .mobile-header-bar-icon-container {

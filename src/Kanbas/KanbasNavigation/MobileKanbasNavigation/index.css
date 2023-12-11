@@ -38,6 +38,7 @@ ul.mkn .list-group-item a {
   height: 40px;
   align-items: center;
   font-weight: 300;
+  text-decoration: none;
 }
 
 ul.mkn .list-group-item.active a {

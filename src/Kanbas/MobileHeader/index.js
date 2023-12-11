@@ -53,33 +53,35 @@ function MobileHeader({obj}) {
               <MobileCourseNavigation/>
             </div>
           </MDBCollapse>
-          <MDBModal open={openKanbasMenu} setOpen={setOpenKanbasMenu}
-                    tabIndex='-1'>
-            <MDBModalDialog size="fullscreen">
-              <MDBModalContent>
-                <MDBModalHeader className="kn-mobile-header-bar">
-                  <Link to="/Kanbas" className="kn-mobile-header-bar-title">
-                    <div className="kn-mobile-header-bar-icon-container">
-                      <img className="logo-mark"
-                           src="../../Images/Canvas_logo_single_mark.png"
-                           alt="..."/>
-                    </div>
-                    <div className="logo-label">
-                      KANBAS
-                    </div>
-                  </Link>
-                  <MDBBtn
-                      className='kn-mobile-header-bar-icon-container btn-close'
-                      color='none'
-                      onClick={() => setOpenKanbasMenu(!openKanbasMenu)}>
-                  </MDBBtn>
-                </MDBModalHeader>
-                <MDBModalBody>
-                  <MobileKanbasNavigation/>
-                </MDBModalBody>
-              </MDBModalContent>
-            </MDBModalDialog>
-          </MDBModal>
+          <div className="d-xs-flex d-sm-flex d-md-none">
+            <MDBModal open={openKanbasMenu} setOpen={setOpenKanbasMenu}
+                      tabIndex='-1'>
+              <MDBModalDialog size="fullscreen">
+                <MDBModalContent>
+                  <MDBModalHeader className="kn-mobile-header-bar">
+                    <Link to="/Kanbas" className="kn-mobile-header-bar-title">
+                      <div className="kn-mobile-header-bar-icon-container">
+                        <img className="logo-mark"
+                             src="../../Images/Canvas_logo_single_mark.png"
+                             alt="..."/>
+                      </div>
+                      <div className="logo-label">
+                        KANBAS
+                      </div>
+                    </Link>
+                    <MDBBtn
+                        className='kn-mobile-header-bar-icon-container btn-close'
+                        color='none'
+                        onClick={() => setOpenKanbasMenu(!openKanbasMenu)}>
+                    </MDBBtn>
+                  </MDBModalHeader>
+                  <MDBModalBody>
+                    <MobileKanbasNavigation/>
+                  </MDBModalBody>
+                </MDBModalContent>
+              </MDBModalDialog>
+            </MDBModal>
+          </div>
         </>
     );
   } else {
@@ -102,33 +104,35 @@ function MobileHeader({obj}) {
             </Link>
             <div className="mobile-header-bar-icon-container"></div>
           </div>
-          <MDBModal open={openKanbasMenu} setOpen={setOpenKanbasMenu}
-                    tabIndex='-1'>
-            <MDBModalDialog size="fullscreen">
-              <MDBModalContent>
-                <MDBModalHeader className="kn-mobile-header-bar">
-                  <Link to="/Kanbas" className="kn-mobile-header-bar-title">
-                    <div className="kn-mobile-header-bar-icon-container">
-                      <img className="logo-mark"
-                           src="../../Images/Canvas_logo_single_mark.png"
-                           alt="..."/>
-                    </div>
-                    <div className="logo-label">
-                      KANBAS
-                    </div>
-                  </Link>
-                  <MDBBtn
-                      className='kn-mobile-header-bar-icon-container btn-close'
-                      color='none'
-                      onClick={() => setOpenKanbasMenu(!openKanbasMenu)}>
-                  </MDBBtn>
-                </MDBModalHeader>
-                <MDBModalBody>
-                  <MobileKanbasNavigation/>
-                </MDBModalBody>
-              </MDBModalContent>
-            </MDBModalDialog>
-          </MDBModal>
+          <div className="d-xs-flex d-sm-flex d-md-none">
+            <MDBModal open={openKanbasMenu} setOpen={setOpenKanbasMenu}
+                      tabIndex='-1'>
+              <MDBModalDialog size="fullscreen">
+                <MDBModalContent>
+                  <MDBModalHeader className="kn-mobile-header-bar">
+                    <Link to="/Kanbas" className="kn-mobile-header-bar-title">
+                      <div className="kn-mobile-header-bar-icon-container">
+                        <img className="logo-mark"
+                             src="../../Images/Canvas_logo_single_mark.png"
+                             alt="..."/>
+                      </div>
+                      <div className="logo-label">
+                        KANBAS
+                      </div>
+                    </Link>
+                    <MDBBtn
+                        className='kn-mobile-header-bar-icon-container btn-close'
+                        color='none'
+                        onClick={() => setOpenKanbasMenu(!openKanbasMenu)}>
+                    </MDBBtn>
+                  </MDBModalHeader>
+                  <MDBModalBody>
+                    <MobileKanbasNavigation/>
+                  </MDBModalBody>
+                </MDBModalContent>
+              </MDBModalDialog>
+            </MDBModal>
+          </div>
         </>
     );
   }

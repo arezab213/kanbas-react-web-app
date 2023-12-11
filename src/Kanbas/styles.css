@@ -8,12 +8,12 @@ body * {
 }
 
 a {
-  text-decoration: none !important;
+  text-decoration: none;
   color: #A32424;
 }
 
 a:hover {
-  text-decoration: underline !important;
+  text-decoration: underline;
   color: inherit;
 }
 
