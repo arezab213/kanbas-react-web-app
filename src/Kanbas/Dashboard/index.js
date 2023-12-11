@@ -1,4 +1,5 @@
-import {useState} from "react";
+import "./index.css"
+import React, {useState} from "react";
 import {
   MDBBtn,
   MDBModal,
@@ -10,12 +11,11 @@ import {
   MDBModalFooter,
 } from 'mdb-react-ui-kit';
 import {Link} from "react-router-dom";
-import "./index.css"
-
 import {FaRegPenToSquare} from "react-icons/fa6";
 import {FaBullhorn} from "react-icons/fa6";
 import {FaRegComments} from "react-icons/fa6";
 import {FaXmark} from "react-icons/fa6";
+import MobileHeader from "../MobileHeader";
 
 function Dashboard({
   courses,
@@ -28,6 +28,7 @@ function Dashboard({
   const [modalTitles, setModalTitles] = useState(
       {header: "Add Course", button: "Add"})
   const [dashboardModal, setDashboardModal] = useState(false);
+  const mobileHeaderInfo = {pageName: "Dashboard"};
   const toggleOpen = (resetInitialCourse = true) => {
     setDashboardModal(!dashboardModal);
     if (resetInitialCourse) {
@@ -48,7 +49,8 @@ function Dashboard({
   };
   return (
       <>
-        <div className="main-content-wrapper">
+        <div className="main-content-wrapper dashboard">
+          <MobileHeader obj={mobileHeaderInfo}/>
           <div className="d-none d-md-flex header-bar">
             <div className="breadcrumb-wrapper">
               <nav id="breadcrumbs">

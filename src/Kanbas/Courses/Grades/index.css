@@ -168,10 +168,6 @@ button#settings-btn {
     width: calc(100vw - 48px)
   }
 
-  .mobile-header-bar {
-    height: 80px;
-  }
-
   button.top-row {
     margin-right: 5px;
     margin-left: 0px;

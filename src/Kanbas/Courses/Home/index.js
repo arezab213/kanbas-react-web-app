@@ -20,12 +20,14 @@ import {
 import {addModule, setModule} from "../Modules/modulesReducer";
 import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
+import MobileHeader from "../../MobileHeader";
 
 function Home({course}) {
   const {courseId} = useParams();
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
   const [moduleModal, setModuleModal] = useState(false);
+  const mobileHeaderInfo = {course: course, pageName: "Home"};
   const toggleOpen = (resetInitialModule = true) => {
     setModuleModal(!moduleModal);
     if (resetInitialModule) {
@@ -42,6 +44,7 @@ function Home({course}) {
   };
   return (
       <div className="main-content-wrapper">
+        <MobileHeader obj={mobileHeaderInfo}/>
         <div className="d-none d-md-flex header-bar">
           <FaBars/>
           <nav id="breadcrumbs">

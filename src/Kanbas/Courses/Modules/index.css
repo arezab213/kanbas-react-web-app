@@ -201,10 +201,6 @@ ul.module-content .list-group-item-secondary:hover {
     padding-left: 12px;
     padding-right: 12px;
   }
-
-  .mobile-header-bar {
-    height: 80px;
-  }
 }
 
 @media only screen and (max-width: 992px) {

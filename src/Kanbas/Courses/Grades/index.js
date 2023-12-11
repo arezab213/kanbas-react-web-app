@@ -7,16 +7,18 @@ import {
 import {FaChevronRight, FaSearch} from "react-icons/fa";
 import CourseNavigation from "../CourseNavigation";
 import React from "react";
+import MobileHeader from "../../MobileHeader";
 
 function Grades({course}) {
   const {courseId} = useParams();
-
   const assignments = db.assignments.filter(
       (assignment) => assignment.course === courseId);
   const enrollments = db.enrollments.filter(
       (enrollment) => enrollment.course === courseId);
+  const mobileHeaderInfo = {course: course, pageName: "Grades"};
   return (
       <div className="main-content-wrapper">
+        <MobileHeader obj={mobileHeaderInfo}/>
         <div className="d-none d-md-flex header-bar">
           <FaBars/>
           <nav id="breadcrumbs">

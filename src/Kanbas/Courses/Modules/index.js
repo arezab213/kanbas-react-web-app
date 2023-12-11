@@ -22,12 +22,14 @@ import {FaRegCircleCheck} from "react-icons/fa6";
 import {Link, useParams} from "react-router-dom";
 import {FaChevronRight} from "react-icons/fa";
 import CourseNavigation from "../CourseNavigation";
+import MobileHeader from "../../MobileHeader";
 
 function Modules({course}) {
   const {courseId} = useParams();
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
   const [moduleModal, setModuleModal] = useState(false);
+  const mobileHeaderInfo = {course: course, pageName: "Modules"};
   const toggleOpen = (resetInitialModule = true) => {
     setModuleModal(!moduleModal);
     if (resetInitialModule) {
@@ -44,6 +46,7 @@ function Modules({course}) {
   };
   return (
       <div className="main-content-wrapper">
+        <MobileHeader obj={mobileHeaderInfo}/>
         <div className="d-none d-md-flex header-bar">
           <FaBars/>
           <nav id="breadcrumbs">

@@ -23,8 +23,10 @@ ul.mobile-secondary-nav .list-group-item {
 }
 
 ul.mobile-secondary-nav .list-group-item a {
+  display: flex;
   color: #a32424;
   font-weight: 300;
+  align-items: center;
 }
 
 ul.mobile-secondary-nav .list-group-item.active a {
@@ -35,7 +37,7 @@ ul.mobile-secondary-nav .list-group-item a:hover {
   text-decoration: underline;
 }
 
-ul.mobile-secondary-nav .list-group-item i {
+ul.mobile-secondary-nav .list-group-item svg {
   margin-right: 7px;
   width: 16px;
   text-align: center;

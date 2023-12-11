@@ -8,12 +8,12 @@ body * {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #A32424;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline !important;
   color: inherit;
 }
 
@@ -169,37 +169,6 @@ ul.breadcrumbs .list-group-item a:hover {
   height: 14px;
   color: #000000;
   font-size: 10px;
-}
-
-.mobile-header-bar {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  align-items: center;
-  background-color: #000000;
-  height: 55px;
-  color: #ffffff;
-}
-
-.mobile-header-title {
-  text-align: center;
-  display: block;
-  flex-grow: 1;
-  color: #ffffff;
-}
-
-.mobile-header-bar-icon-container {
-  text-align: center;
-  width: 60px;
-  color: #ffffff;
-}
-
-.icon-toggle[aria-expanded=true] i#chevron-down {
-  display: none;
-}
-
-.icon-toggle[aria-expanded=false] i#xmark {
-  display: none;
 }
 
 .modal .btn-close {

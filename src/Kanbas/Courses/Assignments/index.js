@@ -8,11 +8,11 @@ import {FaChevronRight} from "react-icons/fa";
 import CourseNavigation from "../CourseNavigation";
 import {selectAssignment} from "./assignmentsReducer";
 import {useDispatch, useSelector} from "react-redux";
+import MobileHeader from "../../MobileHeader";
 
 function Assignments({course}) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const assignment = useSelector((state) => state.assignmentReducer.assignment);
   const {courseId} = useParams();
   const handleClickAddAssignment = () => {
     const letter1 = String.fromCharCode(65 + Math.floor(Math.random() * 26));
@@ -31,8 +31,10 @@ function Assignments({course}) {
     navigate(`/Kanbas/Courses/${courseId}/Assignments/${result}`,
         {state: {isFormForEdit: false}});
   };
+  const mobileHeaderInfo = {course: course, pageName: "Assignments"};
   return (
       <div className="main-content-wrapper">
+        <MobileHeader obj={mobileHeaderInfo}/>
         <div className="d-none d-md-flex header-bar">
           <FaBars/>
           <nav id="breadcrumbs">

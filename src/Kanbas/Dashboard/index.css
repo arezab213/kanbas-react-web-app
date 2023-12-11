@@ -154,6 +154,10 @@ h6.dashboard-card-title {
   .dashboard-main-content-wrapper .header-bar {
     margin-right: 0;
   }
+
+  .main-content-wrapper.dashboard > .mobile-header-bar {
+    height: 55px;
+  }
 }
 
 @media only screen and (max-width: 584px) {

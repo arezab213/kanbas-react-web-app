@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa6";
 import {FaChevronRight} from "react-icons/fa";
 import CourseNavigation from "../../CourseNavigation";
+import MobileHeader from "../../../MobileHeader";
 
 function AssignmentEditor({course}) {
   const assignment = useSelector((state) => state.assignmentReducer.assignment);
@@ -21,6 +22,7 @@ function AssignmentEditor({course}) {
   const navigate = useNavigate();
   const {isFormForEdit} = useLocation().state;
   const {courseId} = useParams();
+  const mobileHeaderInfo = {course: course, pageName: "Assignments"};
   const handleSave = () => {
     isFormForEdit ? dispatch(updateAssignment(assignment)) : dispatch(
         addAssignment(assignment));
@@ -39,6 +41,7 @@ function AssignmentEditor({course}) {
   }
   return (
       <div className="main-content-wrapper">
+        <MobileHeader obj={mobileHeaderInfo}/>
         <div className="d-none d-md-flex header-bar">
           <FaBars/>
           <nav id="breadcrumbs">

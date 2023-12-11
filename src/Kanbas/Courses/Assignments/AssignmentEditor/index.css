@@ -211,10 +211,6 @@ button#add-assign-btn {
     padding-right: 12px;
   }
 
-  .mobile-header-bar {
-    height: 80px;
-  }
-
   .assignments-secondary-header-bar.edit-page .btn, .edit-form-end-btn-row .btn {
     margin-left: 0;
     margin-right: 10px;
