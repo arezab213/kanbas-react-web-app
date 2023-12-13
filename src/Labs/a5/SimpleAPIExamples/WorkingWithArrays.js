@@ -33,6 +33,30 @@ function WorkingWithArrays() {
         `${API}/${todo.id}/title/${todo.title}`);
     setTodos(response.data);
   };
+  const postTodo = async () => {
+    const response = await axios.post(API, todo);
+    setTodos([...todos, response.data]);
+  };
+  const [errorMessage, setErrorMessage] = useState(null);
+  const deleteTodo = async (todo) => {
+    try {
+      const response = await axios.delete(`${API}/${todo.id}`);
+      setTodos(todos.filter((t) => t.id !== todo.id));
+    } catch (error) {
+      console.log(error);
+      setErrorMessage(error.response.data.message);
+    }
+  };
+  const updateTodo = async () => {
+    try {
+      const response = await axios.put(`${API}/${todo.id}`, todo);
+      setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
+      setTodo({});
+    } catch (error) {
+      console.log(error);
+      setErrorMessage(error.response.data.message);
+    }
+  };
   useEffect(() => {
     fetchTodos();
   }, []);
@@ -85,32 +109,61 @@ function WorkingWithArrays() {
         <a
             href={`${API}/${todo.id}/completed/${todo.completed}`}
             className="btn btn-primary me-2">
-          Update Completed to {todo.completed.toString()}
+          Update Completed to {todo.completed?.toString()}
         </a>
         <h3>Deleting from an Array</h3>
         <a href={`${API}/${todo.id}/delete`}
            className="btn btn-primary me-2">
           Delete Todo with ID = {todo.id}
         </a>
-        <h3>Deleting from an Array</h3>
-        <button onClick={createTodo}
-                className="btn btn-primary mb-2 w-100">
-          Create Todo
-        </button>
-        <input value={todo.id}
+        <h3>Working with Arrays using JSON + Extra Credit</h3>
+        <input value={todo.id} readOnly className="form-control"
                onChange={(e) => setTodo({
                  ...todo,
                  id: e.target.value
                })}/>
-        <input value={todo.title}
+        <input value={todo.title} className="form-control"
                onChange={(e) => setTodo({
                  ...todo,
                  title: e.target.value
                })}/>
+        <textarea className="form-control"
+                  onChange={(e) => setTodo({
+                    ...todo,
+                    description: e.target.value
+                  })}
+                  value={todo.description}/>
+        <input className="form-control"
+               onChange={(e) => setTodo({
+                 ...todo, due: e.target.value
+               })}
+               value={todo.due} type="date"/>
+        <label className="form-control">
+          <input type="checkbox" checked={todo.completed}
+                 onChange={(e) => setTodo({
+                   ...todo, completed: e.target.checked
+                 })}/>
+          Completed
+        </label>
+        <button onClick={postTodo} className="btn btn-success mb-2 w-100">
+          Post Todo
+        </button>
+        <button onClick={updateTodo} className="btn btn-success mb-2 w-100">
+          Update Todo
+        </button>
         <button onClick={updateTitle}
                 className="btn btn-success mb-2 w-100">
           Update Title
         </button>
+        <button onClick={createTodo}
+                className="btn btn-primary mb-2 w-100">
+          Create Todo
+        </button>
+        {errorMessage && (
+            <div className="alert alert-danger mb-2 mt-2">
+              {errorMessage}
+            </div>
+        )}
         <ul className="list-group">
           {todos.map((todo) => (
               <li key={todo.id}
@@ -125,7 +178,17 @@ function WorkingWithArrays() {
                     className="btn btn-danger float-end">
                   Remove
                 </button>
+                <button
+                    onClick={() => deleteTodo(todo)}
+                    className="btn btn-danger float-end ms-2">
+                  Delete
+                </button>
+                <input
+                    checked={todo.completed}
+                    type="checkbox" readOnly/>
                 {todo.title}
+                <p>{todo.description}</p>
+                <p>{todo.due}</p>
               </li>
           ))}
         </ul>
