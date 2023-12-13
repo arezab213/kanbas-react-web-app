@@ -1,5 +1,13 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useSelector, useDispatch} from "react-redux";
+import {useParams} from "react-router-dom";
+import {
+  FaEllipsisVertical,
+  FaGripVertical,
+  FaPlus,
+  FaXmark
+} from "react-icons/fa6";
+import {FaCheckCircle} from "react-icons/fa";
 import {
   MDBBtn,
   MDBModal,
@@ -14,18 +22,18 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
-import {useParams} from "react-router-dom";
-import {
-  FaEllipsisVertical,
-  FaGripVertical,
-  FaPlus,
-  FaXmark
-} from "react-icons/fa6";
-import {FaCheckCircle} from "react-icons/fa";
+import * as client from "./client";
 
 function ModuleList() {
   const {courseId} = useParams();
+  useEffect(() => {
+    client.findModulesForCourse(courseId)
+    .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId]);
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
@@ -40,7 +48,13 @@ function ModuleList() {
           }))
     }
   }
-  const saveButtonClick = (module) => {
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+  const handleUpdateModule = async (module) => {
+    const status = await client.updateModule(module);
     dispatch(updateModule(module));
     toggleOpen(false);
   };
@@ -73,7 +87,7 @@ function ModuleList() {
                     </div>
                     <div className="module-row-icon-container x-mark"
                          onClick={() => {
-                           dispatch(deleteModule(module._id));
+                           handleDeleteModule(module._id);
                          }}>
                       <FaXmark/>
                     </div>
@@ -124,7 +138,7 @@ function ModuleList() {
                   Cancel
                 </button>
                 <button className="btn btn-primary"
-                        onClick={() => saveButtonClick({...module})}>Save
+                        onClick={() => handleUpdateModule({...module})}>Save
                 </button>
               </MDBModalFooter>
             </MDBModalContent>

@@ -4,7 +4,6 @@ import KanbasNavigation from "./KanbasNavigation";
 import {Routes, Route, Navigate} from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
-import db from "./Database";
 import "./styles.css";
 import store from "./store";
 import {Provider} from "react-redux";
