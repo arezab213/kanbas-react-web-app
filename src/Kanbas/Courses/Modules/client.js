@@ -10,7 +10,6 @@ export const deleteModule = async (moduleId) => {
 };
 
 export const createModule = async (courseId, module) => {
-  console.log(module)
   const response = await axios.post(
       `${COURSES_URL}/${courseId}/modules`,
       module

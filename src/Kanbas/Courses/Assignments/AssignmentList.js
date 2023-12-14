@@ -1,8 +1,8 @@
 import {Link, useNavigate, useParams} from "react-router-dom";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useSelector, useDispatch} from "react-redux";
 import {
-  selectAssignment, deleteAssignment
+  selectAssignment, deleteAssignment, setAssignments,
 } from "./assignmentsReducer";
 import {
   FaCircleCheck,
@@ -17,10 +17,15 @@ import {
   MDBModalDialog, MDBModalFooter,
   MDBModalHeader, MDBModalTitle
 } from "mdb-react-ui-kit";
+import * as client from "./client";
 
 function AssignmentList() {
   const navigate = useNavigate();
   const {courseId} = useParams();
+  useEffect(() => {
+    client.findAssignmentsForCourse(courseId).then(
+        (assignments) => dispatch(setAssignments(assignments)));
+  }, [courseId]);
   const assignments = useSelector(
       (state) => state.assignmentReducer.assignments);
   const assignment = useSelector((state) => state.assignmentReducer.assignment);
@@ -56,6 +61,12 @@ function AssignmentList() {
     const year = dateObj.getUTCFullYear();
     return `${monthAbbreviation} ${day} ${year}`;
   }
+
+  const handleDeleteAssignment = (assignmentId) => {
+    client.deleteAssignment(assignmentId).then((status) => {
+      dispatch(deleteAssignment(assignmentId));
+    });
+  };
 
   const [deleteAssignmentModal, setDeleteAssignmentModal] = useState(false);
   const toggleOpen = () => {
@@ -162,7 +173,7 @@ function AssignmentList() {
                         onClick={() => toggleOpen()}>Cancel
                 </button>
                 <button className="btn btn-primary" onClick={() => {
-                  dispatch(deleteAssignment(assignment._id));
+                  handleDeleteAssignment(assignment._id);
                   toggleOpen();
                 }}>Yes
                 </button>

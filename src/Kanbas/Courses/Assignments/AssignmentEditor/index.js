@@ -1,6 +1,6 @@
 import React from "react";
 import {useNavigate, useParams, Link, useLocation} from "react-router-dom";
-
+import * as client from "../client";
 import "./index.css"
 import {useSelector, useDispatch} from "react-redux";
 import {
@@ -24,11 +24,20 @@ function AssignmentEditor({course}) {
   const {courseId} = useParams();
   const mobileHeaderInfo = {course: course, pageName: "Assignments"};
   const handleSave = () => {
-    isFormForEdit ? dispatch(updateAssignment(assignment)) : dispatch(
-        addAssignment(assignment));
+    isFormForEdit ? handleUpdateAssignment() : handleAddAssignment()
     resetInitialAssignment();
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
+  const handleAddAssignment = () => {
+    client.createAssignment(courseId, assignment).then((assignment) => {
+      dispatch(addAssignment(assignment));
+    });
+  };
+  const handleUpdateAssignment = async () => {
+    const status = await client.updateAssignment(assignment);
+    dispatch(updateAssignment(assignment));
+  };
+
   const resetInitialAssignment = () => {
     dispatch(selectAssignment({
       title: "New Assignment",
@@ -106,7 +115,10 @@ function AssignmentEditor({course}) {
                        value={assignment.points}
                        id="points-input"
                        onChange={(e) => dispatch(selectAssignment(
-                           {...assignment, points: e.target.value}))}/>
+                           {
+                             ...assignment,
+                             points: parseInt(e.target.value)
+                           }))}/>
               </div>
               <div className="edit-form-section extra-margin">
                 <label htmlFor="assignment-group-dropdown"
