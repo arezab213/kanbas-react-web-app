@@ -52,7 +52,8 @@ function MobileCourseNavigation() {
                       '-')}`}
                   className={`secondary-navigation-link ${pathname.includes(
                       link.replace(/\s+/g, '-')) && "active"}`}>
-                {linksToIconsMap[link]}
+                {linksToIconsMap[link.replace(/ /g, '_').replace(/[^\w\s]/g,
+                    '')]}
                 {link}
               </Link>
             </li>

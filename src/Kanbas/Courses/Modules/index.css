@@ -33,6 +33,16 @@
   color: #05a82b;
 }
 
+.module-row-icon-container.x-mark {
+  color: #d41b2c;
+  cursor: pointer;
+}
+
+.module-row-icon-container.x-mark:active {
+  border-radius: 3px;
+  outline: 1px solid #d41b2c;
+}
+
 .btn.add-module svg {
   font-size: 16px;
   margin-right: 5px;
@@ -98,10 +108,7 @@ ul.module-content .list-group-item-secondary:hover {
 
 .module-header {
   flex-grow: 5;
-  flex-shrink: 1;
-  flex-basis: 0;
   margin-left: 10px;
-  align-self: end;
 }
 
 .module-information {
@@ -151,6 +158,12 @@ ul.module-content .list-group-item-secondary:hover {
   align-items: center;
   justify-content: center;
   margin-left: 15px;
+  cursor: pointer;
+}
+
+.module-row-ellipsis-container:active {
+  border-radius: 3px;
+  outline: 1px solid #4c5860;
 }
 
 .module-row-icon-container {
@@ -169,27 +182,37 @@ ul.module-content .list-group-item-secondary:hover {
   margin-left: 10px;
 }
 
-/*@media only screen and (max-width: 767px) {*/
-/*  .home-main-content {*/
-/*    padding-left: 12px;*/
-/*    padding-right: 12px;*/
-/*  }*/
+@media only screen and (max-width: 576px) {
+  .module-information > .module-title, .module-header > .module-title {
+    font-size: 14px;
+  }
 
-/*  .mobile-header-bar {*/
-/*    height: 80px;*/
-/*  }*/
-/*}*/
+  .module-row-ellipsis-container {
+    margin-left: 5px;
+  }
 
-/*@media only screen and (max-width: 992px) {*/
-/*  .secondary-header-bar .btn {*/
-/*    margin-left: 5px;*/
-/*    max-height: 42px;*/
-/*  }*/
+  .module-row-icon-container {
+    margin-left: 5px;
+  }
+}
 
-/*  .home-main-content > .secondary-header-bar {*/
-/*    display: flex;*/
-/*    flex-direction: row-reverse;*/
-/*    flex-wrap: wrap;*/
-/*    justify-content: left;*/
-/*  }*/
-/*}*/
+@media only screen and (max-width: 767px) {
+  .home-main-content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .secondary-header-bar .btn {
+    margin-left: 5px;
+    max-height: 42px;
+  }
+
+  .home-main-content > .secondary-header-bar {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+}

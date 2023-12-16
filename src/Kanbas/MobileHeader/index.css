@@ -1,0 +1,35 @@
+.mobile-header-bar {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  background-color: #000000;
+  height: 80px;
+  color: #ffffff;
+}
+
+.mobile-header-title {
+  text-align: center;
+  display: block;
+  flex-grow: 1;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.mobile-header-bar-icon-container {
+  text-align: center;
+  width: 60px;
+  color: #ffffff;
+}
+
+.icon-toggle[aria-expanded=true] svg#chevron-down {
+  display: none;
+}
+
+.icon-toggle[aria-expanded=false] svg#x-mark {
+  display: none;
+}
+
+.modal-fullscreen .modal-header {
+  border-bottom: 0;
+}

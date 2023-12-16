@@ -38,6 +38,7 @@ ul.mkn .list-group-item a {
   height: 40px;
   align-items: center;
   font-weight: 300;
+  text-decoration: none;
 }
 
 ul.mkn .list-group-item.active a {
@@ -57,7 +58,7 @@ ul.mkn .list-group-item .icon-container {
   display: inline-block;
 }
 
-ul.mkn .list-group-item i {
+ul.mkn .list-group-item svg {
   font-size: 30px;
 }
 
@@ -70,7 +71,7 @@ ul.mkn .list-group-item i {
 }
 
 .kn-mobile-header-bar a, .kn-mobile-header-bar a:active, .kn-mobile-header-bar a:focus, .kn-mobile-header-bar a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
 }
 

@@ -12,6 +12,12 @@
   margin-left: 0;
 }
 
+.dashboard-main-content-wrapper > .header-bar > .btn {
+  align-self: center;
+  margin-left: auto;
+  margin-right: 5px;
+}
+
 .course-cards-container {
   padding-top: 24px;
   margin-left: -36px;
@@ -66,6 +72,12 @@
   color: #ffffff;
 }
 
+.dashboard-card-header > .card-header-button:hover {
+  border-radius: 3px;
+  outline: 1px solid #ffffff;
+  cursor: pointer;
+}
+
 .card-body.dashboard-card {
   padding: 12px 18px 0;
   background-color: #ffffff;
@@ -114,6 +126,16 @@ h6.dashboard-card-title {
   color: #677179;
 }
 
+.dashboard-card-base #edit-button {
+  height: 36px;
+  width: 66px;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 4px;
+  text-decoration: none;
+  color: #677179;
+}
+
 .dashboard-course-card svg {
   vertical-align: top;
 }
@@ -132,6 +154,10 @@ h6.dashboard-card-title {
   .dashboard-main-content-wrapper .header-bar {
     margin-right: 0;
   }
+
+  .main-content-wrapper.dashboard > .mobile-header-bar {
+    height: 55px;
+  }
 }
 
 @media only screen and (max-width: 584px) {
@@ -143,5 +169,11 @@ h6.dashboard-card-title {
   .card.dashboard-course-card {
     flex-grow: 1;
     flex-shrink: 0;
+  }
+
+  .dashboard-main-content-wrapper > .header-bar {
+    font-size: 20px;
+    font-weight: 300;
+    align-items: center;
   }
 }

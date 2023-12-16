@@ -18,12 +18,12 @@
   padding-bottom: 17px;
   padding-right: 5px;
   justify-content: left;
+  row-gap: 5px;
 }
 
-.assignments-secondary-header-bar .btns-row {
+.assignments-secondary-header-bar.main-page .btns-row {
   display: flex;
   flex-direction: row-reverse;
-  flex-grow: 1;
 }
 
 .btn-row-publish-status {
@@ -66,11 +66,12 @@
   font-weight: 200;
   border-radius: 3px;
   margin-left: 5px;
+  margin-right: auto;
 }
 
 .form-control.assignment-text-input:focus {
   border-color: #d41b2c;
-  border-width: 2px;
+  border-width: 1px;
 }
 
 .assignments-module-content {
@@ -130,16 +131,16 @@ ul.assignments-content .list-group-item-secondary:hover {
 }
 
 .assignment-row-header {
+  display: flex;
   flex-grow: 3;
   flex-shrink: 1;
   flex-basis: 0;
   margin-left: 20px;
+  align-items: center;
 }
 
 .assignment-information {
   flex-grow: 3;
-  flex-shrink: 1;
-  flex-basis: 0;
   margin-left: 5px;
 }
 
@@ -164,7 +165,7 @@ ul.assignments-content .list-group-item-secondary:hover {
 }
 
 .assignment-information > .assignment-deadline-points strong {
-  font-weight: 500;
+  font-weight: 550;
 }
 
 .assignment-row-grip-container {
@@ -181,6 +182,13 @@ ul.assignments-content .list-group-item-secondary:hover {
   font-size: 20px;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.assignment-row-ellipsis-container:active {
+  border-radius: 3px;
+  outline: 1px solid #333333;
 }
 
 .assignment-row-icon-container {
@@ -191,12 +199,31 @@ ul.assignments-content .list-group-item-secondary:hover {
   align-items: center;
   justify-content: center;
   margin-left: 15px;
-  margin-right: 15px;
   color: #05a82b;
+}
+
+.assignment-row-icon-container.pencil {
+  margin-right: 15px;
+}
+
+.assignment-row-icon-container.x-mark {
+  color: #d41b2c;
+  cursor: pointer;
+}
+
+.assignment-row-icon-container.x-mark:active {
+  border-radius: 3px;
+  outline: 1px solid #d41b2c;
 }
 
 .assignment-row-icon-container.plus {
   color: #333333;
+  cursor: pointer;
+}
+
+.assignment-row-icon-container.plus:active {
+  border-radius: 3px;
+  outline: 1px solid #333333;
 }
 
 .assignment-main-content .badge {
@@ -222,37 +249,47 @@ ul.assignments-content .list-group-item-secondary:hover {
 }
 
 
-
-/*@media only screen and (max-width: 576px) {
-  .assignment-edit-form .edit-form-section.extra-margin {
-    margin-right: 0;
-    flex-direction: column;
-  }
-
-  .edit-form-section.extra-margin > .form-label {
-    text-align: left;
-    justify-content: left;
-    padding-right: 0;
-    width: 100%
-  }
-
-  .assignment-edit-input-group {
-    width: 70%;
-    margin-left: 15%;
-  }
-
-  button#add-assign-btn {
-    width: 70%;
-    margin-left: 15%;
-  }
-
-  label#input-group-label {
-    text-align: center;
-    justify-content: center;
+@media only screen and (max-width: 576px) {
+  .assignment-main-content > .assignments-secondary-header-bar {
+    align-items: center;
   }
 
   .badge.rounded-pill {
     margin-left: 15px;
+  }
+
+  ul.assignments-content .list-group-item {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  ul.assignments-content .list-group-item-secondary {
+    padding: 6px 6px 6px 4px;
+  }
+
+  .assignment-information > .assignment-title, .assignment-row-header > .assignment-title {
+    font-size: 14px;
+  }
+
+  .assignment-information > .assignment-period {
+    margin-bottom: 0;
+    font-size: 7px;
+  }
+
+  .assignment-information > .assignment-deadline-points {
+    font-size: 7px;
+  }
+
+  .assignment-row-icon-container.pencil {
+    margin-right: 5px;
+  }
+
+  .assignment-row-icon-container {
+    margin-left: 5px;
+  }
+
+  .assignment-row-ellipsis-container {
+    margin-left: 5px;
   }
 }
 
@@ -261,26 +298,4 @@ ul.assignments-content .list-group-item-secondary:hover {
     padding-left: 12px;
     padding-right: 12px;
   }
-
-  .mobile-header-bar {
-    height: 80px;
-  }
-
-  .assignments-secondary-header-bar .btn, .edit-form-end-btn-row .btn {
-    margin-left: 0;
-    margin-right: 10px;
-  }
 }
-
-@media only screen and (max-width: 822px) {
-  .secondary-header-bar.main-page .btns-row {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-grow: 1;
-    justify-content: left;
-  }
-
-  .form-control.assignment-text-input {
-    margin-bottom: 5px;
-  }
-}*/
