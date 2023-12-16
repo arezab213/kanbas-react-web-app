@@ -1,0 +1,213 @@
+body * {
+  font-family: 'Lato Extended', 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+
+*:focus {
+  box-shadow: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: #A32424;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.btn {
+  background-color: #f5f5f5 !important;
+  color: #2d3b45 !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: #c7cdd1 !important;
+  border-radius: 3px !important;
+  padding: 8px 14px !important;
+  text-decoration: none !important;
+  font-weight: 300 !important;
+  height: 40px !important;
+  align-items: center !important;
+  display: flex !important;
+}
+
+.btn svg {
+  margin-right: 5px;
+}
+
+.btn.icon svg {
+  margin-right: 0;
+}
+
+.btn:hover {
+  background-color: #e5e5e5 !important;
+  transition: 0.2s !important;
+  color: #2d3b45 !important;
+  border-color: #c7cdd1 !important;
+}
+
+.btn:focus, .btn:active {
+  background-color: #e5e5e5 !important;
+  transition: 0.1s !important;
+  color: #2d3b45 !important;
+  border-color: #a32424 !important;
+  border-width: 1px !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn-secondary {
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-radius: 3px !important;
+  padding: 8px 14px !important;
+  text-decoration: none !important;
+  font-weight: 300 !important;
+  background-color: #d41b2c !important;
+  color: #ffffff !important;
+  border-color: #b51726 !important;
+}
+
+.btn-secondary:focus, .btn-secondary:active, .btn-secondary:hover {
+  background-color: #b51726 !important;
+  border-color: #b51726 !important;
+  transition: 0.1s !important;
+  color: #ffffff !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn.ellipsis {
+  height: 40px !important;
+  font-size: 20px !important;
+  padding-right: 7px !important;
+  padding-left: 7px !important;
+}
+
+.btn.ellipsis svg {
+  margin-right: 0;
+}
+
+.btn.icon {
+  height: 40px !important;
+  font-size: 20px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.flex-row-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-content-wrapper {
+  margin-left: 84px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.below-header-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #c7cdd1;
+  margin: 0 24px;
+  height: 72px;
+}
+
+.header-bar svg {
+  margin-left: 5px;
+  margin-right: 30px;
+  width: 25px;
+  height: 26px;
+  color: #A32424;
+  text-align: center;
+}
+
+ul.breadcrumbs.list-group {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+ul.breadcrumbs .list-group-item {
+  vertical-align: top;
+  border-style: none;
+  font-size: 18px;
+  padding: 0;
+  font-weight: 300;
+}
+
+ul.breadcrumbs .list-group-item#dashboard-header {
+  font-size: 35px;
+  font-weight: 200;
+}
+
+ul.breadcrumbs .list-group-item a {
+  color: #a32424;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+ul.breadcrumbs .list-group-item a:hover {
+  text-decoration: underline;
+}
+
+.header-bar li svg {
+  margin-right: 9px;
+  margin-left: 9px;
+  width: 8px;
+  height: 14px;
+  color: #000000;
+  font-size: 10px;
+}
+
+.mobile-header-bar {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  background-color: #000000;
+  height: 55px;
+  color: #ffffff;
+}
+
+.mobile-header-title {
+  text-align: center;
+  display: block;
+  flex-grow: 1;
+  color: #ffffff;
+}
+
+.mobile-header-bar-icon-container {
+  text-align: center;
+  width: 60px;
+  color: #ffffff;
+}
+
+.icon-toggle[aria-expanded=true] i#chevron-down {
+  display: none;
+}
+
+.icon-toggle[aria-expanded=false] i#xmark {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .main-content-wrapper {
+    margin-left: 0;
+  }
+
+  .below-header-content {
+    overflow-x: auto;
+  }
+}
