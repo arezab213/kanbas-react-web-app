@@ -21,6 +21,7 @@ import {addModule, setModule} from "../Modules/modulesReducer";
 import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import MobileHeader from "../../MobileHeader";
+import {createModule} from "../Modules/client";
 
 function Home({course}) {
   const {courseId} = useParams();
@@ -38,8 +39,11 @@ function Home({course}) {
           }))
     }
   }
-  const saveButtonClick = (module) => {
-    dispatch(addModule(module));
+  const handleAddModule = (module) => {
+    createModule(courseId, module).then((module) => {
+      console.log(module)
+      dispatch(addModule(module));
+    });
     toggleOpen(false);
   };
   return (
@@ -109,7 +113,7 @@ function Home({course}) {
                         Cancel
                       </button>
                       <button className="btn btn-primary"
-                              onClick={() => saveButtonClick(
+                              onClick={() => handleAddModule(
                                   {...module, course: courseId})}>Add Module
                       </button>
                     </MDBModalFooter>

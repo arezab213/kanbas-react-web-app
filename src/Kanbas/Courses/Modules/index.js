@@ -23,6 +23,7 @@ import {Link, useParams} from "react-router-dom";
 import {FaChevronRight} from "react-icons/fa";
 import CourseNavigation from "../CourseNavigation";
 import MobileHeader from "../../MobileHeader";
+import {createModule} from "./client";
 
 function Modules({course}) {
   const {courseId} = useParams();
@@ -40,8 +41,11 @@ function Modules({course}) {
           }))
     }
   }
-  const saveButtonClick = (module) => {
-    dispatch(addModule(module));
+  const handleAddModule = (module) => {
+    createModule(courseId, module).then((module) => {
+      console.log(module)
+      dispatch(addModule(module));
+    });
     toggleOpen(false);
   };
   return (
@@ -111,7 +115,7 @@ function Modules({course}) {
                         Cancel
                       </button>
                       <button className="btn btn-primary"
-                              onClick={() => saveButtonClick(
+                              onClick={() => handleAddModule(
                                   {...module, course: courseId})}>Add Module
                       </button>
                     </MDBModalFooter>
