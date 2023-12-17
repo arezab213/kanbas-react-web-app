@@ -30,8 +30,6 @@ function AssignmentList() {
       (state) => state.assignmentReducer.assignments);
   const assignment = useSelector((state) => state.assignmentReducer.assignment);
   const dispatch = useDispatch();
-  const courseAssignments = assignments.filter(
-      (assignment) => assignment.course === courseId);
   const handleClickAddAssignment = () => {
     const genRanHex = size => [...Array(size)].map(
         () => Math.floor(Math.random() * 16).toString(16)).join('');
@@ -100,7 +98,7 @@ function AssignmentList() {
             </div>
           </li>
           {
-            courseAssignments.map((assignment) => (
+            assignments.map((assignment) => (
                 <li className="list-group-item-secondary">
                   <div className="assignment-row-grip-container">
                     <FaGripVertical/>
