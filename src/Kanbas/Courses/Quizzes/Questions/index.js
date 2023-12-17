@@ -92,6 +92,9 @@ function QuizQuestions({course}) {
             </div>
             <div className="quiz-edit-form">
               <QuizNav/>
+              <ul>
+
+              </ul>
             </div>
             <div className="edit-form-end-btn-row">
               <div className="form-check quiz-edit-checkbox">
