@@ -43,7 +43,6 @@ function Modules({course}) {
   }
   const handleAddModule = (module) => {
     createModule(courseId, module).then((module) => {
-      console.log(module)
       dispatch(addModule(module));
     });
     toggleOpen(false);
