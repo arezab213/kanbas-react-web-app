@@ -246,7 +246,9 @@ function AssignmentEditor({course}) {
                       Due
                     </label>
                     <input className="form-control assignment-edit-input"
-                           id="due_date" type="date" value={assignment.dueDate}
+                           id="due_date" type="date"
+                           value={assignment.dueDate.toString().substring(0,
+                               10)}
                            onChange={(e) => dispatch(selectAssignment(
                                {...assignment, dueDate: e.target.value}))}/>
                   </div>
@@ -258,7 +260,8 @@ function AssignmentEditor({course}) {
                       </label>
                       <input className="form-control assignment-edit-input"
                              type="date" id="avl_from"
-                             value={assignment.availableFromDate}
+                             value={assignment.availableFromDate.toString().substring(
+                                 0, 10)}
                              onChange={(e) => dispatch(selectAssignment({
                                ...assignment,
                                availableFromDate: e.target.value
@@ -271,7 +274,8 @@ function AssignmentEditor({course}) {
                       </label>
                       <input className="form-control assignment-edit-input"
                              type="date" id="avl_until"
-                             value={assignment.availableUntilDate}
+                             value={assignment.availableUntilDate.toString().substring(
+                                 0, 10)}
                              onChange={(e) => dispatch(selectAssignment({
                                ...assignment,
                                availableUntilDate: e.target.value

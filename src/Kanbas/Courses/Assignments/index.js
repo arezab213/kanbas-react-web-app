@@ -15,9 +15,9 @@ function Assignments({course}) {
   const dispatch = useDispatch();
   const {courseId} = useParams();
   const handleClickAddAssignment = () => {
-    const letter1 = String.fromCharCode(65 + Math.floor(Math.random() * 26));
-    const randomNumber = Math.floor(100 + Math.random() * 900);
-    const result = `${letter1}${randomNumber}`;
+    const genRanHex = size => [...Array(size)].map(
+        () => Math.floor(Math.random() * 16).toString(16)).join('');
+    const hexId = genRanHex(24)
     dispatch(selectAssignment({
       title: "New Assignment",
       points: 100,
@@ -25,10 +25,10 @@ function Assignments({course}) {
       availableFromDate: "2023-01-10",
       availableUntilDate: "2023-05-15",
       dueDate: "2023-05-15",
-      _id: result,
+      _id: genRanHex(24),
       course: courseId
     }))
-    navigate(`/Kanbas/Courses/${courseId}/Assignments/${result}`,
+    navigate(`/Kanbas/Courses/${courseId}/Assignments/${hexId}`,
         {state: {isFormForEdit: false}});
   };
   const mobileHeaderInfo = {course: course, pageName: "Assignments"};
