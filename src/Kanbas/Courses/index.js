@@ -9,6 +9,7 @@ import Grades from "./Grades";
 import "./index.css"
 import Quizzes from "./Quizzes";
 import QuizDetailsEditor from "./Quizzes/QuizDetailsEditor";
+import QuizDetails from "./Quizzes/Details";
 
 function Courses() {
   const {courseId} = useParams();
@@ -39,6 +40,10 @@ function Courses() {
           <Route
               path="Quizzes/:quizId/Edit"
               element={<QuizDetailsEditor course={course}/>}/>
+          />
+          <Route
+              path="Quizzes/:quizId/Details"
+              element={<QuizDetails course={course}/>}/>
           />
           <Route path="Grades" element={<Grades course={course}/>}/>
         </Routes>

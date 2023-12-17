@@ -76,7 +76,7 @@ function QuizList() {
                             onClick={() => {
                               dispatch(selectQuiz({...quiz}));
                             }}
-                            to={`/Kanbas/Courses/${courseId}/Quizzes/${quiz._id}`}
+                            to={`/Kanbas/Courses/${courseId}/Quizzes/${quiz._id}/Details`}
                             state={{isFormForEdit: true}}>
                         {quiz.title}
                       </Link>
@@ -95,7 +95,7 @@ function QuizList() {
                          onClick={() => {
                            dispatch(selectQuiz({...quiz}));
                            navigate(
-                               `/Kanbas/Courses/${courseId}/Quizzes/${quiz._id}`,
+                               `/Kanbas/Courses/${courseId}/Quizzes/${quiz._id}/Details`,
                                {state: {isFormForEdit: true}});
                          }}>
                       <FaEllipsisVertical/>
