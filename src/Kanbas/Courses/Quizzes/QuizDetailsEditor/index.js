@@ -19,7 +19,7 @@ function QuizDetailsEditor({course}) {
   const {courseId, quizId} = useParams();
   const findQuizById = async () => {
     const response = await client.findQuizById(quizId);
-    if (response !== undefined) {
+    if (response !== null) {
       dispatch(selectQuiz(response));
     }
   };
@@ -32,13 +32,12 @@ function QuizDetailsEditor({course}) {
   const mobileHeaderInfo = {course: course, pageName: "Edit Quiz"};
   const quiz = useSelector((state) => state.quizReducer.quiz);
   const handleSave = (quiz) => {
-    isFormForEdit ? handleUpdateQuiz(quiz) : handleAddQuiz(quiz)
-    resetInitialQuiz();
+    isFormForEdit ? handleUpdateQuiz(quiz) : handleAddQuiz(
+        {...quiz, _id: quizId})
     navigate(`/Kanbas/Courses/${courseId}/Quizzes/${quizId}/Details`);
   };
   const handleSaveAndPublish = (quiz) => {
     isFormForEdit ? handleUpdateQuiz(quiz) : handleAddQuiz(quiz)
-    resetInitialQuiz();
     navigate(`/Kanbas/Courses/${courseId}/Quizzes`);
   };
   const handleAddQuiz = (quiz) => {
@@ -50,19 +49,6 @@ function QuizDetailsEditor({course}) {
     const status = await client.updateQuiz(quiz);
     dispatch(updateQuiz(quiz));
   };
-
-  const resetInitialQuiz = () => {
-    dispatch(selectQuiz({
-      title: "New Quiz",
-      points: 100,
-      description: "Quiz Description",
-      availableFromDate: "2023-01-10",
-      availableUntilDate: "2023-05-15",
-      dueDate: "2023-05-15",
-      published: false,
-      shuffleAnswers: false,
-    }))
-  }
   return (
       <div className="main-content-wrapper">
         <MobileHeader obj={mobileHeaderInfo}/>
