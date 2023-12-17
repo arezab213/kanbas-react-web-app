@@ -7,7 +7,7 @@ import {
   FaChevronRight,
   FaEllipsisVertical, FaPencil, FaRegCircleCheck
 } from "react-icons/fa6";
-import {Link, useLocation, useNavigate, useParams} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {selectQuiz, updateQuiz} from "../quizzesReducer";
 import "../QuizDetailsEditor/index.css"
@@ -22,7 +22,6 @@ function QuizDetails({course}) {
   const quiz = useSelector((state) => state.quizReducer.quiz);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const {isFormForEdit} = useLocation().state;
   const mobileHeaderInfo = {course: course, pageName: "Edit Quiz"};
   const handleUpdateQuizPublishStatus = async () => {
     let currentlyPublished = quiz.published;
@@ -66,7 +65,12 @@ function QuizDetails({course}) {
                   <FaEllipsisVertical/>
                 </button>
                 <button type="button" className="btn btn-primary"
-                        id="publish-status-button">
+                        onClick={() => {
+                          dispatch(selectQuiz({...quiz}));
+                          navigate(
+                              `/Kanbas/Courses/${courseId}/Quizzes/${quiz._id}/Edit`,
+                              {state: {isFormForEdit: true}});
+                        }}>
                   <FaPencil/>
                   Edit
                 </button>
@@ -82,13 +86,44 @@ function QuizDetails({course}) {
               </div>
             </div>
             <div className="quiz-edit-form">
-
+              <h3>{quiz.title}</h3>
+              <div>
+                <strong>Points</strong>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                {`${quiz.points}`}
+              </div>
+              <div>
+                <strong>Available From</strong>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                {`${quiz.availableFromDate.toString().substring(0, 10)}`}
+              </div>
+              <div>
+                <strong>Available Until</strong>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                {`${quiz.availableUntilDate.toString().substring(0, 10)}`}
+              </div>
+              <div>
+                <strong>Due Date</strong>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                {`${quiz.dueDate.toString().substring(0, 10)}`}
+              </div>
+              <div>
+                <strong>Shuffle Answers</strong>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                {`${quiz.shuffleAnswers ? "Yes" : "No"}`}
+              </div>
+              <div>
+                <strong>Time Limit</strong>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                {`${(quiz.timeLimit === false) ? "None"
+                    : quiz.timeLimit} Minutes`}
+              </div>
             </div>
             <div className="edit-form-end-btn-row">
-              <Link to={`/Kanbas/Courses/${courseId}/Quizzes`}>
+              {/*<Link to={`/Kanbas/Courses/${courseId}/Quizzes`}>
                 <button type="button" className="btn btn-primary">Cancel
                 </button>
-              </Link>
+              </Link>*/}
               <button type="button" className="btn btn-secondary">
                 Preview
               </button>

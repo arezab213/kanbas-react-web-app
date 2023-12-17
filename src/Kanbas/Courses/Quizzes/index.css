@@ -35,6 +35,10 @@
   color: #05a82b;
 }
 
+.btn-row-publish-status.unpublished {
+  color: #333333;
+}
+
 .quizzes-secondary-header-bar .btn, .edit-form-end-btn-row .btn {
   margin-left: 5px;
   margin-top: 0;
@@ -51,6 +55,10 @@
 .btn-row-publish-status svg {
   color: #05a82b;
   margin-right: 5px;
+}
+
+.btn-row-publish-status.unpublished svg {
+  color: #333333;
 }
 
 .quiz-main-content .form-control.quiz-text-input {

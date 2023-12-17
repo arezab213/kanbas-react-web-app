@@ -108,9 +108,8 @@ function QuizList() {
                          }}>
                       <FaXmark/>
                     </div>
-                    <div className="quiz-row-icon-container">
-                      <FaCircleCheck/>
-                    </div>
+                    {quiz.published && <div className="quiz-row-icon-container">
+                      <FaCircleCheck/></div>}
                   </div>
                 </li>
             ))

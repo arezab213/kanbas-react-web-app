@@ -1,7 +1,8 @@
-import React from "react"
+import React, {useEffect} from "react"
 import CourseNavigation from "../../CourseNavigation";
 import MobileHeader from "../../../MobileHeader";
 import {
+  FaBan,
   FaBars,
   FaChevronRight,
   FaCircleCheck,
@@ -15,23 +16,37 @@ import "./index.css"
 import * as client from "../client";
 
 function QuizDetailsEditor({course}) {
-  const {courseId} = useParams();
+  const {courseId, quizId} = useParams();
+  const findQuizById = async () => {
+    const response = await client.findQuizById(quizId);
+    if (response !== undefined) {
+      dispatch(selectQuiz(response));
+    }
+  };
+  useEffect(() => {
+    findQuizById();
+  }, [quizId]);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const {isFormForEdit} = useLocation().state;
   const mobileHeaderInfo = {course: course, pageName: "Edit Quiz"};
   const quiz = useSelector((state) => state.quizReducer.quiz);
-  const handleSave = () => {
-    isFormForEdit ? handleUpdateQuiz() : handleAddQuiz()
+  const handleSave = (quiz) => {
+    isFormForEdit ? handleUpdateQuiz(quiz) : handleAddQuiz(quiz)
+    resetInitialQuiz();
+    navigate(`/Kanbas/Courses/${courseId}/Quizzes/${quizId}/Details`);
+  };
+  const handleSaveAndPublish = (quiz) => {
+    isFormForEdit ? handleUpdateQuiz(quiz) : handleAddQuiz(quiz)
     resetInitialQuiz();
     navigate(`/Kanbas/Courses/${courseId}/Quizzes`);
   };
-  const handleAddQuiz = () => {
+  const handleAddQuiz = (quiz) => {
     client.createQuiz(courseId, quiz).then((quiz) => {
       dispatch(addQuiz(quiz));
     });
   };
-  const handleUpdateQuiz = async () => {
+  const handleUpdateQuiz = async (quiz) => {
     const status = await client.updateQuiz(quiz);
     dispatch(updateQuiz(quiz));
   };
@@ -82,9 +97,10 @@ function QuizDetailsEditor({course}) {
                 <button className="btn btn-primary ellipsis">
                   <FaEllipsisVertical/>
                 </button>
-                <div className="btn-row-publish-status">
-                  <FaCircleCheck/>
-                  Published
+                <div className={`btn-row-publish-status${quiz.published ? ""
+                    : " unpublished"}`}>
+                  {quiz.published ? <FaCircleCheck/> : <FaBan/>}
+                  {`${quiz.published ? "Published" : " Unpublished"}`}
                 </div>
               </div>
             </div>
@@ -202,12 +218,15 @@ function QuizDetailsEditor({course}) {
                 <button type="button" className="btn btn-primary">Cancel
                 </button>
               </Link>
-              <button type="button" onClick={handleSave}
-                      className="btn btn-primary">
+              <button className="btn btn-primary" type="button"
+                      onClick={() => {
+                        dispatch(selectQuiz({...quiz, published: true}));
+                        handleSaveAndPublish({...quiz, published: true});
+                      }}>
                 Save & Publish
               </button>
-              <button type="button" onClick={handleSave}
-                      className="btn btn-secondary">
+              <button type="button" className="btn btn-secondary"
+                      onClick={() => handleSave(quiz)}>
                 Save
               </button>
             </div>
