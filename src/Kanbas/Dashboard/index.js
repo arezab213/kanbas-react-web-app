@@ -89,13 +89,15 @@ function Dashboard({
                             to={`/Kanbas/Courses/${course._id}`}>
                         <div className="card-body dashboard-card">
                           <h6 className="dashboard-card-title">
-                            {`${course._id} ${course.name}`}
+                            {`${course.name}`}
                           </h6>
                           <div className="dashboard-card-subtitle">
-                            {`${course._id}.${course.number}`}
+                            {`${course.number}`}
                           </div>
                           <div className="dashboard-card-course-term">
-                            {`${course.startDate} to ${course.endDate}`}
+                            {`${course.startDate.toString().substring(0,
+                                10)} to ${course.endDate.toString().substring(0,
+                                10)}`}
                           </div>
                         </div>
                       </Link>
@@ -149,14 +151,14 @@ function Dashboard({
                            {...course, number: e.target.value})}/>
                 <label htmlFor="courseStartDate"
                        className="form-label">Start</label>
-                <input value={course.startDate}
+                <input value={course.startDate.toString().substring(0, 10)}
                        className="form-control modal-input"
                        id="courseStartDate"
                        type="date" onChange={(e) => setCourse(
                     {...course, startDate: e.target.value})}/>
                 <label htmlFor="courseEndDate"
                        className="form-label">End</label>
-                <input value={course.endDate}
+                <input value={course.endDate.toString().substring(0, 10)}
                        className="form-control modal-input"
                        id="courseEndDate"
                        type="date" onChange={(e) => setCourse(
