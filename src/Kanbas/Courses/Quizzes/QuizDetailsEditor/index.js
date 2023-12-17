@@ -98,11 +98,11 @@ function QuizDetailsEditor({course}) {
                            {...quiz, title: e.target.value}))}/>
               </div>
               <div className="edit-form-section">
-            <textarea className="form-control quiz-edit-text-area"
-                      value={quiz.description}
-                      onChange={(e) => dispatch(selectQuiz(
-                          {...quiz, description: e.target.value}))}>
-            </textarea>
+                <textarea className="form-control quiz-edit-text-area"
+                          value={quiz.description}
+                          onChange={(e) => dispatch(selectQuiz(
+                              {...quiz, description: e.target.value}))}>
+                </textarea>
               </div>
               <div className="edit-form-section extra-margin">
                 <label htmlFor="points-input"

@@ -1,7 +1,8 @@
-import React from "react"
+import React, {useEffect} from "react"
 import CourseNavigation from "../../CourseNavigation";
 import MobileHeader from "../../../MobileHeader";
 import {
+  FaBan,
   FaBars,
   FaChevronRight,
   FaCircleCheck,
@@ -9,37 +10,36 @@ import {
 } from "react-icons/fa6";
 import {Link, useLocation, useNavigate, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {addQuiz, selectQuiz, updateQuiz} from "../quizzesReducer";
+import {selectQuiz, updateQuiz} from "../quizzesReducer";
 import "../QuizDetailsEditor/index.css"
 import * as client from "../client";
+import {setAssignments} from "../../Assignments/assignmentsReducer";
 
 function QuizDetails({course}) {
-  const {courseId} = useParams();
+  const {courseId, quizId} = useParams();
+  useEffect(() => {
+    client.findQuizById(quizId).then(
+        (quiz) => dispatch(selectQuiz(quiz)));
+  }, [quizId]);
+  const quiz = useSelector((state) => state.quizReducer.quiz);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const {isFormForEdit} = useLocation().state;
   const mobileHeaderInfo = {course: course, pageName: "Edit Quiz"};
-  const quiz = useSelector((state) => state.quizReducer.quiz);
-  const handleUpdateQuiz = async () => {
-    const status = await client.updateQuiz(quiz);
-    dispatch(updateQuiz(quiz));
+ /* const findQuizById = async (quizId) => {
+    const response = await client.findQuizById(quizId)
+    dispatch(selectQuiz(response));
   };
-  /*const handleSave = () => {
-    isFormForEdit ? handleUpdateQuiz() : handleAddQuiz()
-    resetInitialQuiz();
-    navigate(`/Kanbas/Courses/${courseId}/Quizzes`);
-  };
-  const handleAddQuiz = () => {
-    client.createQuiz(courseId, quiz).then((quiz) => {
-      dispatch(addQuiz(quiz));
-    });
-  };
-  const handleUpdateQuiz = async () => {
+  findQuizById(quizId)*/
+  const handleUpdateQuizPublishStatus = async () => {
+    let currentlyPublished = quiz.published
+
+    dispatch(selectQuiz({...quiz, published: !currentlyPublished}));
     const status = await client.updateQuiz(quiz);
     dispatch(updateQuiz(quiz));
   };
 
-  const resetInitialQuiz = () => {
+  /*const resetInitialQuiz = () => {
     dispatch(selectQuiz({
       title: "New Quiz",
       points: 100,
@@ -94,20 +94,23 @@ function QuizDetails({course}) {
                   Preview
                 </button>
                 <button type="button" className="btn btn-primary"
-                        id="quiz-publish-btn"
-                        onClick={async (e) => {
-                          dispatch(selectQuiz(
-                              {...quiz, published: !quiz.published}));
-                          await handleUpdateQuiz()
-                        }}>
-                  <FaRegCircleCheck/>
+                        id="quiz-publish-btn" onClick={handleUpdateQuizPublishStatus}>
+                  {quiz.published ? <FaRegCircleCheck/> : <FaBan/>}
                   {quiz.published ? "Published" : "Unpublished"}
                 </button>
               </div>
             </div>
             <div className="quiz-edit-form">
 
-
+            </div>
+            <div className="edit-form-end-btn-row">
+              <Link to={`/Kanbas/Courses/${courseId}/Quizzes`}>
+                <button type="button" className="btn btn-primary">Cancel
+                </button>
+              </Link>
+              <button type="button" className="btn btn-secondary">
+                Preview
+              </button>
             </div>
           </div>
         </div>

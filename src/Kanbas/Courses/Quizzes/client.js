@@ -22,6 +22,11 @@ export const findQuizzesForCourse = async (courseId) => {
   return response.data;
 };
 
+export const findQuizById = async (quizId) => {
+  const response = await axios.get(`${QUIZZES_URL}/${quizId}`);
+  return response.data;
+};
+
 export const createQuiz = async (courseId, quiz) => {
   const response = await axios.post(
       `${COURSES_URL}/${courseId}/quizzes/${quiz._id}`,
