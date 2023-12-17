@@ -56,7 +56,7 @@ function Modules({course}) {
             <ul className="breadcrumbs list-group">
               <li className="list-group-item">
                 <Link to={`/Kanbas/Courses/${courseId}`}>
-                  {`${course._id} ${course.name}`}
+                  {`${course.name}`}
                 </Link>
               </li>
               <li className="list-group-item">

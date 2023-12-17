@@ -119,9 +119,6 @@ function AssignmentList() {
                         {assignment.title}
                       </Link>
                     </div>
-                    <div className="d-none d-sm-block assignment-period">
-                      {assignment.course}
-                    </div>
                     <div className="assignment-deadline-points">
                       <strong>{assignment._id}</strong>
                       &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
