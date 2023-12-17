@@ -10,6 +10,18 @@
   margin-bottom: 12px;
 }
 
+.quiz-edit-form .nav {
+  font-weight: 300;
+}
+
+.quiz-edit-form .nav .nav-link.active {
+  color: inherit;
+}
+
+.quiz-edit-form .nav .nav-link {
+  color: #d41b2c;
+}
+
 .quizzes-secondary-header-bar.edit-page .btns-row {
   display: flex;
   flex-direction: row-reverse;

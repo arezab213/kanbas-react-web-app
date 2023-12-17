@@ -68,8 +68,7 @@ function QuizDetails({course}) {
                         onClick={() => {
                           dispatch(selectQuiz({...quiz}));
                           navigate(
-                              `/Kanbas/Courses/${courseId}/Quizzes/${quiz._id}/Edit`,
-                              {state: {isFormForEdit: true}});
+                              `/Kanbas/Courses/${courseId}/Quizzes/${quiz._id}/Edit`);
                         }}>
                   <FaPencil/>
                   Edit

@@ -29,8 +29,7 @@ function Quizzes({course}) {
       published: false,
       shuffleAnswers: false,
     }))
-    navigate(`/Kanbas/Courses/${courseId}/Quizzes/${hexId}/Edit`,
-        {state: {isFormForEdit: false}});
+    navigate(`/Kanbas/Courses/${courseId}/Quizzes/${hexId}/Edit`);
   };
   const mobileHeaderInfo = {course: course, pageName: "Quizzes"};
   return (

@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React, {useEffect, useState} from "react"
 import CourseNavigation from "../../CourseNavigation";
 import MobileHeader from "../../../MobileHeader";
 import {
@@ -17,21 +17,25 @@ import * as client from "../client";
 
 function QuizDetailsEditor({course}) {
   const {courseId, quizId} = useParams();
+  const [isFormForEdit, setIsForForEdit] = useState(false)
   const findQuizById = async () => {
     const response = await client.findQuizById(quizId);
     if (response !== null) {
       dispatch(selectQuiz(response));
+      setIsForForEdit(true)
+      console.log(isFormForEdit)
     }
   };
   useEffect(() => {
     findQuizById();
   }, [quizId]);
+  console.log(isFormForEdit)
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const {isFormForEdit} = useLocation().state;
   const mobileHeaderInfo = {course: course, pageName: "Edit Quiz"};
   const quiz = useSelector((state) => state.quizReducer.quiz);
   const handleSave = (quiz) => {
+    console.log(isFormForEdit)
     isFormForEdit ? handleUpdateQuiz(quiz) : handleAddQuiz(
         {...quiz, _id: quizId})
     navigate(`/Kanbas/Courses/${courseId}/Quizzes/${quizId}/Details`);
@@ -91,7 +95,7 @@ function QuizDetailsEditor({course}) {
               </div>
             </div>
             <div className="quiz-edit-form">
-              <QuizNav state={isFormForEdit}/>
+              <QuizNav/>
               <div className="edit-form-section">
                 <input className="form-control quiz-edit-input mt-3"
                        type="text"
@@ -212,7 +216,9 @@ function QuizDetailsEditor({course}) {
                 Save & Publish
               </button>
               <button type="button" className="btn btn-secondary"
-                      onClick={() => handleSave(quiz)}>
+                      onClick={() => {
+                        handleSave(quiz)
+                      }}>
                 Save
               </button>
             </div>

@@ -6,14 +6,16 @@ function QuizNav({state}) {
   return (
       <nav className="nav nav-tabs mb-0">
         <Link
-            className={`nav-link ${pathname.includes("Edit") ? "active" : ""}`}
-            to={`/Kanbas/Courses/${courseId}/Quizzes/${quizId}/Edit`}
-            state={{isFormForEdit: state}}>
+            className={`nav-link ${!pathname.includes("Questions") ? "active"
+                : ""}`}
+            to={`/Kanbas/Courses/${courseId}/Quizzes/${quizId}/Edit`}>
           Details
         </Link>
         <Link className={`nav-link ${pathname.includes("Questions") ? "active"
             : ""}`}
-              to={`/Kanbas/Courses/${courseId}/Quizzes/${quizId}/Edit/Questions`}>Questions</Link>
+              to={`/Kanbas/Courses/${courseId}/Quizzes/${quizId}/Edit/Questions`}>
+          Questions
+        </Link>
       </nav>
   );
 }
