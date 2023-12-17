@@ -27,8 +27,9 @@ function Quizzes({course}) {
       _id: genRanHex(24),
       course: courseId,
       published: false,
+      shuffleAnswers: false,
     }))
-    navigate(`/Kanbas/Courses/${courseId}/Quizzes/${hexId}`,
+    navigate(`/Kanbas/Courses/${courseId}/Quizzes/${hexId}/Edit`,
         {state: {isFormForEdit: false}});
   };
   const mobileHeaderInfo = {course: course, pageName: "Quizzes"};
@@ -53,7 +54,7 @@ function Quizzes({course}) {
         </div>
         <div className="below-header-content">
           {<CourseNavigation/>}
-          <div className="quizzes-main-content">
+          <div className="quiz-main-content">
             <div className="quizzes-secondary-header-bar main-page">
               <input className="form-control quiz-text-input" type="text"
                      placeholder="Search for Quiz"/>

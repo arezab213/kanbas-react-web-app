@@ -10,9 +10,9 @@ import {
   FaBars,
   FaCircleCheck,
   FaEllipsisVertical,
-  FaPlus
+  FaPlus,
+  FaChevronRight
 } from "react-icons/fa6";
-import {FaChevronRight} from "react-icons/fa";
 import CourseNavigation from "../../CourseNavigation";
 import MobileHeader from "../../../MobileHeader";
 

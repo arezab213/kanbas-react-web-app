@@ -10,6 +10,7 @@ const initialState = {
     availableUntilDate: "2023-05-15",
     dueDate: "2023-05-15",
     published: false,
+    shuffleAnswers: false,
   },
 };
 
