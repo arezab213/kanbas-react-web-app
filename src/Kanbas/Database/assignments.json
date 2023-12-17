@@ -2,7 +2,7 @@
   {
     "_id": "A101",
     "title": "Propulsion Assignment",
-    "course": "RS101",
+    "course": "65510e70870c092d5441bc94",
     "points": 100,
     "description": "Assignment Description",
     "availableFromDate": "2023-01-10",
@@ -12,7 +12,7 @@
   {
     "_id": "A102",
     "title": "Combustion Analysis",
-    "course": "RS101",
+    "course": "65510e70870c092d5441bc94",
     "points": 100,
     "description": "Assignment Description",
     "availableFromDate": "2023-01-10",
@@ -22,7 +22,7 @@
   {
     "_id": "A103",
     "title": "Nozzle Design Project",
-    "course": "RS101",
+    "course": "65510e70870c092d5441bc94",
     "points": 100,
     "description": "Assignment Description",
     "availableFromDate": "2023-01-10",
@@ -32,7 +32,7 @@
   {
     "_id": "A201",
     "title": "Aerodynamics Quiz",
-    "course": "RS102",
+    "course": "65510e70870c092d5441bc95",
     "points": 100,
     "description": "Assignment Description",
     "availableFromDate": "2023-01-10",
@@ -42,7 +42,7 @@
   {
     "_id": "A202",
     "title": "Flow Analysis",
-    "course": "RS102",
+    "course": "65510e70870c092d5441bc95",
     "points": 100,
     "description": "Assignment Description",
     "availableFromDate": "2023-01-10",
@@ -52,7 +52,7 @@
   {
     "_id": "A203",
     "title": "Heating Analysis",
-    "course": "RS102",
+    "course": "65510e70870c092d5441bc95",
     "points": 100,
     "description": "Assignment Description",
     "availableFromDate": "2023-01-10",
@@ -62,7 +62,7 @@
   {
     "_id": "A301",
     "title": "Structural Design Task",
-    "course": "RS103",
+    "course": "65510e70870c092d5441bc96",
     "points": 100,
     "description": "Assignment Description",
     "availableFromDate": "2023-01-10",
@@ -72,7 +72,7 @@
   {
     "_id": "A302",
     "title": "Orbital Calculations",
-    "course": "RS103",
+    "course": "65510e70870c092d5441bc96",
     "points": 100,
     "description": "Assignment Description",
     "availableFromDate": "2023-01-10",
@@ -82,7 +82,7 @@
   {
     "_id": "A303",
     "title": "Systems Engineering Exam",
-    "course": "RS103",
+    "course": "65510e70870c092d5441bc96",
     "points": 100,
     "description": "Assignment Description",
     "availableFromDate": "2023-01-10",
