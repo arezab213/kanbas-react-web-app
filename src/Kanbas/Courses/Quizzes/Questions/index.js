@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa6";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {selectQuiz, updateQuiz} from "../quizzesReducer";
+import {deleteQuiz, selectQuiz, updateQuiz} from "../quizzesReducer";
 import {
   addQuestion,
   selectQuestion,
@@ -22,6 +22,7 @@ import QuizNav from "../QuizDetailsEditor/quizNav";
 import "../QuizDetailsEditor/index.css"
 import * as quizzesClient from "../client";
 import * as questionsClient from "./client";
+import "../../index.css"
 
 function QuizQuestions({course}) {
   const {courseId, quizId} = useParams();
@@ -52,6 +53,10 @@ function QuizQuestions({course}) {
   const handleAddQuestion = async () => {
     const status = await questionsClient.createQuestion(quizId, question);
     dispatch(addQuestion(question));
+  };
+  const handleDeleteQuestion = async (questionId) => {
+    const status = await questionsClient.deleteQuestion(questionId);
+    dispatch(deleteQuestion(questionId));
   };
   return (
       <div className="main-content-wrapper">
@@ -96,11 +101,25 @@ function QuizQuestions({course}) {
             </div>
             <div className="quiz-edit-form">
               <QuizNav/>
-              <ul>
+              <ul className="quizzes-content list-group">
                 {
                   questions.map((question) => (
                       <li className="list-group-item-secondary">
-                        {question.title}
+                        <div className="quiz-information">
+                          <div className="quiz-title">
+                            {question.title}
+                          </div>
+                        </div>
+                        <div className="row-right-side-icons-container">
+                          <div className="quiz-row-ellipsis-container">
+                            <FaEllipsisVertical/>
+                          </div>
+                          <div className="quiz-row-icon-container x-mark"
+                               onClick={() => handleDeleteQuestion(
+                                   question._id)}>
+                            <FaXmark/>
+                          </div>
+                        </div>
                       </li>
                   ))
                 }
