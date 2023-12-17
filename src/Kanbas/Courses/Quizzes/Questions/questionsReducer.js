@@ -2,7 +2,7 @@ import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
   questions: [],
-  question: {
+  defaultQuestion: {
     title: "New Question Title",
     question: "New Question Description",
     points: 10,
@@ -53,7 +53,7 @@ const questionsSlice = createSlice({
       });
     },
     selectQuestion: (state, action) => {
-      state.question = action.payload;
+      state.defaultQuestion = action.payload;
     },
   },
 });

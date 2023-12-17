@@ -6,49 +6,53 @@ import {
   FaBars,
   FaChevronRight,
   FaCircleCheck,
-  FaEllipsisVertical, FaPlus
+  FaEllipsisVertical, FaPlus, FaRocket, FaXmark
 } from "react-icons/fa6";
-import {Link, useLocation, useNavigate, useParams} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {addQuiz, selectQuiz, updateQuiz} from "../quizzesReducer";
+import {selectQuiz, updateQuiz} from "../quizzesReducer";
+import {
+  addQuestion,
+  selectQuestion,
+  updateQuestion,
+  setQuestions,
+  deleteQuestion
+} from "./questionsReducer";
 import QuizNav from "../QuizDetailsEditor/quizNav";
 import "../QuizDetailsEditor/index.css"
-import * as client from "../client";
+import * as quizzesClient from "../client";
+import * as questionsClient from "./client";
 
 function QuizQuestions({course}) {
   const {courseId, quizId} = useParams();
   const findQuizById = async () => {
-    const response = await client.findQuizById(quizId);
+    const response = await quizzesClient.findQuizById(quizId);
     if (response !== null) {
       dispatch(selectQuiz(response));
     }
   };
+  const findQuestionsForQuiz = async () => {
+    const response = await questionsClient.findQuestionsForQuiz(quizId);
+    if (response !== null) {
+      dispatch(setQuestions(response));
+    }
+  };
   useEffect(() => {
     findQuizById();
+    findQuestionsForQuiz();
   }, [quizId]);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const {isFormForEdit} = useLocation().state;
   const mobileHeaderInfo = {course: course, pageName: "Edit Quiz"};
   const quiz = useSelector((state) => state.quizReducer.quiz);
-  /* const handleSave = (quiz) => {
-     isFormForEdit ? handleUpdateQuiz(quiz) : handleAddQuiz(
-         {...quiz, _id: quizId})
-     navigate(`/Kanbas/Courses/${courseId}/Quizzes/${quizId}/Details`);
-   };
-   const handleSaveAndPublish = (quiz) => {
-     isFormForEdit ? handleUpdateQuiz(quiz) : handleAddQuiz(quiz)
-     navigate(`/Kanbas/Courses/${courseId}/Quizzes`);
-   };
-   const handleAddQuiz = (quiz) => {
-     client.createQuiz(courseId, quiz).then((quiz) => {
-       dispatch(addQuiz(quiz));
-     });
-   };
-   const handleUpdateQuiz = async (quiz) => {
-     const status = await client.updateQuiz(quiz);
-     dispatch(updateQuiz(quiz));
-   };*/
+  const question = useSelector(
+      (state) => state.questionsReducer.defaultQuestion)
+  const questions = useSelector((state) => state.questionsReducer.questions);
+
+  const handleAddQuestion = async () => {
+    const status = await questionsClient.createQuestion(quizId, question);
+    dispatch(addQuestion(question));
+  };
   return (
       <div className="main-content-wrapper">
         <MobileHeader obj={mobileHeaderInfo}/>
@@ -93,8 +97,18 @@ function QuizQuestions({course}) {
             <div className="quiz-edit-form">
               <QuizNav/>
               <ul>
-
+                {
+                  questions.map((question) => (
+                      <li className="list-group-item-secondary">
+                        {question.title}
+                      </li>
+                  ))
+                }
               </ul>
+              <button className="btn btn-primary" onClick={handleAddQuestion}>
+                <FaPlus/>
+                New Question
+              </button>
             </div>
             <div className="edit-form-end-btn-row">
               <div className="form-check quiz-edit-checkbox">
