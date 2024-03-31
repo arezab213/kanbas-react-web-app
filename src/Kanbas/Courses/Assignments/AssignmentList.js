@@ -30,12 +30,10 @@ function AssignmentList() {
       (state) => state.assignmentReducer.assignments);
   const assignment = useSelector((state) => state.assignmentReducer.assignment);
   const dispatch = useDispatch();
-  const courseAssignments = assignments.filter(
-      (assignment) => assignment.course === courseId);
   const handleClickAddAssignment = () => {
-    const letter1 = String.fromCharCode(65 + Math.floor(Math.random() * 26));
-    const randomNumber = Math.floor(100 + Math.random() * 900);
-    const result = `${letter1}${randomNumber}`;
+    const genRanHex = size => [...Array(size)].map(
+        () => Math.floor(Math.random() * 16).toString(16)).join('');
+    const hexId = genRanHex(24)
     dispatch(selectAssignment({
       title: "New Assignment",
       points: 100,
@@ -43,10 +41,10 @@ function AssignmentList() {
       availableFromDate: "2023-01-10",
       availableUntilDate: "2023-05-15",
       dueDate: "2023-05-15",
-      _id: result,
+      _id: hexId,
       course: courseId
     }))
-    navigate(`/Kanbas/Courses/${courseId}/Assignments/${result}`,
+    navigate(`/Kanbas/Courses/${courseId}/Assignments/${hexId}`,
         {state: {isFormForEdit: false}});
   };
 
@@ -55,7 +53,7 @@ function AssignmentList() {
       "Jan", "Feb", "Mar", "Apr", "May", "Jun",
       "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
     ];
-    const dateObj = new Date(`${inputDate}T00:00:00`);
+    const dateObj = new Date(`${inputDate}`);
     const monthAbbreviation = months[dateObj.getUTCMonth()];
     const day = dateObj.getUTCDate();
     const year = dateObj.getUTCFullYear();
@@ -100,7 +98,7 @@ function AssignmentList() {
             </div>
           </li>
           {
-            courseAssignments.map((assignment) => (
+            assignments.map((assignment) => (
                 <li className="list-group-item-secondary">
                   <div className="assignment-row-grip-container">
                     <FaGripVertical/>
@@ -119,12 +117,7 @@ function AssignmentList() {
                         {assignment.title}
                       </Link>
                     </div>
-                    <div className="d-none d-sm-block assignment-period">
-                      {assignment.course}
-                    </div>
                     <div className="assignment-deadline-points">
-                      <strong>{assignment._id}</strong>
-                      &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                       <strong>Due</strong> {formatDate(assignment.dueDate)}
                       &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                       {assignment.points ? assignment.points : 0} pts

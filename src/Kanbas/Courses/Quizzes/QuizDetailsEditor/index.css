@@ -1,0 +1,230 @@
+.quiz-edit-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #c7cdd1;
+  padding-bottom: 50px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.quiz-edit-form .nav {
+  font-weight: 300;
+}
+
+.quiz-edit-form .nav .nav-link.active {
+  color: inherit;
+}
+
+.quiz-edit-form .nav .nav-link {
+  color: #d41b2c;
+}
+
+.quizzes-secondary-header-bar.edit-page .btns-row {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-grow: 1;
+}
+
+.edit-form-end-btn-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #c7cdd1;
+  min-height: 33px;
+  padding-bottom: 12px;
+  padding-right: 8px;
+  padding-left: 8px;
+  align-items: center;
+}
+
+.form-check.quiz-edit-checkbox {
+  display: flex;
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+
+.form-check.quiz-edit-checkbox * {
+  display: flex;
+  font-size: 14px;
+  font-weight: 300;
+  color: #333333;
+  margin-right: 7px;
+}
+
+.form-control.quiz-edit-input {
+  height: 38px;
+  display: block;
+  box-shadow: none;
+  border-width: 1px;
+  border-style: solid;
+  padding: 8px 12px;
+  border-color: #d8e0e6;
+  font-size: 14px;
+  font-weight: 300;
+  border-radius: 3px;
+}
+
+.form-control.quiz-edit-input:focus {
+  border-color: #d41b2c;
+  border-width: 1px;
+}
+
+.quiz-edit-form .edit-form-section {
+  margin-bottom: 20px;
+}
+
+.quiz-edit-input-group .edit-form-section {
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.quiz-edit-form .form-label {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0 !important;
+}
+
+.edit-form-section .above-label {
+  margin-bottom: 5px !important;
+}
+
+.form-control.quiz-edit-text-area {
+  height: 130px;
+  display: block;
+  box-shadow: none;
+  border-width: 1px;
+  border-style: solid;
+  padding: 8px;
+  border-color: #d8e0e6;
+  font-size: 14px;
+  font-weight: 300;
+  border-radius: 3px;
+}
+
+.form-select.quiz-edit-dropdown {
+  height: 38px;
+  display: block;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d8e0e6;
+  border-radius: 3px;
+  background-color: #ffffff;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.form-select.quiz-edit-dropdown:focus {
+  border-color: #d41b2c;
+  border-width: 1px;
+}
+
+.form-control.quiz-edit-text-area:focus {
+  border-color: #d41b2c;
+  border-width: 1px;
+}
+
+.quiz-edit-form .edit-form-section.extra-margin {
+  display: flex;
+  flex-direction: row;
+  margin-right: 20%;
+}
+
+.edit-form-section.extra-margin.last {
+  margin-bottom: 0;
+}
+
+.edit-form-section.extra-margin > .form-label {
+  width: 33.33%;
+  display: flex;
+  text-align: right;
+  justify-content: right;
+  padding-right: 15px;
+  margin-bottom: 0;
+}
+
+.edit-form-section.extra-margin > .form-check.quiz-edit-checkbox {
+  width: 100%;
+}
+
+.quiz-edit-input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d8e0e6;
+  border-radius: 3px;
+  padding: 15px 15px 0;
+}
+
+.quiz-edit-input-group .form-select.quiz-edit-dropdown {
+  width: 66%;
+}
+
+.quiz-edit-input-group .form-select.quiz-edit-dropdown {
+  width: 66%;
+}
+
+button#add-assign-btn {
+  width: 100% !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-top-width: 1px !important;
+  align-items: center !important;
+  justify-content: center;
+}
+
+.last .quiz-edit-input-group {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-width: 0;
+}
+
+@media only screen and (max-width: 576px) {
+  .quiz-edit-form .edit-form-section.extra-margin {
+    margin-right: 0;
+    flex-direction: column;
+  }
+
+  .edit-form-section.extra-margin > .form-label {
+    text-align: left;
+    justify-content: left;
+    padding-right: 0;
+    width: 100%
+  }
+
+  .quiz-edit-input-group {
+    max-width: 80%;
+    margin-left: 10%;
+  }
+
+  button#add-assign-btn {
+    width: 80% !important;
+    margin-left: 10%;
+  }
+
+  label#input-group-label {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .quiz-main-content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .quizzes-secondary-header-bar.edit-page .btn, .edit-form-end-btn-row .btn {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}

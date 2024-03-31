@@ -7,10 +7,15 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import "./index.css"
+import Quizzes from "./Quizzes";
+import QuizDetailsEditor from "./Quizzes/QuizDetailsEditor";
+import QuizDetails from "./Quizzes/Details";
+import QuizQuestions from "./Quizzes/Questions";
 
 function Courses() {
   const {courseId} = useParams();
-  const URL = "http://localhost:4000/api/courses";
+  const API_BASE = process.env.REACT_APP_API_BASE;
+  const URL = `${API_BASE}/courses`;
   const [course, setCourse] = useState({});
   const findCourseById = async (courseId) => {
     const response = await axios.get(
@@ -31,6 +36,19 @@ function Courses() {
           <Route
               path="Assignments/:assignmentId"
               element={<AssignmentEditor course={course}/>}/>
+          />
+          <Route path="Quizzes" element={<Quizzes course={course}/>}/>
+          <Route
+              path="Quizzes/:quizId/Edit"
+              element={<QuizDetailsEditor course={course}/>}/>
+          />
+          <Route
+              path="Quizzes/:quizId/Edit/Questions"
+              element={<QuizQuestions course={course}/>}/>
+          />
+          <Route
+              path="Quizzes/:quizId/Details"
+              element={<QuizDetails course={course}/>}/>
           />
           <Route path="Grades" element={<Grades course={course}/>}/>
         </Routes>

@@ -41,7 +41,6 @@ function Home({course}) {
   }
   const handleAddModule = (module) => {
     createModule(courseId, module).then((module) => {
-      console.log(module)
       dispatch(addModule(module));
     });
     toggleOpen(false);
@@ -55,7 +54,7 @@ function Home({course}) {
             <ul className="breadcrumbs list-group">
               <li className="list-group-item">
                 <Link to={`/Kanbas/Courses/${courseId}`}>
-                  {`${course._id} ${course.name}`}
+                  {`${course.name}`}
                 </Link>
               </li>
               <li className="list-group-item">
