@@ -37,19 +37,19 @@ function Courses() {
               path="Assignments/:assignmentId"
               element={<AssignmentEditor course={course}/>}/>
           />
-          <Route path="Quizzes" element={<Quizzes course={course}/>}/>
-          <Route
-              path="Quizzes/:quizId/Edit"
-              element={<QuizDetailsEditor course={course}/>}/>
-          />
-          <Route
-              path="Quizzes/:quizId/Edit/Questions"
-              element={<QuizQuestions course={course}/>}/>
-          />
-          <Route
-              path="Quizzes/:quizId/Details"
-              element={<QuizDetails course={course}/>}/>
-          />
+          {/*<Route path="Quizzes" element={<Quizzes course={course}/>}/>*/}
+          {/*<Route*/}
+          {/*    path="Quizzes/:quizId/Edit"*/}
+          {/*    element={<QuizDetailsEditor course={course}/>}/>*/}
+          {/*/>*/}
+          {/*<Route*/}
+          {/*    path="Quizzes/:quizId/Edit/Questions"*/}
+          {/*    element={<QuizQuestions course={course}/>}/>*/}
+          {/*/>*/}
+          {/*<Route*/}
+          {/*    path="Quizzes/:quizId/Details"*/}
+          {/*    element={<QuizDetails course={course}/>}/>*/}
+          {/*/>*/}
           <Route path="Grades" element={<Grades course={course}/>}/>
         </Routes>
       </>
