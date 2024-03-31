@@ -34,7 +34,7 @@ function MobileHeader({obj}) {
                     event.preventDefault();
                     setOpenKanbasMenu(!openKanbasMenu);
                   }}>
-              <div>{`${obj.course._id} ${obj.course.name}`}</div>
+              <div>{`${obj.course.name}`}</div>
               <div>{obj.pageName}</div>
             </Link>
             <Link className="mobile-header-bar-icon-container icon-toggle"
