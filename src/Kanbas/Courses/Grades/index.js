@@ -100,7 +100,7 @@ function Grades({course}) {
                 Apply Filters
               </button>
             </div>
-            <div className="grades-page-section">
+            <div className="table grades-page-section">
               <div className="table-responsive grades-table-container">
                 <table
                     className="table table-striped table-bordered grades-table">

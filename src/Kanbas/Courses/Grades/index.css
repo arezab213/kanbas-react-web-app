@@ -14,6 +14,10 @@
   justify-content: end;
 }
 
+.table.grades-page-section {
+  justify-content: center;
+}
+
 button.top-row {
   margin-left: 15px;
 }
@@ -67,7 +71,7 @@ button#settings-btn {
 }
 
 .grades-table-container {
-  width: calc(100vw - 325px)
+  width: calc(80vw)
 }
 
 .grades-table {
